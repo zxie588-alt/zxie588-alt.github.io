@@ -247,7 +247,7 @@ h3 {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 12px;
   margin: 24px 0;
 }
@@ -299,6 +299,85 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
+}
+
+.dashboard-shell {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 20px;
+}
+
+.dashboard-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.dashboard-control {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.dashboard-control input {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.dashboard-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft-2);
+  padding: 14px;
+}
+
+.dashboard-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dashboard-card strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--text);
+  font-size: 22px;
+}
+
+.chart-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.chart-wrap canvas {
+  display: block;
+  width: 100%;
+  min-width: 620px;
+  height: auto;
+}
+
+.decision-box {
+  border-left: 4px solid var(--accent);
+  background: var(--soft);
+  border-radius: 6px;
+  margin-top: 16px;
+  padding: 14px 16px;
 }
 
 .footer {

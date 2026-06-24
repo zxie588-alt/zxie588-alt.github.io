@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NZ Home Ventilation Layout and Sizing - Ricardo Xie</title>
+    <title>Smart NZ Home Ventilation System - Ricardo Xie</title>
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
@@ -20,11 +20,12 @@
     </header>
 
     <main class="project-main">
-      <p class="eyebrow">Main NZ building services project</p>
-      <h1>NZ Residential MVHR / ERV Ventilation Layout and Preliminary Sizing</h1>
+      <p class="eyebrow">Main NZ building services and validation project</p>
+      <h1>Smart NZ Residential MVHR / ERV Ventilation System</h1>
       <p class="lead">
-        A New Zealand residential ventilation case study that connects CAD layout, local building-services
-        context, airflow scheduling, duct velocity, pressure-loss estimation and fan-duty assumptions.
+        A self-directed New Zealand residential ventilation case study that connects CAD layout, local
+        building-services context, airflow scheduling, duct velocity, pressure-loss estimation, equipment
+        selection, sensor validation planning and a lightweight digital-twin dashboard.
       </p>
 
       <img class="project-image" src="../assets/images/nz_home_ventilation_isometric.png" alt="3D isometric view of residential ventilation layout">
@@ -33,6 +34,7 @@
         <div class="stat"><strong>151</strong>Named CAD bodies and features</div>
         <div class="stat"><strong>60 L/s</strong>Normal balanced supply and extract flow</div>
         <div class="stat"><strong>LGH-35</strong>Concept MVHR unit selected for normal and boost duty</div>
+        <div class="stat"><strong>85 L/s</strong>Boost target linked to commissioning and control logic</div>
       </div>
 
       <section class="section">
@@ -40,6 +42,68 @@
         <img class="project-image" src="../assets/images/nz_ventilation_plan_schematic.svg" alt="2D schematic plan of the NZ residential MVHR ventilation layout">
         <div class="actions">
           <a class="button secondary" href="../assets/cad/nz_home_ventilation_layout.dxf">Download DXF plan</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Sensor Validation and Digital Twin</h2>
+        <p class="lead">
+          The next upgrade turns the model into a measurable system: CO2, humidity, temperature, airflow
+          target and fan-power data feed a commissioning log and dashboard, so the design can be reviewed
+          as a testable engineering workflow rather than only a drawing.
+        </p>
+        <img class="project-image" src="../assets/images/nz_ventilation_sensor_validation_architecture.svg" alt="Sensor validation architecture for the smart ventilation system">
+
+        <div class="dashboard-shell" data-ventilation-dashboard>
+          <h3>Interactive Control Prototype</h3>
+          <p class="muted">
+            Move through sample commissioning events and adjust thresholds to see how the system changes
+            between normal, boost and recovery states.
+          </p>
+          <div class="dashboard-controls">
+            <label class="dashboard-control">
+              Sample event
+              <input id="sampleIndex" type="range" min="0" max="5" value="3">
+            </label>
+            <label class="dashboard-control">
+              CO2 boost threshold
+              <input id="co2Boost" type="range" min="800" max="1400" value="1000" step="25">
+            </label>
+            <label class="dashboard-control">
+              RH boost threshold
+              <input id="rhBoost" type="range" min="55" max="80" value="65" step="1">
+            </label>
+            <label class="dashboard-control">
+              Heat-recovery effectiveness
+              <input id="recoveryEffectiveness" type="range" min="50" max="90" value="77" step="1">
+            </label>
+          </div>
+          <p class="muted"><strong id="sampleLabel">Sample event</strong></p>
+          <div class="dashboard-grid">
+            <div class="dashboard-card"><span>CO2</span><strong id="dashCo2">-</strong></div>
+            <div class="dashboard-card"><span>Relative humidity</span><strong id="dashRh">-</strong></div>
+            <div class="dashboard-card"><span>Recommended mode</span><strong id="dashMode">-</strong></div>
+            <div class="dashboard-card"><span>Estimated ACH</span><strong id="dashAch">-</strong></div>
+            <div class="dashboard-card"><span>Recovered thermal load</span><strong id="dashHeat">-</strong></div>
+            <div class="dashboard-card"><span>Fan power</span><strong id="dashPower">-</strong></div>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="ventilationTrend" width="860" height="320" aria-label="CO2 and relative humidity trend chart"></canvas>
+          </div>
+          <div class="decision-box">
+            <strong>Control decision</strong>
+            <p id="dashDecision">-</p>
+            <p class="muted" id="controlValues">-</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="button" href="../assets/reports/nz_ventilation_commissioning_test_plan.md">Commissioning test plan</a>
+          <a class="button secondary" href="../assets/data/nz_ventilation_commissioning_sample.csv">Sample commissioning CSV</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_digital_twin_method.md">Digital twin method</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_requirements_trade_fmea.md">Requirements / FMEA</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_sensor_bom.csv">Sensor BOM</a>
+          <a class="button secondary" href="../assets/cad/nz_ventilation_sensor_pod_plate.dxf">Sensor pod DXF</a>
         </div>
       </section>
 
@@ -55,6 +119,10 @@
             <li>Added a manufacturer-based equipment check and selected Mitsubishi Electric Lossnay LGH-35RVX3-E as the concept MVHR unit size.</li>
             <li>Generated a 2D DXF ventilation plan so the system can be reviewed in AutoCAD as well as SolidWorks.</li>
             <li>Automated the visual system model with C# SolidWorks API, producing 151 named features plus STEP, STL, PNG and component-list exports.</li>
+            <li>Added stakeholder requirements, trade study and FMEA so the project shows systems-engineering judgement.</li>
+            <li>Built a sensor-validation and commissioning workflow with CO2, humidity, airflow, fan power and control-state data.</li>
+            <li>Created a Python Streamlit dashboard prototype and a web-based interactive control demonstrator.</li>
+            <li>Added a concept sensor-pod mounting DXF and BOM to show mechanical hardware/test-rig thinking.</li>
           </ul>
           <div class="actions">
             <a class="button" href="../assets/reports/nz_ventilation_preliminary_design_note.md">Case-study note</a>
@@ -67,6 +135,8 @@
             <a class="button secondary" href="../assets/reports/nz_ventilation_duct_pressure_estimate.csv">Pressure estimate</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_equipment_selection.md">Equipment selection</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_local_context.md">NZ context notes</a>
+            <a class="button secondary" href="../assets/reports/nz_ventilation_commissioning_test_plan.md">Test plan</a>
+            <a class="button secondary" href="../assets/reports/nz_ventilation_requirements_trade_fmea.md">Requirements / FMEA</a>
           </div>
         </div>
         <aside class="panel">
@@ -75,8 +145,10 @@
             This is a portfolio-level preliminary design exercise. It is not a building consent design,
             compliance certificate or professional engineering statement. The intent is to show that I can
             connect a 3D ventilation layout with New Zealand building-services terminology, code awareness
-            and early-stage sizing logic. The remaining blockers are a real architectural plan, full manufacturer
-            fan-curve overlay, diffuser/grille data, acoustic check and professional compliance review.
+            early-stage sizing logic and a validation pathway. The sample commissioning log is simulated until
+            physical sensors are connected. The remaining blockers are a real architectural plan, full manufacturer
+            fan-curve overlay, diffuser/grille data, measured airflow balancing, acoustic check and professional
+            compliance review.
           </p>
         </aside>
       </section>
@@ -139,5 +211,6 @@
         </div>
       </section>
     </main>
+    <script src="../assets/js/nz_ventilation_dashboard.js"></script>
   </body>
 </html>

@@ -30,7 +30,7 @@ GitHub notes that Pages sites are publicly available on the internet, so remove 
 
 ## Included projects
 
-- NZ Residential MVHR / ERV Ventilation Layout and Preliminary Sizing
+- Smart NZ Home MVHR / ERV Ventilation System
 - Solar Chimney CFD Reproduction and Critical Benchmark
 - Composite Formula SAE Front Wing Structural Analysis
 - Orbital AI Data Centre Systems Engineering Feasibility Study
@@ -39,7 +39,7 @@ GitHub notes that Pages sites are publicly available on the internet, so remove 
 ## Before publishing
 
 - Replace placeholder wording if a project role needs more exact wording.
-- Add a selected MVHR/ERV manufacturer datasheet if the ventilation project is developed further.
+- Replace the simulated commissioning CSV with measured sensor data after physical testing.
 - Add a Revit MEP plan sheet when available.
 - Add a final PDF resume link when the resume is typeset.
 - Do not publish raw course reports, assignment files or editable DOCX submissions. Keep public evidence curated: case-study pages, selected result images, neutral design notes, calculation tables and clean model exports.
