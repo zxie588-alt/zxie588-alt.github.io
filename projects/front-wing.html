@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Composite Front Wing FEA - Ricardo Xie</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../index.html">Ricardo Xie</a>
+        <div class="nav-links">
+          <a href="../index.html#projects">Projects</a>
+          <a href="https://github.com/zxie588-alt/composite-front-wing-fea">Source repo</a>
+          <a href="mailto:zxie588@aucklanduni.ac.nz">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-main">
+      <p class="eyebrow">FEA and composite structures</p>
+      <h1>Composite Formula SAE Front Wing Structural Analysis</h1>
+      <p class="lead">
+        A composite laminate and Abaqus shell FEA project for a Formula SAE front wing main element,
+        balancing stiffness, strength and mass under aerodynamic, cornering and bump load cases.
+      </p>
+
+      <div class="stats">
+        <div class="stat"><strong>54,998</strong>Final shell elements</div>
+        <div class="stat"><strong>74%</strong>Peak stress utilisation under governing case</div>
+        <div class="stat"><strong>77%</strong>Estimated mass reduction from initial layup</div>
+      </div>
+
+      <section class="split">
+        <div class="panel">
+          <h2>Engineering Capability Shown</h2>
+          <ul class="detail-list">
+            <li>Converted aerodynamic, cornering and bump scenarios into Abaqus load cases for a composite front-wing structure.</li>
+            <li>Built an S4R shell-element laminate model with local refinement around attachment regions where stress concentration mattered.</li>
+            <li>Checked ply-level stresses against fatigue and ultimate allowables rather than only reading global displacement contours.</li>
+            <li>Iterated from an over-designed layup to a lighter quasi-isotropic laminate while retaining strength and stiffness margin.</li>
+          </ul>
+        </div>
+        <aside class="panel">
+          <h2>Key Evidence</h2>
+          <p>
+            The final model used 54,998 shell elements. The governing load case reached about 74% peak stress
+            utilisation with SF = 1.5, and the final main-element mass estimate was about 1.17 kg.
+          </p>
+          <div class="actions">
+            <a class="button secondary" href="https://github.com/zxie588-alt/composite-front-wing-fea">Source repo</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <h2>Selected Results</h2>
+        <div class="image-grid">
+          <img src="../assets/images/front_wing_02.png" alt="Abaqus mesh view of Formula SAE front wing">
+          <img src="../assets/images/front_wing_03.png" alt="Abaqus displacement contour for front wing bump case">
+          <img src="../assets/images/front_wing_04.png" alt="Abaqus stress result for composite front wing">
+          <img src="../assets/images/front_wing_05.png" alt="Composite laminate result visual for front wing analysis">
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+Zone,Room type,NominalArea_m2,Design intent,Normal_supply_Lps,Normal_extract_Lps,Boost_extract_Lps,Indicative_duct_diameter_mm,Normal_velocity_mps,Boost_velocity_mps,Openable_area_m2,Healthy_Homes_min_openable_area_m2,Check_or_note
+Living / dining north,Habitable concept zone,,Supply fresh air to occupied open-plan zone,15,0,0,130,1.13,,TBC,TBC,Area and openable-window data require a real architectural plan
+Living / lounge south,Habitable concept zone,,Supply fresh air to occupied open-plan zone,15,0,0,130,1.13,,TBC,TBC,Area and openable-window data require a real architectural plan
+Bedroom 1,Habitable concept zone,,Supply fresh air to bedroom,15,0,0,130,1.13,,TBC,TBC,Area and openable-window data require a real architectural plan
+Bedroom 2,Habitable concept zone,,Supply fresh air to bedroom,15,0,0,130,1.13,,TBC,TBC,Area and openable-window data require a real architectural plan
+Kitchen,Wet / pollutant source,,Extract cooking fumes and moisture,0,30,50,120,2.65,4.42,TBC,TBC,Normal mode exceeds the 12 L/s continuous-mechanical reference; boost mode targets the 50 L/s extractor-capacity check
+Bathroom,Wet room,,Extract moisture and odours,0,20,25,120,1.77,2.21,TBC,TBC,Normal mode exceeds the 10 L/s continuous-mechanical reference; boost mode targets the 25 L/s extractor-capacity check
+Laundry,Service / wet room,,Extract moisture from laundry area,0,10,10,120,0.88,0.88,TBC,TBC,Assumed service-zone extract for concept design
+Outdoor intake,Outdoor air terminal,,Provide outside air to MVHR/ERV unit,60,0,0,180,2.36,3.34,,,Normal intake 60 L/s; if balanced boost is required check 85 L/s intake capacity
+Exhaust discharge,Outdoor exhaust terminal,,Discharge extracted air outdoors,0,60,85,180,2.36,3.34,,,Normal exhaust 60 L/s; boost exhaust 85 L/s requires fan curve and acoustic check
+System balance,Whole dwelling concept,96,Check supply/extract balance and fan duty,60,60,85,,,,,,Normal mode is balanced at 60 L/s supply and 60 L/s extract; boost mode is a demand/extractor check

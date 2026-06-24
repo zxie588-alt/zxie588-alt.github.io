@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NZ Home Ventilation Layout and Sizing - Ricardo Xie</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../index.html">Ricardo Xie</a>
+        <div class="nav-links">
+          <a href="../index.html#projects">Projects</a>
+          <a href="https://github.com/zxie588-alt/nz-home-ventilation-system">Source repo</a>
+          <a href="../assets/models/nz_home_ventilation_system.step">STEP model</a>
+          <a href="mailto:zxie588@aucklanduni.ac.nz">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-main">
+      <p class="eyebrow">Main NZ building services project</p>
+      <h1>NZ Residential MVHR / ERV Ventilation Layout and Preliminary Sizing</h1>
+      <p class="lead">
+        A New Zealand residential ventilation case study that connects CAD layout, local building-services
+        context, airflow scheduling, duct velocity, pressure-loss estimation and fan-duty assumptions.
+      </p>
+
+      <img class="project-image" src="../assets/images/nz_home_ventilation_isometric.png" alt="3D isometric view of residential ventilation layout">
+
+      <div class="stats">
+        <div class="stat"><strong>151</strong>Named CAD bodies and features</div>
+        <div class="stat"><strong>60 L/s</strong>Normal balanced supply and extract flow</div>
+        <div class="stat"><strong>LGH-35</strong>Concept MVHR unit selected for normal and boost duty</div>
+      </div>
+
+      <section class="section">
+        <h2>2D Ventilation Plan</h2>
+        <img class="project-image" src="../assets/images/nz_ventilation_plan_schematic.svg" alt="2D schematic plan of the NZ residential MVHR ventilation layout">
+        <div class="actions">
+          <a class="button secondary" href="../assets/cad/nz_home_ventilation_layout.dxf">Download DXF plan</a>
+        </div>
+      </section>
+
+      <section class="split">
+        <div class="panel">
+          <h2>Engineering Capability Shown</h2>
+          <ul class="detail-list">
+            <li>Translated a residential MVHR / ERV concept into routed supply, extract, outdoor-intake and exhaust systems.</li>
+            <li>Connected the CAD model to New Zealand building-services context: NZBC G4 ventilation, H1 energy efficiency and Healthy Homes point checks.</li>
+            <li>Built a balanced normal operating case: 60 L/s supply and 60 L/s extract, equal to about 216 m3/h.</li>
+            <li>Separated boost / extractor checks from normal heat-recovery operation, with an 85 L/s boost extract target.</li>
+            <li>Estimated duct velocities and path pressure losses, then set preliminary fan-duty targets of about 80 Pa normal and 120 Pa boost.</li>
+            <li>Added a manufacturer-based equipment check and selected Mitsubishi Electric Lossnay LGH-35RVX3-E as the concept MVHR unit size.</li>
+            <li>Generated a 2D DXF ventilation plan so the system can be reviewed in AutoCAD as well as SolidWorks.</li>
+            <li>Automated the visual system model with C# SolidWorks API, producing 151 named features plus STEP, STL, PNG and component-list exports.</li>
+          </ul>
+          <div class="actions">
+            <a class="button" href="../assets/reports/nz_ventilation_preliminary_design_note.md">Case-study note</a>
+            <a class="button" href="../assets/models/nz_home_ventilation_system.step">STEP model</a>
+            <a class="button secondary" href="https://github.com/zxie588-alt/nz-home-ventilation-system">Source repo</a>
+            <a class="button secondary" href="../assets/models/nz_home_ventilation_system.stl">STL model</a>
+            <a class="button secondary" href="../assets/cad/nz_home_ventilation_layout.dxf">DXF plan</a>
+            <a class="button secondary" href="../assets/reports/nz_home_ventilation_component_list.csv">Component list</a>
+            <a class="button secondary" href="../assets/reports/nz_ventilation_airflow_schedule.csv">Airflow schedule</a>
+            <a class="button secondary" href="../assets/reports/nz_ventilation_duct_pressure_estimate.csv">Pressure estimate</a>
+            <a class="button secondary" href="../assets/reports/nz_ventilation_equipment_selection.md">Equipment selection</a>
+            <a class="button secondary" href="../assets/reports/nz_ventilation_local_context.md">NZ context notes</a>
+          </div>
+        </div>
+        <aside class="panel">
+          <h2>Design Boundary</h2>
+          <p>
+            This is a portfolio-level preliminary design exercise. It is not a building consent design,
+            compliance certificate or professional engineering statement. The intent is to show that I can
+            connect a 3D ventilation layout with New Zealand building-services terminology, code awareness
+            and early-stage sizing logic. The remaining blockers are a real architectural plan, full manufacturer
+            fan-curve overlay, diffuser/grille data, acoustic check and professional compliance review.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section">
+        <h2>Preliminary Sizing Results</h2>
+        <div class="split">
+          <div class="panel">
+            <h3>Normal Balanced Mode</h3>
+            <ul class="detail-list">
+              <li>Supply: four diffusers at 15 L/s each, total 60 L/s.</li>
+              <li>Extract: kitchen 30 L/s, bathroom 20 L/s and laundry 10 L/s, total 60 L/s.</li>
+              <li>Nominal whole-dwelling sense check: 216 m3/h over about 230 m3, or 0.94 ACH.</li>
+              <li>Typical velocities: 2.36 m/s in 180 mm main ducts and 1.13 m/s in 130 mm supply branches.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Boost and Fan Duty</h3>
+            <ul class="detail-list">
+              <li>Boost extract check: kitchen 50 L/s, bathroom 25 L/s and laundry 10 L/s.</li>
+              <li>Highest normal path estimate: kitchen extract path at about 34 Pa before equipment allowances.</li>
+              <li>Highest boost path estimate: kitchen boost path at about 72 Pa before equipment allowances.</li>
+              <li>Portfolio fan targets: 60 L/s at about 80 Pa normal, 85 L/s at about 120 Pa boost.</li>
+              <li>Concept unit: LGH-35RVX3-E, selected because its 97 L/s at 160 Pa maximum point covers the boost target with headroom.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>New Zealand Local Context</h2>
+        <div class="split">
+          <div class="panel">
+            <h3>References Used</h3>
+            <ul class="detail-list">
+              <li>
+                <a href="https://www.building.govt.nz/building-code-compliance/g-services-and-facilities/g4-ventilation">NZ Building Code G4 - Ventilation</a>:
+                requires ventilation to occupied spaces and covers outdoor air and extract ventilation.
+              </li>
+              <li>
+                <a href="https://www.building.govt.nz/building-code-compliance/h-energy-efficiency/h1-energy-efficiency">NZ Building Code H1 - Energy Efficiency</a>:
+                relevant because ventilation, uncontrolled airflow and HVAC systems affect energy performance.
+              </li>
+              <li>
+                <a href="https://www.tenancy.govt.nz/healthy-homes/ventilation-standard/">Healthy Homes ventilation standard</a>:
+                used as a practical residential reference for openable-area and kitchen/bathroom extract checks.
+              </li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Software Direction</h3>
+            <ul class="detail-list">
+              <li><strong>Excel / Google Sheets:</strong> airflow schedule, duct sizing, pressure-loss estimate and fan selection note.</li>
+              <li><strong>AutoCAD:</strong> 2D ventilation plan, duct route communication and future drawing-sheet development.</li>
+              <li><strong>Revit MEP:</strong> future BIM upgrade if licensed access is available.</li>
+              <li><strong>SolidWorks:</strong> current visual 3D system model and mechanical layout demonstration.</li>
+              <li><strong>EnergyPlus / IES VE / Fluent / CFX:</strong> later-stage energy or airflow simulation after basic sizing is complete.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

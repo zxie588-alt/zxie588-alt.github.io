@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solar Chimney CFD - Ricardo Xie</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../index.html">Ricardo Xie</a>
+        <div class="nav-links">
+          <a href="../index.html#projects">Projects</a>
+          <a href="https://github.com/zxie588-alt/solar-chimney-cfd">Source repo</a>
+          <a href="mailto:zxie588@aucklanduni.ac.nz">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-main">
+      <p class="eyebrow">CFD and heat transfer</p>
+      <h1>Solar Chimney CFD Reproduction and Critical Benchmark</h1>
+      <p class="lead">
+        A controlled CFD reproduction of a laboratory-scale solar chimney, focused on natural convection,
+        conjugate heat transfer, boundary-condition uncertainty and physical validation.
+      </p>
+
+      <div class="stats">
+        <div class="stat"><strong>Tools</strong>ANSYS Fluent, ANSYS CFX</div>
+        <div class="stat"><strong>Methods</strong>CHT, mesh independence, heat and mass balance</div>
+        <div class="stat"><strong>Focus</strong>Buoyancy-driven flow and heat-input sensitivity</div>
+      </div>
+
+      <section class="split">
+        <div class="panel">
+          <h2>Engineering Capability Shown</h2>
+          <ul class="detail-list">
+            <li>Defined a conjugate heat-transfer CFD model with air, absorber and transparent cover domains instead of treating heat input as a black-box setting.</li>
+            <li>Audited energy input and rejected a direct solar-loading setup after heat accounting showed it was not physically credible.</li>
+            <li>Used mesh independence, mass balance, heat balance, Reynolds/Rayleigh-number checks and buoyancy scaling as validation tools.</li>
+            <li>Compared Fluent and CFX behaviour under controlled assumptions and explained the limits of point-value validation when boundary data is incomplete.</li>
+          </ul>
+        </div>
+        <aside class="panel">
+          <h2>Key Evidence</h2>
+          <p>
+            The value of this project is the engineering judgement: boundary-condition diagnosis, heat-transfer
+            auditing, solver comparison and first-principles checks before accepting a simulation result.
+          </p>
+          <div class="actions">
+            <a class="button secondary" href="https://github.com/zxie588-alt/solar-chimney-cfd">Source repo</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <h2>Methods Used</h2>
+        <div class="stats">
+          <div class="stat"><strong>Model setup</strong>Ideal-gas air, absorber, cover, coupled walls and gravity-driven flow.</div>
+          <div class="stat"><strong>Validation</strong>Mesh sensitivity, heat balance, mass balance and dimensionless-number checks.</div>
+          <div class="stat"><strong>Decision</strong>Rejected non-physical inputs instead of tuning the model to match a target.</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
