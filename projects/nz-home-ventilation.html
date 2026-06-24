@@ -107,6 +107,48 @@
         </div>
       </section>
 
+      <section class="section">
+        <h2>SolidWorks Validation Kit</h2>
+        <p class="lead">
+          I also modelled a SolidWorks validation kit so the sensor and commissioning workflow has a
+          physical mechanical context: a 150 mm test duct, sensor pod, pressure taps, silicone tubes,
+          ESP32 electronics tray, fan module, flow straightener and outlet grille.
+        </p>
+        <img class="project-image" src="../assets/images/smart_ventilation_validation_kit_isometric.png" alt="SolidWorks model of the smart ventilation validation kit">
+        <div class="stats">
+          <div class="stat"><strong>91</strong>Named SolidWorks bodies/features</div>
+          <div class="stat"><strong>150 mm</strong>Concept duct test section</div>
+          <div class="stat"><strong>CO2 / RH / Pa</strong>Sensor and pressure validation layout</div>
+          <div class="stat"><strong>STEP + STL</strong>Exported for review and manufacturing discussion</div>
+        </div>
+        <div class="split">
+          <div class="panel">
+            <h3>What This Adds</h3>
+            <ul class="detail-list">
+              <li>Shows how the CO2/RH sensor package could be mechanically mounted and serviced.</li>
+              <li>Adds upstream/downstream pressure taps connected to a differential-pressure sensor module.</li>
+              <li>Links the digital dashboard to physical data sources: fan mode, airflow target, pressure, CO2 and humidity.</li>
+              <li>Gives hardware/product employers a concrete test-rig and packaging example, not only an HVAC drawing.</li>
+            </ul>
+          </div>
+          <aside class="panel">
+            <h3>Generated with SolidWorks API</h3>
+            <p>
+              The model was generated through a C# SolidWorks API script, then exported as native SLDPRT,
+              STEP, STL and PNG. This keeps the CAD package repeatable and connects mechanical modelling
+              with programming-based automation.
+            </p>
+          </aside>
+        </div>
+        <div class="actions">
+          <a class="button" href="../assets/models/smart_ventilation_validation_kit.step">Download validation kit STEP</a>
+          <a class="button secondary" href="../assets/models/smart_ventilation_validation_kit.stl">Download validation kit STL</a>
+          <a class="button secondary" href="../assets/reports/smart_validation_kit_design_note.md">Validation kit design note</a>
+          <a class="button secondary" href="../assets/reports/smart_validation_kit_component_list.csv">Validation kit component list</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/nz-home-ventilation-system/tree/main/source/solidworks">Native SolidWorks file</a>
+        </div>
+      </section>
+
       <section class="split">
         <div class="panel">
           <h2>Engineering Capability Shown</h2>
@@ -123,12 +165,15 @@
             <li>Built a sensor-validation and commissioning workflow with CO2, humidity, airflow, fan power and control-state data.</li>
             <li>Created a Python Streamlit dashboard prototype and a web-based interactive control demonstrator.</li>
             <li>Added a concept sensor-pod mounting DXF and BOM to show mechanical hardware/test-rig thinking.</li>
+            <li>Modelled a SolidWorks validation kit with test duct, sensor pod, pressure taps, electronics tray, fan module and flow straightener.</li>
           </ul>
           <div class="actions">
             <a class="button" href="../assets/reports/nz_ventilation_preliminary_design_note.md">Case-study note</a>
             <a class="button" href="../assets/models/nz_home_ventilation_system.step">STEP model</a>
+            <a class="button" href="../assets/models/smart_ventilation_validation_kit.step">Validation kit STEP</a>
             <a class="button secondary" href="https://github.com/zxie588-alt/nz-home-ventilation-system">Source repo</a>
             <a class="button secondary" href="../assets/models/nz_home_ventilation_system.stl">STL model</a>
+            <a class="button secondary" href="../assets/models/smart_ventilation_validation_kit.stl">Validation kit STL</a>
             <a class="button secondary" href="../assets/cad/nz_home_ventilation_layout.dxf">DXF plan</a>
             <a class="button secondary" href="../assets/reports/nz_home_ventilation_component_list.csv">Component list</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_airflow_schedule.csv">Airflow schedule</a>
