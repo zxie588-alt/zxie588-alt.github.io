@@ -31,6 +31,7 @@ GitHub notes that Pages sites are publicly available on the internet, so remove 
 ## Included projects
 
 - Smart NZ Home MVHR / ERV Ventilation System
+- Ruggedized Outdoor IoT Sensor Module
 - Solar Chimney CFD Reproduction and Critical Benchmark
 - Composite Formula SAE Front Wing Structural Analysis
 - Orbital AI Data Centre Systems Engineering Feasibility Study

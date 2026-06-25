@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ruggedized Outdoor IoT Sensor Module - Ricardo Xie</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../index.html">Ricardo Xie</a>
+        <div class="nav-links">
+          <a href="../index.html#projects">Projects</a>
+          <a href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module">Source repo</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-main">
+      <p class="eyebrow">Product engineering project in development</p>
+      <h1>Ruggedized Outdoor IoT Sensor Module</h1>
+      <p class="lead">
+        A new portfolio project for hardware/product engineering roles: rugged enclosure architecture,
+        DFM planning, reliability test strategy, electronics architecture in Proteus, firmware planning in
+        Keil/embedded C, and future SolidWorks/Abaqus validation evidence.
+      </p>
+
+      <img class="project-image" src="../assets/images/rugged_iot_system_architecture.svg" alt="Ruggedized outdoor IoT sensor module architecture diagram">
+
+      <div class="stats">
+        <div class="stat"><strong>Step 1</strong>Project skeleton and evidence boundaries</div>
+        <div class="stat"><strong>12</strong>Initial engineering requirements</div>
+        <div class="stat"><strong>7</strong>Seed DFMEA failure modes</div>
+        <div class="stat"><strong>5</strong>Planned reliability test streams</div>
+      </div>
+
+      <section class="split">
+        <div class="panel">
+          <h2>Why This Project Exists</h2>
+          <p>
+            This project complements the NZ ventilation case study. The ventilation project targets HVAC,
+            building services and commissioning. This project targets product engineering: enclosure design,
+            DFM, test fixtures, electronics packaging, firmware boundaries and reliability validation.
+          </p>
+          <ul class="detail-list">
+            <li>SolidWorks enclosure and exploded assembly are planned for the next step.</li>
+            <li>Proteus will be used for electronics architecture, not a final PCB release.</li>
+            <li>Keil / embedded C will show firmware state-machine thinking once the MCU target is fixed.</li>
+            <li>Abaqus will be used for focused strap-mount and corner-load FEA after geometry exists.</li>
+          </ul>
+        </div>
+        <aside class="panel">
+          <h2>Evidence Boundary</h2>
+          <p>
+            This page currently shows project initiation and architecture only. It does not claim an IP rating,
+            physical test data, production readiness, final PCB design or validated firmware. Those evidence
+            items will be added only after the corresponding work is completed.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section">
+        <h2>Step 1 Deliverables</h2>
+        <div class="split">
+          <div class="panel">
+            <h3>Engineering Definition</h3>
+            <ul class="detail-list">
+              <li>Project brief and safe claim boundary.</li>
+              <li>Requirements matrix covering enclosure, sealing, mounting, electronics, firmware and validation.</li>
+              <li>System architecture linking mechanical design, Proteus electronics, Keil firmware and validation fixtures.</li>
+              <li>Initial DFMEA for gasket, strap mount, screw boss, service port, battery restraint, thermal risk and assembly error.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Planned Technical Outputs</h3>
+            <ul class="detail-list">
+              <li>Ruggedized enclosure CAD with gasket groove, ribs, bosses, strap mount and sealed port.</li>
+              <li>Reliability test fixtures: strap pull, drop orientation, spray stand and thermal logging setup.</li>
+              <li>Two focused FEA load cases: strap mount pull load and enclosure corner equivalent load.</li>
+              <li>Proteus electronics architecture and Keil/embedded C firmware state-machine evidence.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="button" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module">Source repo</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/project_brief.md">Project brief</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/requirements_matrix.csv">Requirements matrix</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/dfmea_seed.csv">DFMEA seed</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/toolchain_plan.md">Toolchain plan</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
