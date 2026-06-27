@@ -22,18 +22,18 @@
       <p class="eyebrow">Product engineering project in development</p>
       <h1>Ruggedized Outdoor IoT Sensor Module</h1>
       <p class="lead">
-        A new portfolio project for hardware/product engineering roles: rugged enclosure architecture,
-        DFM planning, reliability test strategy, electronics architecture in Proteus, firmware planning in
-        Keil/embedded C, and future SolidWorks/Abaqus validation evidence.
+        A hardware/product engineering portfolio project: SolidWorks enclosure CAD V1, rugged package
+        architecture, DFM planning, reliability test strategy, electronics architecture in Proteus, firmware
+        planning in Keil/embedded C, and future Abaqus validation evidence.
       </p>
 
-      <img class="project-image" src="../assets/images/rugged_iot_system_architecture.svg" alt="Ruggedized outdoor IoT sensor module architecture diagram">
+      <img class="project-image" src="../assets/images/iot_sensor_module_exploded_v1.png" alt="SolidWorks exploded assembly of a ruggedized outdoor IoT sensor module">
 
       <div class="stats">
-        <div class="stat"><strong>Step 1</strong>Project skeleton and evidence boundaries</div>
+        <div class="stat"><strong>CAD V1</strong>SolidWorks exploded assembly completed</div>
         <div class="stat"><strong>12</strong>Initial engineering requirements</div>
-        <div class="stat"><strong>7</strong>Seed DFMEA failure modes</div>
-        <div class="stat"><strong>5</strong>Planned reliability test streams</div>
+        <div class="stat"><strong>6</strong>Native CAD files</div>
+        <div class="stat"><strong>11</strong>STEP/STL export files</div>
       </div>
 
       <section class="split">
@@ -45,7 +45,7 @@
             DFM, test fixtures, electronics packaging, firmware boundaries and reliability validation.
           </p>
           <ul class="detail-list">
-            <li>SolidWorks enclosure and exploded assembly are planned for the next step.</li>
+            <li>SolidWorks CAD V1 includes lower enclosure, upper lid, gasket, PCB placeholder, battery placeholder and exploded assembly.</li>
             <li>Proteus will be used for electronics architecture, not a final PCB release.</li>
             <li>Keil / embedded C will show firmware state-machine thinking once the MCU target is fixed.</li>
             <li>Abaqus will be used for focused strap-mount and corner-load FEA after geometry exists.</li>
@@ -54,37 +54,42 @@
         <aside class="panel">
           <h2>Evidence Boundary</h2>
           <p>
-            This page currently shows project initiation and architecture only. It does not claim an IP rating,
-            physical test data, production readiness, final PCB design or validated firmware. Those evidence
-            items will be added only after the corresponding work is completed.
+            This page currently shows planning documents and SolidWorks concept CAD V1. It does not claim an
+            IP rating, physical test data, production readiness, final PCB design or validated firmware. Those
+            evidence items will be added only after the corresponding work is completed.
           </p>
         </aside>
       </section>
 
       <section class="section">
-        <h2>Step 1 Deliverables</h2>
+        <h2>CAD V1 Deliverables</h2>
         <div class="split">
+          <div class="panel">
+            <h3>SolidWorks Model Set</h3>
+            <ul class="detail-list">
+              <li>Lower enclosure concept with side walls, screw boss locations and PCB standoff locations.</li>
+              <li>Upper lid concept with raised sensor/membrane zone, screw pads and internal alignment lip intent.</li>
+              <li>Gasket placeholder showing the intended lid-to-base compression path.</li>
+              <li>PCB and battery placeholders for early package checking.</li>
+              <li>Exploded assembly and neutral STEP/STL exports for review.</li>
+            </ul>
+          </div>
           <div class="panel">
             <h3>Engineering Definition</h3>
             <ul class="detail-list">
-              <li>Project brief and safe claim boundary.</li>
               <li>Requirements matrix covering enclosure, sealing, mounting, electronics, firmware and validation.</li>
               <li>System architecture linking mechanical design, Proteus electronics, Keil firmware and validation fixtures.</li>
               <li>Initial DFMEA for gasket, strap mount, screw boss, service port, battery restraint, thermal risk and assembly error.</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h3>Planned Technical Outputs</h3>
-            <ul class="detail-list">
-              <li>Ruggedized enclosure CAD with gasket groove, ribs, bosses, strap mount and sealed port.</li>
-              <li>Reliability test fixtures: strap pull, drop orientation, spray stand and thermal logging setup.</li>
-              <li>Two focused FEA load cases: strap mount pull load and enclosure corner equivalent load.</li>
-              <li>Proteus electronics architecture and Keil/embedded C firmware state-machine evidence.</li>
+              <li>CAD design log documenting current limitations and next modelling tasks.</li>
             </ul>
           </div>
         </div>
+        <img class="project-image" src="../assets/images/rugged_iot_system_architecture.svg" alt="Ruggedized outdoor IoT sensor module architecture diagram">
         <div class="actions">
           <a class="button" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module">Source repo</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/cad/solidworks">SolidWorks files</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/exports">STEP/STL exports</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/cad_design_log.md">CAD design log</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/project_brief.md">Project brief</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/requirements_matrix.csv">Requirements matrix</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/dfmea_seed.csv">DFMEA seed</a>
