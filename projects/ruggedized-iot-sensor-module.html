@@ -24,7 +24,7 @@
       <p class="lead">
         A hardware/product engineering portfolio project: detailed SolidWorks enclosure CAD V2, rugged
         package architecture, DFM planning, reliability test strategy, electronics architecture in Proteus,
-            firmware target build evidence in Keil/embedded C, Abaqus validation evidence, thermal exposure simulation
+            firmware target build and STM32L4 device-pack evidence in Keil/embedded C, Abaqus validation evidence, thermal exposure simulation
         and a concept engineering release pack.
       </p>
 
@@ -59,8 +59,8 @@
           <h2>Evidence Boundary</h2>
           <p>
             This page shows planning documents, SolidWorks concept CAD V1/V2, three Abaqus concept FEA load cases,
-            electronics/firmware architecture and a concept engineering release package. It does not claim
-            an IP rating, physical test data, production readiness, final PCB design or validated firmware.
+            electronics/firmware architecture, low-power MCU device-pack readiness and a concept engineering release package.
+            It does not claim an IP rating, physical test data, production readiness, final PCB design or validated firmware.
           </p>
         </aside>
       </section>
@@ -198,8 +198,8 @@
       <section class="section">
         <h2>Electronics + Firmware Architecture</h2>
         <p>
-          The project now links the mechanical enclosure to a Proteus-ready electronics package, native Proteus project container and
-          Keil/uVision firmware target build. The current evidence covers component candidates, connection-level
+          The project now links the mechanical enclosure to a Proteus-ready electronics package, native Proteus project container,
+          Keil/uVision firmware target build and STM32L4 low-power device-pack audit. The current evidence covers component candidates, connection-level
           net ownership, power-budget assumptions, state-machine behaviour, battery/sensor fault handling
           and the sealed service/debug interface.
         </p>
@@ -222,6 +222,7 @@
               <li>Keil/uVision ARMCM3 concept target build verified through the local uVision command-line launcher.</li>
               <li>Clean ARM Compiler 6 / ARMCLANG build result: 0 errors, 0 warnings.</li>
               <li>Program size from the verified target build: Code 500 bytes, RO-data 80 bytes, RW-data 0 bytes, ZI-data 1024 bytes.</li>
+              <li>STM32L4xx device pack installed and audited; STM32L432KCUx selected as the next low-power candidate MCU path.</li>
               <li>Embedded C source structure includes state machine, mock sensor driver, power monitor, startup assembly and linker scatter file.</li>
               <li>Pin map and firmware architecture note covering sleep, sampling, filtering, transmit, low-battery, fault and service states.</li>
             </ul>
@@ -232,6 +233,7 @@
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/firmware/keil/iot_sensor_module_mdk">Keil firmware package</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/keil_uv4_build_log.txt">uVision build log</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/keil_uv4_build_summary_v1.md">Build summary</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/device_pack_audit_v1.md">Device-pack audit</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/schematic_v1">Schematic package</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/native_capture_v1">Native Proteus project</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/native_capture_v1/proteus_native_project_verification_v1.md">Proteus verification</a>
@@ -298,6 +300,7 @@
             <h3>Validation Control</h3>
             <ul class="detail-list">
               <li>Verification matrix traces CAD, FEA, firmware and electronics evidence to requirements.</li>
+              <li>Firmware evidence separates the clean ARMCM3 concept build from the STM32L4 candidate MCU path.</li>
               <li>CTQ inspection table links package features to datums, tolerances and future evidence.</li>
               <li>Physical pull, spray, drop and thermal tests are clearly marked as future work.</li>
               <li>Evidence gap register was updated so the project does not overclaim maturity.</li>
