@@ -199,7 +199,7 @@
         <h2>Electronics + Firmware Architecture</h2>
         <p>
           The project now links the mechanical enclosure to a Proteus-ready electronics package, native Proteus project container,
-          Keil/uVision firmware target build and STM32L4 low-power device-pack audit. The current evidence covers component candidates, connection-level
+          Keil/uVision firmware target build, STM32L4 low-power device-pack audit and candidate MCU porting plan. The current evidence covers component candidates, connection-level
           net ownership, power-budget assumptions, state-machine behaviour, battery/sensor fault handling
           and the sealed service/debug interface.
         </p>
@@ -223,6 +223,7 @@
               <li>Clean ARM Compiler 6 / ARMCLANG build result: 0 errors, 0 warnings.</li>
               <li>Program size from the verified target build: Code 500 bytes, RO-data 80 bytes, RW-data 0 bytes, ZI-data 1024 bytes.</li>
               <li>STM32L4xx device pack installed and audited; STM32L432KCUx selected as the next low-power candidate MCU path.</li>
+              <li>Candidate STM32L432 pin allocation and porting plan separate the current concept build from the future board-specific target.</li>
               <li>Embedded C source structure includes state machine, mock sensor driver, power monitor, startup assembly and linker scatter file.</li>
               <li>Pin map and firmware architecture note covering sleep, sampling, filtering, transmit, low-battery, fault and service states.</li>
             </ul>
@@ -234,6 +235,8 @@
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/keil_uv4_build_log.txt">uVision build log</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/keil_uv4_build_summary_v1.md">Build summary</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/device_pack_audit_v1.md">Device-pack audit</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/stm32l432_candidate_pinout_v1.csv">STM32L432 pinout</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/stm32l432_porting_plan_v1.md">Porting plan</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/schematic_v1">Schematic package</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/native_capture_v1">Native Proteus project</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/native_capture_v1/proteus_native_project_verification_v1.md">Proteus verification</a>
