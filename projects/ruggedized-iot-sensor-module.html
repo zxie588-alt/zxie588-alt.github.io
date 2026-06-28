@@ -24,7 +24,7 @@
       <p class="lead">
         A hardware/product engineering portfolio project: detailed SolidWorks enclosure CAD V2, rugged
         package architecture, DFM planning, reliability test strategy, electronics architecture in Proteus,
-        firmware planning in Keil/embedded C, and future Abaqus validation evidence.
+        firmware planning in Keil/embedded C, and Abaqus validation evidence.
       </p>
 
       <img class="project-image" src="../assets/images/iot_sensor_module_exploded_v2.png" alt="Detailed SolidWorks exploded assembly of a ruggedized outdoor IoT sensor module">
@@ -47,8 +47,8 @@
           <ul class="detail-list">
             <li>SolidWorks CAD V2 includes detailed lower enclosure, upper lid, gasket, PCB placeholder, battery placeholder and exploded assembly.</li>
             <li>The model now makes the sealing path, fastening path, strap-mount path and service-access path visible.</li>
-            <li>Proteus will be used for electronics architecture, not a final PCB release.</li>
-            <li>Keil / embedded C will show firmware state-machine thinking once the MCU target is fixed.</li>
+            <li>Proteus architecture notes now map MCU, sensor, power, debug and radio-boundary signals.</li>
+            <li>Keil / embedded C now includes a state machine, pin map and ARMCLANG-verifiable source structure.</li>
             <li>Abaqus is used for a completed concept strap-mount pull load case, with corner-load FEA planned next.</li>
           </ul>
         </div>
@@ -126,6 +126,40 @@
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/fea/abaqus/strap_lug_static_v1">FEA output folder</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/strap_lug_static_v1/strap_lug_fea_report_v1.md">FEA report</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/scripts/build_abaqus_strap_lug_fea_v1.py">Abaqus script</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Electronics + Firmware Architecture</h2>
+        <p>
+          The project now links the mechanical enclosure to a Proteus-style electronics architecture and
+          Keil/uVision firmware package. The current evidence focuses on signal ownership, state-machine
+          behaviour, battery/sensor fault handling and the service/debug interface.
+        </p>
+        <img class="project-image" src="../assets/images/iot_electronics_firmware_architecture.svg" alt="Electronics and firmware architecture diagram for the ruggedized IoT sensor module">
+        <div class="split">
+          <div class="panel">
+            <h3>Electronics Evidence</h3>
+            <ul class="detail-list">
+              <li>Proteus architecture note for MCU, I2C sensor, battery monitor, regulator, LEDs, SWD service header and UART radio boundary.</li>
+              <li>Concept signal table linking each electrical signal to firmware ownership and validation intent.</li>
+              <li>Mechanical links to PCB envelope, battery restraint, sealed service/debug port and sensor membrane opening.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Firmware Evidence</h3>
+            <ul class="detail-list">
+              <li>Keil/uVision project scaffold using the local uVision launcher.</li>
+              <li>ARMCLANG-verifiable embedded C source structure with state machine, mock sensor driver and power monitor.</li>
+              <li>Pin map and firmware architecture note covering sleep, sampling, filtering, transmit, low-battery, fault and service states.</li>
+            </ul>
+          </div>
+        </div>
+        <img class="project-image" src="../assets/images/iot_firmware_state_machine.svg" alt="Firmware state machine diagram for ruggedized IoT sensor module">
+        <div class="actions">
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/firmware/keil/iot_sensor_module_mdk">Keil firmware package</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus">Proteus architecture</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/electronics_firmware_integration.md">Integration note</a>
         </div>
       </section>
     </main>
