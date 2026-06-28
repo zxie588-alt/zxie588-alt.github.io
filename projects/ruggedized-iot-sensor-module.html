@@ -24,7 +24,7 @@
       <p class="lead">
         A hardware/product engineering portfolio project: detailed SolidWorks enclosure CAD V2, rugged
         package architecture, DFM planning, reliability test strategy, electronics architecture in Proteus,
-        firmware planning in Keil/embedded C, Abaqus validation evidence, thermal exposure simulation
+            firmware target build evidence in Keil/embedded C, Abaqus validation evidence, thermal exposure simulation
         and a concept engineering release pack.
       </p>
 
@@ -49,7 +49,7 @@
             <li>SolidWorks CAD V2 includes detailed lower enclosure, upper lid, gasket, PCB placeholder, battery placeholder and exploded assembly.</li>
             <li>The model now makes the sealing path, fastening path, strap-mount path and service-access path visible.</li>
             <li>Proteus-ready schematic evidence now maps candidate components, power rails, net ownership, firmware pins and mechanical interfaces.</li>
-            <li>Keil / embedded C now includes a state machine, pin map and ARMCLANG-verifiable source structure.</li>
+            <li>Keil / embedded C now includes a state machine, pin map, startup file, scatter file and clean uVision ARMCM3 target build.</li>
             <li>Abaqus is used for completed strap-mount pull, enclosure corner-load and screw-boss compression concept load cases.</li>
             <li>Thermal exposure simulation identifies sealed-enclosure overheating risk and design actions before prototype testing.</li>
           </ul>
@@ -198,7 +198,7 @@
         <h2>Electronics + Firmware Architecture</h2>
         <p>
           The project now links the mechanical enclosure to a Proteus-ready electronics package and
-          Keil/uVision firmware structure. The current evidence covers component candidates, connection-level
+          Keil/uVision firmware target build. The current evidence covers component candidates, connection-level
           net ownership, power-budget assumptions, state-machine behaviour, battery/sensor fault handling
           and the sealed service/debug interface.
         </p>
@@ -217,8 +217,10 @@
           <div class="panel">
             <h3>Firmware Evidence</h3>
             <ul class="detail-list">
-              <li>Keil/uVision project scaffold using the local uVision launcher.</li>
-              <li>ARMCLANG-verifiable embedded C source structure with state machine, mock sensor driver and power monitor.</li>
+              <li>Keil/uVision ARMCM3 concept target build verified through the local uVision command-line launcher.</li>
+              <li>Clean ARM Compiler 6 / ARMCLANG build result: 0 errors, 0 warnings.</li>
+              <li>Program size from the verified target build: Code 500 bytes, RO-data 80 bytes, RW-data 0 bytes, ZI-data 1024 bytes.</li>
+              <li>Embedded C source structure includes state machine, mock sensor driver, power monitor, startup assembly and linker scatter file.</li>
               <li>Pin map and firmware architecture note covering sleep, sampling, filtering, transmit, low-battery, fault and service states.</li>
             </ul>
           </div>
@@ -226,6 +228,8 @@
         <img class="project-image" src="../assets/images/iot_firmware_state_machine.svg" alt="Firmware state machine diagram for ruggedized IoT sensor module">
         <div class="actions">
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/firmware/keil/iot_sensor_module_mdk">Keil firmware package</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/keil_uv4_build_log.txt">uVision build log</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/keil_uv4_build_summary_v1.md">Build summary</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/schematic_v1">Schematic package</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/schematic_netlist_v1.csv">Netlist</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/power_budget_v1.csv">Power budget</a>
