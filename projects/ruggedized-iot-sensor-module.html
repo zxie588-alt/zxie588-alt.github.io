@@ -33,7 +33,7 @@
         <div class="stat"><strong>CAD V2</strong>Detailed SolidWorks enclosure package</div>
         <div class="stat"><strong>12</strong>Initial engineering requirements</div>
         <div class="stat"><strong>12</strong>Native CAD files across V1/V2</div>
-        <div class="stat"><strong>1</strong>Concept release package</div>
+        <div class="stat"><strong>2</strong>Abaqus concept FEA load cases</div>
       </div>
 
       <section class="split">
@@ -49,13 +49,13 @@
             <li>The model now makes the sealing path, fastening path, strap-mount path and service-access path visible.</li>
             <li>Proteus architecture notes now map MCU, sensor, power, debug and radio-boundary signals.</li>
             <li>Keil / embedded C now includes a state machine, pin map and ARMCLANG-verifiable source structure.</li>
-            <li>Abaqus is used for a completed concept strap-mount pull load case, with corner-load FEA planned next.</li>
+            <li>Abaqus is used for completed strap-mount pull and enclosure corner-load concept load cases.</li>
           </ul>
         </div>
         <aside class="panel">
           <h2>Evidence Boundary</h2>
           <p>
-            This page shows planning documents, SolidWorks concept CAD V1/V2, Abaqus concept FEA,
+            This page shows planning documents, SolidWorks concept CAD V1/V2, two Abaqus concept FEA load cases,
             electronics/firmware architecture and a concept engineering release package. It does not claim
             an IP rating, physical test data, production readiness, final PCB design or validated firmware.
           </p>
@@ -126,6 +126,38 @@
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/fea/abaqus/strap_lug_static_v1">FEA output folder</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/strap_lug_static_v1/strap_lug_fea_report_v1.md">FEA report</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/scripts/build_abaqus_strap_lug_fea_v1.py">Abaqus script</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Abaqus Corner-Load FEA</h2>
+        <p>
+          A second Abaqus 2025 load case screens early drop/handling risk. The simplified enclosure plate surrogate
+          applies a 120 N equivalent static load to one outer corner, with four screw-line support patches representing
+          the fastening load path.
+        </p>
+        <div class="stats">
+          <div class="stat"><strong>120 N</strong>Equivalent static corner load</div>
+          <div class="stat"><strong>5.55 MPa</strong>Maximum von Mises stress</div>
+          <div class="stat"><strong>0.021 mm</strong>Maximum displacement</div>
+          <div class="stat"><strong>7.21</strong>Concept yield ratio</div>
+        </div>
+        <div class="split">
+          <div>
+            <img class="project-image" src="../assets/images/corner_load_mises_contour_v1.png" alt="Abaqus von Mises stress contour for enclosure corner-load concept">
+          </div>
+          <div>
+            <img class="project-image" src="../assets/images/corner_load_displacement_contour_v1.png" alt="Abaqus displacement contour for enclosure corner-load concept">
+          </div>
+        </div>
+        <p>
+          This result documents how the design would be screened before a physical drop test. It is not a dynamic
+          impact certification, but it shows the load-case definition, boundary-condition thinking and evidence control.
+        </p>
+        <div class="actions">
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/fea/abaqus/corner_load_static_v1">FEA output folder</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/corner_load_static_v1/corner_load_fea_report_v1.md">FEA report</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/scripts/build_abaqus_corner_load_fea_v1.py">Abaqus script</a>
         </div>
       </section>
 
