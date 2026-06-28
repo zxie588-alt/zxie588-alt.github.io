@@ -24,7 +24,8 @@
       <p class="lead">
         A hardware/product engineering portfolio project: detailed SolidWorks enclosure CAD V2, rugged
         package architecture, DFM planning, reliability test strategy, electronics architecture in Proteus,
-        firmware planning in Keil/embedded C, Abaqus validation evidence and a concept engineering release pack.
+        firmware planning in Keil/embedded C, Abaqus validation evidence, thermal exposure simulation
+        and a concept engineering release pack.
       </p>
 
       <img class="project-image" src="../assets/images/iot_sensor_module_exploded_v2.png" alt="Detailed SolidWorks exploded assembly of a ruggedized outdoor IoT sensor module">
@@ -50,6 +51,7 @@
             <li>Proteus-ready schematic evidence now maps candidate components, power rails, net ownership, firmware pins and mechanical interfaces.</li>
             <li>Keil / embedded C now includes a state machine, pin map and ARMCLANG-verifiable source structure.</li>
             <li>Abaqus is used for completed strap-mount pull, enclosure corner-load and screw-boss compression concept load cases.</li>
+            <li>Thermal exposure simulation identifies sealed-enclosure overheating risk and design actions before prototype testing.</li>
           </ul>
         </div>
         <aside class="panel">
@@ -228,6 +230,32 @@
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/schematic_netlist_v1.csv">Netlist</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/power_budget_v1.csv">Power budget</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/electronics_firmware_integration.md">Integration note</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Thermal Exposure Simulation</h2>
+        <p>
+          A lumped thermal RC model was added to screen sealed-enclosure temperature risk before physical
+          hardware exists. The model combines a warm ambient ramp, external solar/lamp heat input and
+          electronics duty-cycle pulses from the firmware transmit boundary.
+        </p>
+        <div class="stats">
+          <div class="stat"><strong>240 min</strong>Simulated exposure window</div>
+          <div class="stat"><strong>66.6 C</strong>Peak internal temperature</div>
+          <div class="stat"><strong>55 C</strong>Warning reference</div>
+          <div class="stat"><strong>Risk</strong>Direct exposure needs mitigation</div>
+        </div>
+        <img class="project-image" src="../assets/images/thermal_exposure_plot_v1.svg" alt="Thermal exposure simulation plot for sealed outdoor IoT enclosure">
+        <p>
+          The result is intentionally treated as a risk flag, not a pass claim. Suggested actions include
+          lighter enclosure colour, shaded mounting, reduced radio/LED duty cycle, vent membrane review and
+          future internal/external temperature logging.
+        </p>
+        <div class="actions">
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/data/thermal_exposure_model_v1">Thermal data folder</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/data/thermal_exposure_model_v1/thermal_exposure_report_v1.md">Thermal report</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/scripts/build_thermal_exposure_model_v1.py">Model script</a>
         </div>
       </section>
 
