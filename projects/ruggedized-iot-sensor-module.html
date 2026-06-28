@@ -33,7 +33,7 @@
         <div class="stat"><strong>CAD V2</strong>Detailed SolidWorks enclosure package</div>
         <div class="stat"><strong>12</strong>Initial engineering requirements</div>
         <div class="stat"><strong>12</strong>Native CAD files across V1/V2</div>
-        <div class="stat"><strong>22</strong>STEP/STL export files across V1/V2</div>
+        <div class="stat"><strong>1</strong>Abaqus concept FEA load case</div>
       </div>
 
       <section class="split">
@@ -49,7 +49,7 @@
             <li>The model now makes the sealing path, fastening path, strap-mount path and service-access path visible.</li>
             <li>Proteus will be used for electronics architecture, not a final PCB release.</li>
             <li>Keil / embedded C will show firmware state-machine thinking once the MCU target is fixed.</li>
-            <li>Abaqus will be used for focused strap-mount and corner-load FEA after geometry exists.</li>
+            <li>Abaqus is used for a completed concept strap-mount pull load case, with corner-load FEA planned next.</li>
           </ul>
         </div>
         <aside class="panel">
@@ -95,6 +95,37 @@
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/requirements_matrix.csv">Requirements matrix</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/dfmea_seed.csv">DFMEA seed</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/toolchain_plan.md">Toolchain plan</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Abaqus Strap-Mount FEA</h2>
+        <p>
+          A concept Abaqus 2025 load case was added for the rear strap-mount lugs. The simplified model applies a
+          150 N total strap pull, split across the two lug holes, using a PC-ABS concept material and C3D10 solid mesh.
+        </p>
+        <div class="stats">
+          <div class="stat"><strong>150 N</strong>Total strap pull load</div>
+          <div class="stat"><strong>1.57 MPa</strong>Maximum von Mises stress</div>
+          <div class="stat"><strong>0.010 mm</strong>Maximum displacement</div>
+          <div class="stat"><strong>25.47</strong>Concept yield ratio</div>
+        </div>
+        <div class="split">
+          <div>
+            <img class="project-image" src="../assets/images/strap_lug_mises_contour_v1.png" alt="Abaqus von Mises stress contour for strap-mount lug concept">
+          </div>
+          <div>
+            <img class="project-image" src="../assets/images/strap_lug_displacement_contour_v1.png" alt="Abaqus displacement contour for strap-mount lug concept">
+          </div>
+        </div>
+        <p>
+          This is early concept FEA: the geometry, support boundary and material values are simplified. It is useful
+          design evidence for load-path thinking, not a certified safety factor or physical validation result.
+        </p>
+        <div class="actions">
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/fea/abaqus/strap_lug_static_v1">FEA output folder</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/strap_lug_static_v1/strap_lug_fea_report_v1.md">FEA report</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/scripts/build_abaqus_strap_lug_fea_v1.py">Abaqus script</a>
         </div>
       </section>
     </main>
