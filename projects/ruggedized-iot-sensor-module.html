@@ -19,12 +19,12 @@
     </header>
 
     <main class="project-main">
-      <p class="eyebrow">Product engineering CAD V2</p>
+      <p class="eyebrow">Hardware product engineering release package</p>
       <h1>Ruggedized Outdoor IoT Sensor Module</h1>
       <p class="lead">
         A hardware/product engineering portfolio project: detailed SolidWorks enclosure CAD V2, rugged
         package architecture, DFM planning, reliability test strategy, electronics architecture in Proteus,
-        firmware planning in Keil/embedded C, and Abaqus validation evidence.
+        firmware planning in Keil/embedded C, Abaqus validation evidence and a concept engineering release pack.
       </p>
 
       <img class="project-image" src="../assets/images/iot_sensor_module_exploded_v2.png" alt="Detailed SolidWorks exploded assembly of a ruggedized outdoor IoT sensor module">
@@ -33,7 +33,7 @@
         <div class="stat"><strong>CAD V2</strong>Detailed SolidWorks enclosure package</div>
         <div class="stat"><strong>12</strong>Initial engineering requirements</div>
         <div class="stat"><strong>12</strong>Native CAD files across V1/V2</div>
-        <div class="stat"><strong>1</strong>Abaqus concept FEA load case</div>
+        <div class="stat"><strong>1</strong>Concept release package</div>
       </div>
 
       <section class="split">
@@ -55,9 +55,9 @@
         <aside class="panel">
           <h2>Evidence Boundary</h2>
           <p>
-            This page currently shows planning documents and SolidWorks concept CAD V1/V2. It does not claim
+            This page shows planning documents, SolidWorks concept CAD V1/V2, Abaqus concept FEA,
+            electronics/firmware architecture and a concept engineering release package. It does not claim
             an IP rating, physical test data, production readiness, final PCB design or validated firmware.
-            Those evidence items will be added only after the corresponding work is completed.
           </p>
         </aside>
       </section>
@@ -160,6 +160,48 @@
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/firmware/keil/iot_sensor_module_mdk">Keil firmware package</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus">Proteus architecture</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/electronics_firmware_integration.md">Integration note</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Engineering Release Package</h2>
+        <p>
+          A concept release package was added to make the project read like an engineering deliverable rather than
+          only a modelling exercise. It includes drawing sheets, V2 BOM, DFM review, assembly instruction and a
+          verification matrix that separates completed evidence from future physical validation.
+        </p>
+        <div class="split">
+          <div>
+            <img class="project-image" src="../assets/images/iot_sensor_module_v2_dimensioned_overview.svg" alt="Concept dimensioned overview drawing for the ruggedized IoT sensor module">
+          </div>
+          <div>
+            <img class="project-image" src="../assets/images/iot_sensor_module_v2_assembly_callouts.svg" alt="Concept assembly callout drawing for the ruggedized IoT sensor module">
+          </div>
+        </div>
+        <div class="split">
+          <div class="panel">
+            <h3>Release Contents</h3>
+            <ul class="detail-list">
+              <li>Drawing register with dimensioned overview and assembly callout sheets.</li>
+              <li>V2 concept BOM linked to current evidence and next actions.</li>
+              <li>DFM checklist covering gasket compression, bosses, strap lugs, service port and cable gland.</li>
+              <li>Assembly work instruction for gasket, PCB, battery, lid and service-port checks.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Validation Control</h3>
+            <ul class="detail-list">
+              <li>Verification matrix traces CAD, FEA, firmware and electronics evidence to requirements.</li>
+              <li>Physical pull, spray, drop and thermal tests are clearly marked as future work.</li>
+              <li>Evidence gap register was updated so the project does not overclaim maturity.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/engineering_release_package.md">Release package note</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/drawings">Drawing package</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/dfm_checklist.md">DFM checklist</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/verification_validation_matrix.csv">Verification matrix</a>
         </div>
       </section>
     </main>
