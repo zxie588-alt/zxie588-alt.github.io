@@ -24,55 +24,70 @@
     <main>
       <section class="hero">
         <div>
-          <p class="eyebrow">Mechanical Engineering Portfolio</p>
-          <h1>HVAC, simulation and systems engineering.</h1>
+          <p class="eyebrow">Selected engineering work | Auckland</p>
+          <h1>Real tools. Real work.</h1>
           <p class="lead">
-            I turn open-ended engineering problems into requirements, assumptions, models, calculations,
-            trade-offs and defensible decisions. My portfolio connects New Zealand building-services work
-            with CFD, FEA and systems engineering leadership.
+            I am a University of Auckland mechanical engineering master's student building a portfolio around
+            CAD, FEA, CFD, HVAC and systems engineering. The work is shown through real software screenshots,
+            exported results, source files and clear notes about what is still unfinished.
           </p>
           <div class="actions">
-            <a class="button" href="#projects">View projects</a>
+            <a class="button" href="#projects">Open the project shelf</a>
             <a class="button secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=zxie588@aucklanduni.ac.nz&su=Engineering%20internship%20opportunity">Email me</a>
           </div>
         </div>
-        <aside class="hero-panel" aria-label="Profile summary">
-          <h2>Current focus</h2>
-          <ul class="quick-list">
-            <li>University of Auckland Mechanical Engineering master's candidate.</li>
-            <li>Interested in mechanical, simulation, thermal, HVAC and building services internships.</li>
-            <li>Eligible for full-time work during scheduled university vacations under current student visa conditions.</li>
-            <li>Project lead experience in aerospace systems engineering.</li>
-          </ul>
-        </aside>
+        <figure class="hero-shot">
+          <img src="assets/images/cover_iot_module_closeup.png" alt="Close-up render-style crop of ruggedized IoT sensor module assembly">
+          <figcaption>
+            Close-up model view for the cover. Full software-window screenshots are kept inside the case studies.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="proof-strip" aria-label="Portfolio evidence standard">
+        <div>
+          <span>01</span>
+          <strong>Real software screenshots</strong>
+          <p>SolidWorks, Keil, ANSYS/Abaqus exports and source files are shown before claims.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <strong>Case-study rhythm</strong>
+          <p>Each project opens with a strong visual, then role, method, evidence and limits.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>Honest gaps</strong>
+          <p>Empty Proteus, missing PCB layout and PLC screenshots are marked as next work.</p>
+        </div>
       </section>
 
       <section class="section" id="projects">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Project preview deck</p>
-            <h2>Selected Projects</h2>
+            <p class="eyebrow">Project shelf</p>
+            <h2>Flip through the work</h2>
           </div>
-          <p class="muted">Flip through the project previews, then open a case study for evidence screenshots, source files and boundaries.</p>
+          <p class="muted">Large thumbnails, short captions, real source files. Decorative previews are removed unless they are clearly marked as placeholders.</p>
         </div>
 
         <div class="project-deck" data-carousel>
           <button class="deck-control prev" type="button" data-carousel-prev aria-label="Previous project">‹</button>
           <div class="project-track" data-carousel-track>
             <a class="project-slide" href="projects/ruggedized-iot-sensor-module.html">
-              <img src="assets/images/iot_project_evidence_overview_v1.png" alt="Preview collage for ruggedized IoT sensor module project">
+              <img src="assets/images/cover_iot_module_closeup.png" alt="Close-up view of ruggedized IoT sensor module project">
               <div class="slide-copy">
                 <p class="eyebrow">Hardware product engineering</p>
                 <h3>Ruggedized Outdoor IoT Sensor Module</h3>
-                <p>CAD, FEA, PCB concept, Keil STM32L4 path, PLC validation fixture and release package evidence.</p>
+                <p>SolidWorks assembly views, Keil source screenshot, Abaqus exports and an honest list of missing PCB/PLC evidence.</p>
               </div>
             </a>
             <a class="project-slide" href="projects/nz-home-ventilation.html">
-              <img src="assets/images/nz_home_ventilation_isometric.png" alt="Preview of NZ home ventilation system model">
+              <img src="assets/images/cover_nz_ventilation_closeup.png" alt="Close-up view of NZ home ventilation system model">
               <div class="slide-copy">
                 <p class="eyebrow">Main NZ building services project</p>
                 <h3>Smart NZ Home MVHR / ERV Ventilation System</h3>
-                <p>NZBC context, airflow sizing, commissioning plan, test-rig modelling and digital twin dashboard.</p>
+                <p>SolidWorks ventilation layout screenshots, airflow sizing, commissioning plan and NZ building-services context.</p>
               </div>
             </a>
             <a class="project-slide" href="projects/front-wing.html">
@@ -84,11 +99,19 @@
               </div>
             </a>
             <a class="project-slide" href="projects/orbital-ai-data-centre.html">
-              <img src="assets/images/orbital_ai_data_centre_preview.png" alt="Preview of orbital AI data centre systems engineering study">
+              <img src="assets/images/real_orbital_architecture_page.png" alt="Architecture page from orbital AI data centre feasibility study">
               <div class="slide-copy">
                 <p class="eyebrow">Systems engineering leadership</p>
                 <h3>Orbital AI Data Centre Feasibility Study</h3>
-                <p>Stakeholders, architecture trades, budgets, risk, verification gates and technical leadership.</p>
+                <p>Architecture, stakeholder logic, requirements, risk and verification gates from the actual study material.</p>
+              </div>
+            </a>
+            <a class="project-slide" href="projects/solar-chimney.html">
+              <img src="assets/images/real_solar_chimney_cfd_results_page.png" alt="ANSYS Fluent CFD result page for solar chimney project">
+              <div class="slide-copy">
+                <p class="eyebrow">CFD and heat transfer</p>
+                <h3>Solar Chimney CFD Reproduction</h3>
+                <p>Real ANSYS result page showing temperature and velocity-field sensitivity checks.</p>
               </div>
             </a>
           </div>
@@ -99,28 +122,27 @@
         <h2 class="subsection-title">All Project Case Studies</h2>
         <div class="project-grid">
           <a class="project-card featured" href="projects/ruggedized-iot-sensor-module.html">
-            <img src="assets/images/iot_project_evidence_overview_v1.png" alt="Preview collage for ruggedized outdoor IoT sensor module">
+            <img src="assets/images/cover_iot_module_closeup.png" alt="Close-up view of ruggedized outdoor IoT sensor module">
             <div class="card-body">
               <p class="eyebrow">Hardware product engineering</p>
               <h3>Ruggedized Outdoor IoT Sensor Module</h3>
               <p class="muted">
-                SolidWorks enclosure, Abaqus FEA, Proteus-ready schematic package, PCB concept layout, Keil/uVision STM32L4 path,
-                PLC validation fixture logic, thermal simulation, DFM, BOM, inspection-control drawings and validation matrix.
+                SolidWorks enclosure and exploded assembly, Abaqus concept load cases, Keil/uVision firmware source,
+                release notes, DFM thinking and a clear screenshot gap list for PCB/PLC work.
               </p>
               <div class="tags">
                 <span class="tag">SolidWorks</span>
                 <span class="tag">Abaqus</span>
-                <span class="tag">PCB</span>
-                <span class="tag">PLC</span>
+                <span class="tag">PCB concept</span>
+                <span class="tag">PLC concept</span>
                 <span class="tag">Keil</span>
-                <span class="tag">Proteus</span>
                 <span class="tag">DFM</span>
               </div>
             </div>
           </a>
 
           <a class="project-card" href="projects/nz-home-ventilation.html">
-            <img src="assets/images/nz_home_ventilation_isometric.png" alt="3D CAD layout of a residential ventilation system">
+            <img src="assets/images/cover_nz_ventilation_closeup.png" alt="Close-up view of residential ventilation system">
             <div class="card-body">
               <p class="eyebrow">Main NZ building services project</p>
               <h3>Smart NZ Home MVHR / ERV Ventilation System</h3>
@@ -140,7 +162,7 @@
           </a>
 
           <a class="project-card" href="projects/solar-chimney.html">
-            <img src="assets/images/solar_chimney_preview.png" alt="Preview of solar chimney CFD heat transfer workflow">
+            <img src="assets/images/real_solar_chimney_cfd_results_page.png" alt="ANSYS CFD result page for solar chimney project">
             <div class="card-body">
               <p class="eyebrow">CFD and heat transfer</p>
               <h3>Solar Chimney CFD Reproduction</h3>
@@ -170,7 +192,7 @@
           </a>
 
           <a class="project-card" href="projects/orbital-ai-data-centre.html">
-            <img src="assets/images/orbital_ai_data_centre_preview.png" alt="Preview of orbital AI data centre systems engineering study">
+            <img src="assets/images/real_orbital_architecture_page.png" alt="Architecture page from orbital AI data centre study">
             <div class="card-body">
               <p class="eyebrow">Systems engineering leadership</p>
               <h3>Orbital AI Data Centre Feasibility Study</h3>
@@ -183,8 +205,11 @@
             </div>
           </a>
 
-          <a class="project-card" href="projects/dynamic-weighing.html">
-            <img src="assets/images/dynamic_weighing_preview.png" alt="Preview of dynamic livestock weighing embedded sensing project">
+          <a class="project-card no-image" href="projects/dynamic-weighing.html">
+            <div class="placeholder-shot">
+              <span>Older project</span>
+              <strong>real hardware / code screenshot needed</strong>
+            </div>
             <div class="card-body">
               <p class="eyebrow">Earlier mechatronics project</p>
               <h3>Dynamic Livestock Weighing System</h3>
@@ -197,8 +222,11 @@
             </div>
           </a>
 
-          <a class="project-card" href="projects/smart-pill-box.html">
-            <img src="assets/images/smart_pill_box_preview.png" alt="Preview of smart pill box mechatronics project">
+          <a class="project-card no-image" href="projects/smart-pill-box.html">
+            <div class="placeholder-shot">
+              <span>Older project</span>
+              <strong>real PCB / prototype screenshot needed</strong>
+            </div>
             <div class="card-body">
               <p class="eyebrow">Mechatronics product concept</p>
               <h3>Smart Pill Box</h3>

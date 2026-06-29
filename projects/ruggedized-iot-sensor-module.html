@@ -23,21 +23,25 @@
       <h1>Ruggedized Outdoor IoT Sensor Module</h1>
       <p class="lead">
         A hardware/product engineering portfolio project: detailed SolidWorks enclosure CAD V2, rugged
-        package architecture, DFM planning, reliability test strategy, electronics architecture in Proteus,
-        PCB concept layout, PLC validation-fixture logic, firmware target build and STM32L4 device-pack evidence
-        in Keil/embedded C, Abaqus validation evidence, thermal exposure simulation
-        and a concept engineering release pack.
+        package architecture, DFM planning, reliability test strategy, firmware source in Keil/uVision,
+        Abaqus validation exports, thermal exposure simulation and a concept engineering release pack.
+        PCB and PLC work remain concept packages until real native-tool screenshots or hardware tests are added.
       </p>
 
-      <img class="project-image" src="../assets/images/iot_project_evidence_overview_v1.png" alt="Evidence overview for ruggedized outdoor IoT sensor module project">
+      <img class="project-image" src="../assets/images/cover_iot_module_closeup.png" alt="Close-up view of the ruggedized outdoor IoT sensor module assembly">
+
+      <div class="image-grid">
+        <img src="../assets/images/real_iot_solidworks_side_view.png" alt="Side-view SolidWorks screenshot of the ruggedized IoT assembly">
+        <img src="../assets/images/real_iot_solidworks_lid_detail.png" alt="SolidWorks close-up screenshot showing lid and gasket detail">
+      </div>
 
       <div class="stats">
         <div class="stat"><strong>CAD V2</strong>Detailed SolidWorks enclosure package</div>
         <div class="stat"><strong>12</strong>Initial engineering requirements</div>
         <div class="stat"><strong>12</strong>Native CAD files across V1/V2</div>
         <div class="stat"><strong>3</strong>Abaqus concept FEA load cases</div>
-        <div class="stat"><strong>PCB</strong>2-layer concept layout package</div>
-        <div class="stat"><strong>PLC</strong>Validation fixture control logic</div>
+        <div class="stat"><strong>Keil</strong>Real source-code screenshot</div>
+        <div class="stat"><strong>Next</strong>PCB/PLC need real native screenshots</div>
       </div>
 
       <section class="split">
@@ -51,8 +55,7 @@
           <ul class="detail-list">
             <li>SolidWorks CAD V2 includes detailed lower enclosure, upper lid, gasket, PCB placeholder, battery placeholder and exploded assembly.</li>
             <li>The model now makes the sealing path, fastening path, strap-mount path and service-access path visible.</li>
-            <li>Proteus-ready schematic evidence maps candidate components, power rails, net ownership, firmware pins and mechanical interfaces.</li>
-            <li>A native Proteus 8.13 project container is now verified with ROOT.DSN, PROJECT.XML, manifest and verification report.</li>
+            <li>Electronics work is currently a documented concept package; the Proteus file opens but is not populated enough to use as evidence.</li>
             <li>Keil / embedded C now includes a state machine, pin map, startup file, scatter file and clean uVision ARMCM3 target build.</li>
             <li>Abaqus is used for completed strap-mount pull, enclosure corner-load and screw-boss compression concept load cases.</li>
             <li>Thermal exposure simulation identifies sealed-enclosure overheating risk and design actions before prototype testing.</li>
@@ -62,9 +65,9 @@
           <h2>Evidence Boundary</h2>
           <p>
             This page shows planning documents, SolidWorks concept CAD V1/V2, three Abaqus concept FEA load cases,
-            electronics/firmware architecture, low-power MCU device-pack readiness and a concept engineering release package.
-            It does not claim an IP rating, physical test data, production readiness, final PCB design or validated firmware.
-            A separate software-completion boundary note explains which remaining items require hardware, supplier review or native-tool work.
+            firmware architecture, low-power MCU device-pack readiness and a concept engineering release package.
+            It does not claim an IP rating, physical test data, production readiness, final PCB design, commissioned PLC logic
+            or validated firmware. The screenshot gallery below only shows real tool output I could open or export on this machine.
           </p>
         </aside>
       </section>
@@ -86,7 +89,7 @@
             <h3>Engineering Definition</h3>
             <ul class="detail-list">
               <li>Requirements matrix covering enclosure, sealing, mounting, electronics, firmware and validation.</li>
-              <li>System architecture linking mechanical design, Proteus electronics, Keil firmware and validation fixtures.</li>
+              <li>System architecture linking mechanical design, firmware boundaries and validation fixtures.</li>
               <li>Initial DFMEA for gasket, strap mount, screw boss, service port, battery restraint, thermal risk and assembly error.</li>
               <li>CAD design log documenting current limitations and next modelling tasks.</li>
             </ul>
@@ -202,8 +205,8 @@
       <section class="section">
         <h2>Electronics + Firmware Architecture</h2>
         <p>
-          The project now links the mechanical enclosure to a Proteus-ready electronics package, native Proteus project container,
-          Keil/uVision firmware target build, STM32L4 low-power device-pack audit, PCB concept layout package
+          The project links the mechanical enclosure to a Keil/uVision firmware project,
+          STM32L4 low-power device-pack audit and PCB concept package
           and candidate MCU porting plan. The current evidence covers component candidates, connection-level
           net ownership, power-budget assumptions, state-machine behaviour, battery/sensor fault handling
           and the sealed service/debug interface.
@@ -214,9 +217,8 @@
           <div class="panel">
             <h3>Electronics Evidence</h3>
             <ul class="detail-list">
-              <li>Proteus-ready schematic package for MCU, I2C sensor, battery monitor, regulator, LEDs, SWD service header and UART radio boundary.</li>
-              <li>Native Proteus 8.13 `.pdsprj` project container verified with ROOT.DSN, ROOT.CDB, PROJECT.XML, SHA256 manifest and verification report.</li>
-              <li>PCB concept package includes board-level BOM, netlist, placement plan, stackup, DRC-style review and concept manufacturing outputs.</li>
+              <li>Proteus is not used as visual evidence here because the current `.pdsprj` opens to an empty schematic canvas.</li>
+              <li>PCB concept package includes board-level BOM, netlist, placement plan, stackup and DRC-style review, but not a native EDA layout screenshot.</li>
               <li>Connection-level netlist linking each electrical signal to firmware ownership, mechanical packaging and validation intent.</li>
               <li>Candidate component table and early power budget for sleep, sample/filter, transmit-boundary, low-battery and service modes.</li>
               <li>Mechanical links to PCB envelope, battery restraint, sealed service/debug port and sensor membrane opening.</li>
@@ -244,10 +246,8 @@
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/stm32l432_candidate_pinout_v1.csv">STM32L432 pinout</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/stm32l432_porting_plan_v1.md">Porting plan</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/pcb_concept_v1">PCB concept package</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/pcb_concept_v1/drc_clearance_review_v1.md">PCB DRC review</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/schematic_v1">Schematic package</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/native_capture_v1">Native Proteus project</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/native_capture_v1/proteus_native_project_verification_v1.md">Proteus verification</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/pcb_concept_v1/drc_clearance_review_v1.md">PCB DRC-style review</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/schematic_v1">Concept schematic notes</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/schematic_netlist_v1.csv">Netlist</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/power_budget_v1.csv">Power budget</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/electronics_firmware_integration.md">Integration note</a>
@@ -255,44 +255,43 @@
       </section>
 
       <section class="section">
-        <h2>Software Evidence Screenshots</h2>
+        <h2>Real Tool Screenshots and Exports</h2>
         <p>
-          This gallery is designed for quick portfolio review: it shows the PCB concept layout, schematic structure,
-          DRC-style review, Proteus evidence, Keil build evidence and PLC validation-fixture logic in one place.
+          This gallery only uses screenshots or exports from actual files on my computer. I removed the drawn PCB/PLC mock screenshots
+          because they looked polished but did not prove native-software work.
         </p>
         <div class="evidence-gallery">
           <figure class="evidence-shot">
-            <img src="../assets/images/pcb_layout_top_v1.png" alt="PCB layout concept screenshot for ruggedized IoT sensor module">
-            <figcaption>PCB concept layout showing STM32L432 placement, connectors, route intent, mounting holes and keepouts.</figcaption>
+            <img src="../assets/images/real_iot_solidworks_exploded_overview.png" alt="SolidWorks assembly screenshot for ruggedized IoT sensor module">
+            <figcaption>SolidWorks Premium 2018 screenshot with the exploded assembly and feature tree visible.</figcaption>
           </figure>
           <figure class="evidence-shot">
-            <img src="../assets/images/pcb_schematic_capture_v1.png" alt="Electronics schematic concept screenshot">
-            <figcaption>Electronics schematic concept linking battery, regulator, MCU, sensor, LEDs, SWD and radio boundary.</figcaption>
+            <img src="../assets/images/real_iot_solidworks_lid_detail.png" alt="SolidWorks close-up screenshot for ruggedized IoT sensor module">
+            <figcaption>SolidWorks close-up showing lid, gasket path, internal stack-up and selected geometry.</figcaption>
           </figure>
           <figure class="evidence-shot">
-            <img src="../assets/images/pcb_drc_summary_v1.png" alt="PCB DRC-style review screenshot">
-            <figcaption>DRC-style clearance review for concept board rules, keepouts and native-EDA boundary.</figcaption>
+            <img src="../assets/images/real_keil_code_editor.png" alt="Keil uVision source code screenshot for ruggedized IoT sensor module firmware">
+            <figcaption>Keil/uVision screenshot with project tree, source tabs and embedded C logic visible.</figcaption>
           </figure>
           <figure class="evidence-shot">
-            <img src="../assets/images/proteus_project_evidence_v1.png" alt="Proteus native project verification screenshot">
-            <figcaption>Proteus native project container evidence and schematic package traceability.</figcaption>
+            <img src="../assets/images/strap_lug_mises_contour_v1.png" alt="Abaqus von Mises export for strap lug load case">
+            <figcaption>Abaqus/Standard export for the 150 N strap-lug concept load case.</figcaption>
           </figure>
           <figure class="evidence-shot">
-            <img src="../assets/images/keil_build_evidence_v1.png" alt="Keil ARMCLANG build evidence screenshot">
-            <figcaption>Keil/uVision concept target build evidence: source files, startup assembly and 0-error/0-warning result.</figcaption>
+            <img src="../assets/images/corner_load_mises_contour_v1.png" alt="Abaqus von Mises export for corner-load load case">
+            <figcaption>Abaqus/Standard export for the enclosure corner-load concept screen.</figcaption>
           </figure>
           <figure class="evidence-shot">
-            <img src="../assets/images/plc_ladder_logic_v1.png" alt="PLC ladder logic concept screenshot">
-            <figcaption>PLC ladder-style validation fixture logic for safety permissives, spray, thermal and fault handling.</figcaption>
+            <img src="../assets/images/screw_boss_mises_contour_v1.png" alt="Abaqus von Mises export for screw boss load case">
+            <figcaption>Abaqus/Standard export for the screw-boss compression concept screen.</figcaption>
           </figure>
           <figure class="evidence-shot">
-            <img src="../assets/images/plc_hmi_fixture_v1.png" alt="PLC HMI fixture screen concept">
-            <figcaption>HMI concept for operator cycle control, recipe timing, logger status and alarm history.</figcaption>
+            <img src="../assets/images/real_iot_solidworks_side_view.png" alt="Side-view SolidWorks screenshot for ruggedized IoT sensor module">
+            <figcaption>Side-view SolidWorks screenshot showing the exploded spacing and component stack-up.</figcaption>
           </figure>
-          <figure class="evidence-shot">
-            <img src="../assets/images/plc_sequence_timeline_v1.png" alt="PLC fixture sequence timeline screenshot">
-            <figcaption>Fixture sequence map from idle to precheck, spray, thermal, cooldown, complete and fault.</figcaption>
-          </figure>
+        </div>
+        <div class="honest-note">
+          <p><strong>Still needs real screenshots:</strong> populated Proteus or other EDA schematic, native PCB layout/DRC in a real EDA tool, and PLC ladder/HMI in a real PLC environment. The current Proteus file is not useful evidence because it opens blank.</p>
         </div>
         <div class="actions">
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/pcb_concept_v1">PCB evidence folder</a>
