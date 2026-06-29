@@ -24,68 +24,70 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div>
-          <p class="eyebrow">Selected engineering work | Auckland</p>
-          <h1>Real tools. Real people. Real work.</h1>
+      <section class="hero editorial-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Ricardo Xie / Auckland</p>
+          <h1>Mechanical projects I can actually show.</h1>
           <p class="lead">
-            I am a University of Auckland mechanical engineering master's student building a portfolio around
-            CAD, FEA, CFD, HVAC, hands-on manufacturing, project leadership and visual communication.
-            The work is shown through real software screenshots, exported results, source files, workshop
-            photos, team evidence and clear notes about what is still unfinished.
+            I am looking for internship work in mechanical design, building services, simulation,
+            manufacturing or project engineering. I like projects where I can point to the model,
+            the result and the decision behind it, so this site keeps the evidence close to the story.
           </p>
           <div class="hero-mini-tags" aria-label="Core working modes">
-            <span>Design</span>
-            <span>Model</span>
-            <span>Simulate</span>
-            <span>Build</span>
-            <span>Explain</span>
+            <span>CAD</span>
+            <span>FEA / CFD</span>
+            <span>HVAC</span>
+            <span>Workshop</span>
+            <span>Team lead</span>
           </div>
           <div class="actions">
-            <a class="button" href="#projects">Open the project shelf</a>
+            <a class="button" href="#projects">View projects</a>
             <a class="button secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=zxie588@aucklanduni.ac.nz&su=Engineering%20internship%20opportunity">Email me</a>
           </div>
         </div>
-        <figure class="hero-models">
-          <div class="model-frame primary-model">
-            <img src="assets/images/cover_iot_module_closeup.png" alt="Close-up crop of ruggedized IoT sensor module assembly">
-            <span>Product CAD</span>
-          </div>
-          <div class="model-frame">
-            <img src="assets/images/cover_nz_ventilation_closeup.png" alt="Close-up crop of NZ home ventilation system model">
-            <span>Building services CAD</span>
-          </div>
-          <figcaption>
-            Two main modelling anchors: a ruggedized IoT enclosure and a smart NZ home ventilation system.
-          </figcaption>
-        </figure>
+        <div class="hero-showcase" aria-label="Featured modelling projects">
+          <a class="showcase-card" href="projects/ruggedized-iot-sensor-module.html">
+            <img src="assets/images/cover_iot_module_closeup.png" alt="Ruggedized IoT sensor module CAD model">
+            <div>
+              <span>01 / Product CAD</span>
+              <strong>Ruggedized IoT sensor module</strong>
+            </div>
+          </a>
+          <a class="showcase-card" href="projects/nz-home-ventilation.html">
+            <img src="assets/images/cover_nz_ventilation_closeup.png" alt="NZ home ventilation CAD model">
+            <div>
+              <span>02 / Building services CAD</span>
+              <strong>Smart NZ home ventilation system</strong>
+            </div>
+          </a>
+        </div>
       </section>
 
-      <section class="proof-strip" aria-label="Portfolio evidence standard">
+      <section class="proof-strip" aria-label="What this portfolio focuses on">
         <div>
           <span>01</span>
-          <strong>Real software screenshots</strong>
-          <p>SolidWorks, AutoCAD, Keil, ANSYS/Abaqus exports and source files are shown before claims.</p>
+          <strong>Models first</strong>
+          <p>SolidWorks, Abaqus, CFD and AutoCAD work are shown with real screenshots or exported results.</p>
         </div>
         <div>
           <span>02</span>
-          <strong>People-facing leadership</strong>
-          <p>Project leadership, small-group explanations and media work are documented beside technical projects.</p>
+          <strong>Useful in a team</strong>
+          <p>I usually become the person who organises the work, explains the idea and keeps the group moving.</p>
         </div>
         <div>
           <span>03</span>
-          <strong>Evidence discipline</strong>
-          <p>Primary case studies show native tool evidence first; concept-only items are kept separate and clearly scoped.</p>
+          <strong>Not only coursework</strong>
+          <p>Workshop photos, factory exposure, leadership and photography sit beside the engineering case studies.</p>
         </div>
       </section>
 
       <section class="section" id="projects">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Project shelf</p>
-            <h2>Flip through the work</h2>
+            <p class="eyebrow">Selected case studies</p>
+            <h2>Start with these</h2>
           </div>
-          <p class="muted">Large thumbnails, short captions, real source files. Concept-only work uses simple text cards instead of fake software images.</p>
+          <p class="muted">The strongest projects are up front. Older work stays lower on the page, where it adds background without pretending to be the main story.</p>
         </div>
 
         <div class="project-deck" data-carousel>
@@ -96,7 +98,7 @@
               <div class="slide-copy">
                 <p class="eyebrow">Hardware product engineering</p>
                 <h3>Ruggedized Outdoor IoT Sensor Module</h3>
-                <p>SolidWorks assembly views, Keil source screenshot, Abaqus exports and a clear validation plan for electronics and controls.</p>
+                <p>A compact enclosure project with CAD, FEA, firmware structure and practical notes on what still needs physical validation.</p>
               </div>
             </a>
             <a class="project-slide" href="projects/nz-home-ventilation.html">
@@ -104,7 +106,7 @@
               <div class="slide-copy">
                 <p class="eyebrow">Main NZ building services project</p>
                 <h3>Smart NZ Home MVHR / ERV Ventilation System</h3>
-                <p>SolidWorks ventilation layout screenshots, airflow sizing, commissioning plan and NZ building-services context.</p>
+                <p>A New Zealand residential ventilation concept, built around airflow sizing, commissioning thinking and a visible CAD layout.</p>
               </div>
             </a>
             <a class="project-slide" href="projects/front-wing.html">
@@ -112,7 +114,7 @@
               <div class="slide-copy">
                 <p class="eyebrow">FEA and composites</p>
                 <h3>Composite Formula SAE Front Wing</h3>
-                <p>Composite laminate FEA with load-case definition, mesh refinement and mass-driven iteration.</p>
+                <p>Composite wing analysis with load cases, mesh choices and mass-driven iteration.</p>
               </div>
             </a>
             <a class="project-slide" href="projects/orbital-ai-data-centre.html">
@@ -120,7 +122,7 @@
               <div class="slide-copy">
                 <p class="eyebrow">Systems engineering leadership</p>
                 <h3>Orbital AI Data Centre Feasibility Study</h3>
-                <p>Architecture, stakeholder logic, requirements, risk and verification gates from the actual study material.</p>
+                <p>The project where my leadership mattered most: requirements, architecture trades, risk and verification logic.</p>
               </div>
             </a>
             <a class="project-slide" href="projects/solar-chimney.html">
@@ -128,7 +130,7 @@
               <div class="slide-copy">
                 <p class="eyebrow">CFD and heat transfer</p>
                 <h3>Solar Chimney CFD Reproduction</h3>
-                <p>Real ANSYS result page showing temperature and velocity-field sensitivity checks.</p>
+                <p>A CFD reproduction project focused on heat transfer, buoyancy and checking whether the setup actually makes sense.</p>
               </div>
             </a>
           </div>
@@ -136,7 +138,7 @@
           <div class="deck-dots" data-carousel-dots aria-label="Project deck pages"></div>
         </div>
 
-        <h2 class="subsection-title">All Project Case Studies</h2>
+        <h2 class="subsection-title">More work</h2>
         <div class="project-grid">
           <a class="project-card featured" href="projects/ruggedized-iot-sensor-module.html">
             <img src="assets/images/cover_iot_module_closeup.png" alt="Close-up view of ruggedized outdoor IoT sensor module">
@@ -144,8 +146,8 @@
               <p class="eyebrow">Hardware product engineering</p>
               <h3>Ruggedized Outdoor IoT Sensor Module</h3>
               <p class="muted">
-                SolidWorks enclosure and exploded assembly, Abaqus concept load cases, Keil/uVision firmware source,
-                release notes, DFM thinking and a clear next-validation plan for PCB and PLC work.
+                The hardware project I want people to open first: enclosure CAD, load checks, firmware structure,
+                DFM notes and a realistic next-validation plan for electronics and controls.
               </p>
               <div class="tags">
                 <span class="tag">SolidWorks</span>
@@ -164,8 +166,8 @@
               <p class="eyebrow">Main NZ building services project</p>
               <h3>Smart NZ Home MVHR / ERV Ventilation System</h3>
               <p class="muted">
-                NZ residential MVHR/ERV case study covering system layout, G4/H1/Healthy Homes context,
-                airflow sizing, equipment selection, commissioning planning, sensor validation and a digital-twin dashboard.
+                A New Zealand-focused ventilation layout with airflow sizing, equipment choices, commissioning
+                thinking, sensor validation and a simple digital-twin dashboard.
               </p>
               <div class="tags">
                 <span class="tag">SolidWorks</span>
@@ -183,7 +185,7 @@
             <div class="card-body">
               <p class="eyebrow">CFD and heat transfer</p>
               <h3>Solar Chimney CFD Reproduction</h3>
-              <p class="muted">Conjugate heat-transfer CFD workflow with boundary-condition diagnosis, heat accounting and buoyancy validation.</p>
+              <p class="muted">Rebuilt a solar-chimney CFD setup closely enough to test the boundary conditions, heat balance and buoyancy behaviour.</p>
               <div class="tags">
                 <span class="tag">ANSYS Fluent</span>
                 <span class="tag">CFX</span>
@@ -198,7 +200,7 @@
             <div class="card-body">
               <p class="eyebrow">FEA and composites</p>
               <h3>Composite Formula SAE Front Wing</h3>
-              <p class="muted">Composite laminate FEA with load-case definition, mesh refinement, stress utilisation and mass-driven iteration.</p>
+              <p class="muted">Composite laminate analysis for a front wing, focused on loads, mesh choices, stress use and weight-driven iteration.</p>
               <div class="tags">
                 <span class="tag">Abaqus</span>
                 <span class="tag">Composite layup</span>
@@ -213,7 +215,7 @@
             <div class="card-body">
               <p class="eyebrow">Systems engineering leadership</p>
               <h3>Orbital AI Data Centre Feasibility Study</h3>
-              <p class="muted">Systems leadership across stakeholders, requirements, architecture trades, budgets, risk and verification gates.</p>
+              <p class="muted">The project where I led the structure of the work: stakeholders, requirements, architecture choices, risk and verification.</p>
               <div class="tags">
                 <span class="tag">Project lead</span>
                 <span class="tag">Requirements</span>
@@ -230,7 +232,7 @@
             <div class="card-body">
               <p class="eyebrow">Earlier mechatronics project</p>
               <h3>Dynamic Livestock Weighing System</h3>
-              <p class="muted">Sensor acquisition, embedded control and Bluetooth/serial data transmission for a patented weighing-system project.</p>
+              <p class="muted">Earlier embedded work using STM32, HX711 sensor acquisition and Bluetooth/serial data transmission.</p>
               <div class="tags">
                 <span class="tag">STM32</span>
                 <span class="tag">Sensors</span>
@@ -247,7 +249,7 @@
             <div class="card-body">
               <p class="eyebrow">Mechatronics product concept</p>
               <h3>Smart Pill Box</h3>
-              <p class="muted">Medication scheduling, alert logic, embedded-control planning and product interface thinking.</p>
+              <p class="muted">Earlier product idea around reminder logic, embedded-control planning and a clearer user flow for medication timing.</p>
               <div class="tags">
                 <span class="tag">Mechatronics</span>
                 <span class="tag">Embedded logic</span>
@@ -261,12 +263,12 @@
       <section class="section" id="experience">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Experience outside the CAD file</p>
-            <h2>Tools, teams, factories and cameras</h2>
+            <p class="eyebrow">Beyond the project pages</p>
+            <h2>Machines, teams and cameras</h2>
           </div>
           <p class="muted">
-            A more complete picture of how I work: hands-on manufacturing, lab testing, robotic control,
-            automotive structure exposure, student-team leadership and photography for people, events and stories.
+            These are the parts that make me easier to place in a real team: workshop practice,
+            lab tools, automotive structure exposure, student leadership and photography.
           </p>
         </div>
 
@@ -280,8 +282,8 @@
               <h3>Manufacturing Workshop Internship / Training</h3>
               <p>
                 AutoCAD DXF preparation for laser cutting, a real cut practice plate, CNC machining observation/practice
-                and machined gear/shaft examples. The 3D printing workflow is included as part of the experience scope,
-                with a photo still pending.
+                and machined gear/shaft examples. The 3D printing workflow is included as process exposure,
+                while the strongest evidence here is laser cutting and CNC machining.
               </p>
               <div class="tags">
                 <span class="tag">AutoCAD DXF</span>
@@ -304,8 +306,8 @@
               <p class="eyebrow">Lab, robotics and automotive exposure</p>
               <h3>Engineering Practice & Automotive Structure Training</h3>
               <p>
-                Mechanics testing tools, force-displacement result reading, robotic arm control practice and a car-factory
-                learning experience where I acted as a small-group lead explaining vehicle interior and structural systems.
+                Mechanics testing, force-displacement result reading, robotic arm control and a car-factory
+                training day where I helped explain vehicle interior and structural systems to my group.
               </p>
               <div class="tags">
                 <span class="tag">Mechanics testing</span>
@@ -327,8 +329,8 @@
               <p class="eyebrow">Communication and visual work</p>
               <h3>News Department Leadership & Photography</h3>
               <p>
-                Former news department lead, active photographer and volunteer-event storyteller. The gallery includes
-                team photos, volunteer/event coverage, landscape, portrait, graduation and film-still style work.
+                I used to lead a student news department, and I still shoot events, portraits, campus stories
+                and volunteer activities. It helps me document engineering work clearly instead of hiding it in folders.
               </p>
               <div class="tags">
                 <span class="tag">News department lead</span>
@@ -347,12 +349,12 @@
       <section class="section" id="education">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Education credentials</p>
-            <h2>Current study and verified undergraduate degree</h2>
+            <p class="eyebrow">Education</p>
+            <h2>Current study and degree documents</h2>
           </div>
           <p class="muted">
-            Public-web versions are redacted for privacy: student ID, birth date and certificate numbers are hidden,
-            while institution, degree context and student status remain visible.
+            I am showing public-safe versions here. Student ID, birth date and certificate numbers are hidden,
+            but the school and degree context are still visible.
           </p>
         </div>
 
@@ -362,8 +364,8 @@
               <p class="eyebrow">Current study</p>
               <h3>University of Auckland</h3>
               <p>
-                Master of Mechanical Engineering student in Auckland, New Zealand. Student identity proof is shown
-                with the ID number redacted for public sharing.
+                Master of Mechanical Engineering student in Auckland, New Zealand. The card is included
+                as a public-safe check of current study, with the ID number removed for privacy.
               </p>
               <div class="tags">
                 <span class="tag">University of Auckland</span>
@@ -379,8 +381,8 @@
               <p class="eyebrow">Undergraduate degree</p>
               <h3>Bachelor of Engineering, Mechatronic Engineering</h3>
               <p>
-                Huazhong Agricultural University, undergraduate study from 2021 to 2025. Graduation and bachelor
-                degree certificates are displayed as redacted credential evidence.
+                Huazhong Agricultural University, 2021 to 2025. The graduation and bachelor degree certificates
+                are shown in redacted form for public viewing.
               </p>
               <div class="tags">
                 <span class="tag">Bachelor of Engineering</span>
