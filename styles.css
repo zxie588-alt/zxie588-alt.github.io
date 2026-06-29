@@ -257,6 +257,51 @@ h3 {
   margin-bottom: 0;
 }
 
+.experience-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.experience-media {
+  display: block;
+  min-height: 420px;
+  background: var(--soft-2);
+}
+
+.experience-media:hover {
+  text-decoration: none;
+}
+
+.experience-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.experience-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px;
+  border-left: 4px solid var(--red);
+}
+
+.experience-copy h3 {
+  font-size: 30px;
+}
+
+.experience-copy p {
+  color: var(--muted);
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -558,6 +603,10 @@ h3 {
   background: var(--soft-2);
 }
 
+.evidence-shot.evidence-contain img {
+  object-fit: contain;
+}
+
 .evidence-shot figcaption {
   border-top: 1px solid var(--line);
   color: var(--muted);
@@ -701,6 +750,7 @@ h3 {
   .image-grid,
   .evidence-gallery,
   .project-slide,
+  .experience-feature,
   .proof-strip {
     grid-template-columns: 1fr;
   }
@@ -721,6 +771,16 @@ h3 {
 
   .project-deck {
     padding: 14px 14px 44px;
+  }
+
+  .experience-media,
+  .experience-media img {
+    min-height: 280px;
+  }
+
+  .experience-copy {
+    border-left: 0;
+    border-top: 4px solid var(--red);
   }
 
   .project-slide img,
@@ -773,6 +833,7 @@ h3 {
   .hero-shot,
   .project-deck,
   .project-card,
+  .experience-feature,
   .panel,
   .stat,
   .honest-note {
