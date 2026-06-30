@@ -23,7 +23,7 @@
       <h1>Ruggedized Outdoor IoT Sensor Module</h1>
       <p class="lead">
         A hardware/product engineering portfolio project focused on enclosure design, electronics packaging,
-        firmware boundaries, DFM planning and early validation logic. The strongest evidence is the SolidWorks
+        firmware boundaries, DFM notes and early validation logic. The strongest evidence is the SolidWorks
         CAD package, Abaqus screening cases, Keil/uVision firmware source and engineering release notes.
       </p>
 
@@ -52,7 +52,7 @@
           </div>
           <div class="snapshot-item">
             <span>Evidence status</span>
-            <strong>Concept package with clear next tests</strong>
+            <strong>Design package with clear next tests</strong>
             <p>Good for CAD/DFM/validation discussion; physical prototype, EDA layout and field tests remain next work.</p>
           </div>
           <div class="snapshot-item">
@@ -74,7 +74,7 @@
         <div class="stat"><strong>CAD V2</strong>Detailed SolidWorks enclosure package</div>
         <div class="stat"><strong>12</strong>Initial engineering requirements</div>
         <div class="stat"><strong>12</strong>Native CAD files across V1/V2</div>
-        <div class="stat"><strong>3</strong>Abaqus concept FEA load cases</div>
+        <div class="stat"><strong>3</strong>Abaqus screening load cases</div>
         <div class="stat"><strong>Keil</strong>Real source-code screenshot</div>
         <div class="stat"><strong>Next test</strong>Prototype, sealing, EDA layout and hardware validation</div>
       </div>
@@ -90,17 +90,17 @@
           <ul class="detail-list">
             <li>SolidWorks CAD V2 includes detailed lower enclosure, upper lid, gasket, PCB placeholder, battery placeholder and exploded assembly.</li>
             <li>The model now makes the sealing path, fastening path, strap-mount path and service-access path visible.</li>
-            <li>Electronics work is presented as a documented concept package with BOM, net ownership, power budget and firmware ownership notes.</li>
+            <li>Electronics work is presented as a documented design package with BOM, net ownership, power budget and firmware ownership notes.</li>
             <li>Keil / embedded C now includes a state machine, pin map, startup file, scatter file and clean uVision ARMCM3 target build.</li>
-            <li>Abaqus is used for completed strap-mount pull, enclosure corner-load and screw-boss compression concept load cases.</li>
+            <li>Abaqus is used for completed strap-mount pull, enclosure corner-load and screw-boss compression screening load cases.</li>
             <li>Thermal exposure simulation identifies sealed-enclosure overheating risk and design actions before prototype testing.</li>
           </ul>
         </div>
         <aside class="panel">
           <h2>Evidence Boundary</h2>
           <p>
-            This page shows planning documents, SolidWorks concept CAD V1/V2, three Abaqus concept FEA load cases,
-            firmware architecture, low-power MCU device-pack readiness and a concept engineering release package.
+            This page shows planning documents, SolidWorks CAD V1/V2, three Abaqus screening FEA load cases,
+            firmware architecture, low-power MCU device-pack readiness and an engineering release package.
             The boundary is clear: IP rating, physical test data, production readiness, final PCB design,
             commissioned PLC logic and validated firmware belong to the next hardware stage. The screenshot
             gallery below uses real tool output or exported project files.
@@ -147,25 +147,25 @@
       <section class="section">
         <h2>Abaqus Strap-Mount FEA</h2>
         <p>
-          A concept Abaqus 2025 load case was added for the rear strap-mount lugs. The simplified model applies a
-          150 N total strap pull, split across the two lug holes, using a PC-ABS concept material and C3D10 solid mesh.
+          A screening Abaqus 2025 load case was added for the rear strap-mount lugs. The simplified model applies a
+          150 N total strap pull, split across the two lug holes, using an assumed PC-ABS material and C3D10 solid mesh.
         </p>
         <div class="stats">
           <div class="stat"><strong>150 N</strong>Total strap pull load</div>
           <div class="stat"><strong>1.57 MPa</strong>Maximum von Mises stress</div>
           <div class="stat"><strong>0.010 mm</strong>Maximum displacement</div>
-          <div class="stat"><strong>25.47</strong>Concept yield ratio</div>
+          <div class="stat"><strong>25.47</strong>Screening yield ratio</div>
         </div>
         <div class="split">
           <div>
-            <img class="project-image" src="../assets/images/strap_lug_mises_contour_v1.png" alt="Abaqus von Mises stress contour for strap-mount lug concept">
+            <img class="project-image" src="../assets/images/strap_lug_mises_contour_v1.png" alt="Abaqus von Mises stress contour for strap-mount lug screening case">
           </div>
           <div>
-            <img class="project-image" src="../assets/images/strap_lug_displacement_contour_v1.png" alt="Abaqus displacement contour for strap-mount lug concept">
+            <img class="project-image" src="../assets/images/strap_lug_displacement_contour_v1.png" alt="Abaqus displacement contour for strap-mount lug screening case">
           </div>
         </div>
         <p>
-          This is early concept FEA: the geometry, support boundary and material values are simplified. It is useful
+          This is early screening FEA: the geometry, support boundary and material values are simplified. It is useful
           design evidence for load-path thinking, not a certified safety factor or physical validation result.
         </p>
         <div class="actions">
@@ -186,14 +186,14 @@
           <div class="stat"><strong>120 N</strong>Equivalent static corner load</div>
           <div class="stat"><strong>5.55 MPa</strong>Maximum von Mises stress</div>
           <div class="stat"><strong>0.021 mm</strong>Maximum displacement</div>
-          <div class="stat"><strong>7.21</strong>Concept yield ratio</div>
+          <div class="stat"><strong>7.21</strong>Screening yield ratio</div>
         </div>
         <div class="split">
           <div>
-            <img class="project-image" src="../assets/images/corner_load_mises_contour_v1.png" alt="Abaqus von Mises stress contour for enclosure corner-load concept">
+            <img class="project-image" src="../assets/images/corner_load_mises_contour_v1.png" alt="Abaqus von Mises stress contour for enclosure corner-load screening case">
           </div>
           <div>
-            <img class="project-image" src="../assets/images/corner_load_displacement_contour_v1.png" alt="Abaqus displacement contour for enclosure corner-load concept">
+            <img class="project-image" src="../assets/images/corner_load_displacement_contour_v1.png" alt="Abaqus displacement contour for enclosure corner-load screening case">
           </div>
         </div>
         <p>
@@ -217,14 +217,14 @@
           <div class="stat"><strong>90 N</strong>Equivalent screw clamp load</div>
           <div class="stat"><strong>1.20 MPa</strong>Maximum von Mises stress</div>
           <div class="stat"><strong>0.005 mm</strong>Maximum displacement</div>
-          <div class="stat"><strong>33.36</strong>Concept yield ratio</div>
+          <div class="stat"><strong>33.36</strong>Screening yield ratio</div>
         </div>
         <div class="split">
           <div>
-            <img class="project-image" src="../assets/images/screw_boss_mises_contour_v1.png" alt="Abaqus von Mises stress contour for screw-boss compression concept">
+            <img class="project-image" src="../assets/images/screw_boss_mises_contour_v1.png" alt="Abaqus von Mises stress contour for screw-boss compression screening case">
           </div>
           <div>
-            <img class="project-image" src="../assets/images/screw_boss_displacement_contour_v1.png" alt="Abaqus displacement contour for screw-boss compression concept">
+            <img class="project-image" src="../assets/images/screw_boss_displacement_contour_v1.png" alt="Abaqus displacement contour for screw-boss compression screening case">
           </div>
         </div>
         <p>
@@ -242,19 +242,19 @@
         <h2>Electronics + Firmware Architecture</h2>
         <p>
           The project links the mechanical enclosure to a Keil/uVision firmware project,
-          STM32L4 low-power device-pack audit and PCB concept package
+          STM32L4 low-power device-pack audit and PCB design package
           and candidate MCU porting plan. The current evidence covers component candidates, connection-level
           net ownership, power-budget assumptions, state-machine behaviour, battery/sensor fault handling
           and the sealed service/debug interface.
         </p>
         <img class="project-image" src="../assets/images/iot_electronics_firmware_architecture.svg" alt="Electronics and firmware architecture diagram for the ruggedized IoT sensor module">
-        <img class="project-image" src="../assets/images/iot_sensor_module_schematic_v1.svg" alt="Schematic concept for the ruggedized outdoor IoT sensor module electronics package">
+        <img class="project-image" src="../assets/images/iot_sensor_module_schematic_v1.svg" alt="Schematic draft for the ruggedized outdoor IoT sensor module electronics package">
         <div class="split">
           <div class="panel">
             <h3>Electronics Evidence</h3>
             <ul class="detail-list">
               <li>Proteus is not used as visual evidence here because the current `.pdsprj` opens to an empty schematic canvas.</li>
-              <li>PCB concept package includes board-level BOM, netlist, placement plan, stackup and DRC-style review, but not a native EDA layout screenshot.</li>
+              <li>PCB design package includes board-level BOM, netlist, placement plan, stackup and DRC-style review, but not a native EDA layout screenshot.</li>
               <li>Connection-level netlist linking each electrical signal to firmware ownership, mechanical packaging and validation intent.</li>
               <li>Candidate component table and early power budget for sleep, sample/filter, transmit-boundary, low-battery and service modes.</li>
               <li>Mechanical links to PCB envelope, battery restraint, sealed service/debug port and sensor membrane opening.</li>
@@ -263,12 +263,12 @@
           <div class="panel">
             <h3>Firmware Evidence</h3>
             <ul class="detail-list">
-              <li>Keil/uVision ARMCM3 concept target build verified through the local uVision command-line launcher.</li>
+              <li>Keil/uVision ARMCM3 prototype target build verified through the local uVision command-line launcher.</li>
               <li>Clean ARM Compiler 6 / ARMCLANG build result: 0 errors, 0 warnings.</li>
               <li>Program size from the verified target build: Code 500 bytes, RO-data 80 bytes, RW-data 0 bytes, ZI-data 1024 bytes.</li>
               <li>STM32L4xx device pack installed and audited; STM32L432KCUx selected as the next low-power candidate MCU path.</li>
-              <li>Candidate STM32L432 pin allocation and porting plan separate the current concept build from the future board-specific target.</li>
-              <li>Embedded C source structure includes state machine, mock sensor driver, power monitor, startup assembly and linker scatter file.</li>
+              <li>Candidate STM32L432 pin allocation and porting plan separate the current prototype build from the future board-specific target.</li>
+              <li>Embedded C source structure includes state machine, sensor-driver abstraction, power monitor, startup assembly and linker scatter file.</li>
               <li>Pin map and firmware architecture note covering sleep, sampling, filtering, transmit, low-battery, fault and service states.</li>
             </ul>
           </div>
@@ -281,9 +281,9 @@
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/device_pack_audit_v1.md">Device-pack audit</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/stm32l432_candidate_pinout_v1.csv">STM32L432 pinout</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/stm32l432_porting_plan_v1.md">Porting plan</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/pcb_concept_v1">PCB concept package</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/pcb_concept_v1">PCB design package</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/pcb_concept_v1/drc_clearance_review_v1.md">PCB DRC-style review</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/schematic_v1">Concept schematic notes</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/schematic_v1">Schematic notes</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/schematic_netlist_v1.csv">Netlist</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/power_budget_v1.csv">Power budget</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/electronics_firmware_integration.md">Integration note</a>
@@ -311,15 +311,15 @@
           </figure>
           <figure class="evidence-shot">
             <img src="../assets/images/strap_lug_mises_contour_v1.png" alt="Abaqus von Mises export for strap lug load case">
-            <figcaption>Abaqus/Standard export for the 150 N strap-lug concept load case.</figcaption>
+            <figcaption>Abaqus/Standard export for the 150 N strap-lug screening load case.</figcaption>
           </figure>
           <figure class="evidence-shot">
             <img src="../assets/images/corner_load_mises_contour_v1.png" alt="Abaqus von Mises export for corner-load load case">
-            <figcaption>Abaqus/Standard export for the enclosure corner-load concept screen.</figcaption>
+            <figcaption>Abaqus/Standard export for the enclosure corner-load screening case.</figcaption>
           </figure>
           <figure class="evidence-shot">
             <img src="../assets/images/screw_boss_mises_contour_v1.png" alt="Abaqus von Mises export for screw boss load case">
-            <figcaption>Abaqus/Standard export for the screw-boss compression concept screen.</figcaption>
+            <figcaption>Abaqus/Standard export for the screw-boss compression screening case.</figcaption>
           </figure>
           <figure class="evidence-shot">
             <img src="../assets/images/real_iot_solidworks_side_view.png" alt="Side-view SolidWorks screenshot for ruggedized IoT sensor module">
@@ -365,26 +365,26 @@
       <section class="section">
         <h2>Engineering Release Package</h2>
         <p>
-          A concept release package was added to make the project read like an engineering deliverable rather than
+          A release package was added to make the project read like an engineering deliverable rather than
           only a modelling exercise. It includes drawing sheets, V2 BOM, DFM review, assembly instruction and a
           verification matrix that separates completed evidence from future physical validation.
         </p>
         <div class="split">
           <div>
-            <img class="project-image" src="../assets/images/iot_sensor_module_v2_dimensioned_overview.svg" alt="Concept dimensioned overview drawing for the ruggedized IoT sensor module">
+            <img class="project-image" src="../assets/images/iot_sensor_module_v2_dimensioned_overview.svg" alt="Dimensioned overview drawing for the ruggedized IoT sensor module">
           </div>
           <div>
-            <img class="project-image" src="../assets/images/iot_sensor_module_v2_assembly_callouts.svg" alt="Concept assembly callout drawing for the ruggedized IoT sensor module">
+            <img class="project-image" src="../assets/images/iot_sensor_module_v2_assembly_callouts.svg" alt="Assembly callout drawing for the ruggedized IoT sensor module">
           </div>
         </div>
-        <img class="project-image" src="../assets/images/iot_sensor_module_v2_inspection_control_sheet.svg" alt="Concept inspection-control drawing for the ruggedized IoT sensor module">
+        <img class="project-image" src="../assets/images/iot_sensor_module_v2_inspection_control_sheet.svg" alt="Inspection-control drawing for the ruggedized IoT sensor module">
         <div class="split">
           <div class="panel">
             <h3>Release Contents</h3>
             <ul class="detail-list">
               <li>Drawing register with dimensioned overview and assembly callout sheets.</li>
-              <li>Inspection-control sheet with concept datum strategy, CTQ characteristics and inspection method intent.</li>
-              <li>V2 concept BOM linked to current evidence and next actions.</li>
+              <li>Inspection-control sheet with preliminary datum strategy, CTQ characteristics and inspection method intent.</li>
+              <li>V2 BOM linked to current evidence and next actions.</li>
               <li>DFM checklist covering gasket compression, bosses, strap lugs, service port and cable gland.</li>
               <li>Assembly work instruction for gasket, PCB, battery, lid and service-port checks.</li>
               <li>PLC-style test fixture control package for repeatable spray, thermal, cooldown and fault validation cycles.</li>
@@ -394,7 +394,7 @@
             <h3>Validation Control</h3>
             <ul class="detail-list">
               <li>Verification matrix traces CAD, FEA, firmware and electronics evidence to requirements.</li>
-              <li>Firmware evidence separates the clean ARMCM3 concept build from the STM32L4 candidate MCU path.</li>
+              <li>Firmware evidence separates the clean ARMCM3 prototype build from the STM32L4 candidate MCU path.</li>
               <li>CTQ inspection table links package features to datums, tolerances and future evidence.</li>
               <li>Software-completion boundary note separates completed digital evidence from hardware, supplier and proprietary-tool blockers.</li>
               <li>Physical pull, spray, drop and thermal tests are clearly marked as future work.</li>
