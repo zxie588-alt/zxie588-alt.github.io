@@ -91,6 +91,29 @@
       </section>
 
       <section class="section">
+        <h2>Verification & Limits</h2>
+        <div class="split">
+          <div class="panel">
+            <h3>Checks Used</h3>
+            <ul class="detail-list">
+              <li>Used a shell model with local mesh refinement around attachment regions where load transfer and stress concentration mattered most.</li>
+              <li>Compared displacement and stress patterns across aerodynamic, cornering and bump scenarios instead of relying on one contour plot.</li>
+              <li>Reported ply-level utilisation against fatigue and ultimate allowables, with the governing result kept below the chosen design margin.</li>
+              <li>Kept mass estimate visible so the iteration reads as a strength-to-weight trade, not only a pass/fail stress check.</li>
+            </ul>
+          </div>
+          <aside class="panel">
+            <h3>Current Boundary</h3>
+            <p>
+              This is a simulation and laminate-judgement project. It does not include coupon testing,
+              adhesive/joint testing, aerodynamic tunnel data or track validation. The next useful upgrade
+              would be a documented mesh-convergence table and physical coupon comparison for the selected laminate.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
         <h2>Selected Results</h2>
         <div class="image-grid">
           <img src="../assets/images/front_wing_02.png" alt="Abaqus mesh view of Formula SAE front wing">

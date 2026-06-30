@@ -93,6 +93,30 @@
       </section>
 
       <section class="section">
+        <h2>Verification & Limits</h2>
+        <div class="split">
+          <div class="panel">
+            <h3>Checks Used</h3>
+            <ul class="detail-list">
+              <li>Checked mass balance and heat balance before accepting the velocity and temperature contours.</li>
+              <li>Used mesh-sensitivity checks and dimensionless-number estimates to test whether the simulated buoyancy behaviour was plausible.</li>
+              <li>Compared Fluent and CFX behaviour under controlled assumptions, then treated disagreement as a modelling clue rather than hiding it.</li>
+              <li>Audited heat input and rejected non-physical boundary settings instead of tuning the case only to match a target point.</li>
+            </ul>
+          </div>
+          <aside class="panel">
+            <h3>Current Boundary</h3>
+            <p>
+              The project is strongest as a critical CFD benchmark. It does not claim a fully validated
+              product design, because the original boundary data and laboratory measurement detail are limited.
+              Better validation would need measured inlet/outlet conditions, surface temperatures and a controlled
+              comparison dataset.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
         <h2>Methods Used</h2>
         <div class="stats">
           <div class="stat"><strong>Model setup</strong>Ideal-gas air, absorber, cover, coupled walls and gravity-driven flow.</div>
