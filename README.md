@@ -41,6 +41,6 @@ GitHub notes that Pages sites are publicly available on the internet, so remove 
 
 - Replace placeholder wording if a project role needs more exact wording.
 - Replace the simulated commissioning CSV with measured sensor data after physical testing.
-- Add a Revit MEP plan sheet when available.
+- Keep the Revit MEP coordination package honest: publish the schedule/handoff evidence now, and add native Revit screenshots only after exporting them from a checked `.rvt` model.
 - Add a final PDF resume link when the resume is typeset.
 - Do not publish raw course reports, assignment files or editable DOCX submissions. Keep public evidence curated: case-study pages, selected result images, neutral design notes, calculation tables and clean model exports.

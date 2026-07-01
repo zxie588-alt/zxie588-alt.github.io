@@ -840,34 +840,6 @@ h3 {
   padding: 26px 30px;
 }
 
-.placeholder-shot {
-  display: grid;
-  align-content: center;
-  min-height: 230px;
-  border-right: 2px solid var(--line);
-  border-bottom: 0;
-  background:
-    linear-gradient(135deg, rgba(255, 210, 74, 0.52), rgba(17, 138, 178, 0.22), rgba(232, 72, 50, 0.12)),
-    #ffffff;
-  padding: 18px;
-}
-
-.placeholder-shot span {
-  color: var(--red);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.placeholder-shot strong {
-  display: block;
-  max-width: 260px;
-  margin-top: 8px;
-  font-size: 22px;
-  line-height: 1.1;
-}
-
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -1455,12 +1427,6 @@ h3 {
   .project-card.featured img {
     height: 210px;
     min-height: 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .placeholder-shot {
-    min-height: 180px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }

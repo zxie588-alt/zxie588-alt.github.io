@@ -38,13 +38,13 @@
           </div>
           <div class="snapshot-item">
             <span>Deliverables</span>
-            <strong>3D model, DXF plan, sizing notes</strong>
-            <p>SolidWorks model, AutoCAD-readable plan, airflow schedule, pressure estimate and review sheet.</p>
+            <strong>3D model, DXF plan, Revit-ready BIM pack</strong>
+            <p>SolidWorks model, AutoCAD-readable plan, airflow schedule, pressure estimate, BIM schedule and review sheet.</p>
           </div>
           <div class="snapshot-item">
             <span>Tools</span>
-            <strong>SolidWorks, AutoCAD/DXF, C# API</strong>
-            <p>Generated system layout and validation kit outputs, including STEP/STL and component lists.</p>
+            <strong>SolidWorks, Revit MEP, AutoCAD/DXF</strong>
+            <p>Generated system layout, Revit MEP coordination workflow, STEP/STL exports and component lists.</p>
           </div>
           <div class="snapshot-item">
             <span>Key numbers</span>
@@ -74,6 +74,7 @@
       <div class="stats">
         <div class="stat"><strong>151</strong>Named CAD bodies and features</div>
         <div class="stat"><strong>60 L/s</strong>Normal balanced supply and extract flow</div>
+        <div class="stat"><strong>10 rows</strong>Revit MEP schedule seed for equipment and terminals</div>
         <div class="stat"><strong>LGH-35</strong>Selected MVHR unit for normal and boost duty</div>
         <div class="stat"><strong>85 L/s</strong>Boost target linked to commissioning and control logic</div>
       </div>
@@ -83,6 +84,46 @@
         <img class="project-image" src="../assets/images/nz_ventilation_plan_schematic.svg" alt="2D schematic plan of the NZ residential MVHR ventilation layout">
         <div class="actions">
           <a class="button secondary" href="../assets/cad/nz_home_ventilation_layout.dxf">Download DXF plan</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Revit MEP / BIM Coordination Upgrade</h2>
+        <p class="lead">
+          After adding Revit 2026 to the toolchain, I extended the project into a Revit-ready MEP coordination
+          package. The goal is to make the work read like a building-services BIM handoff: model systems,
+          sheet views, schedules, tags, service access and commissioning checks, not only a standalone CAD model.
+        </p>
+        <img class="project-image" src="../assets/images/nz_ventilation_revit_mep_coordination_sheet.svg" alt="Revit MEP coordination sheet for the NZ residential ventilation project">
+        <div class="split">
+          <div class="panel">
+            <h3>What I Added</h3>
+            <ul class="detail-list">
+              <li>Revit MEP view and sheet structure: M-101 plan, M-201 equipment coordination, M-301 schedule and M-401 commissioning notes.</li>
+              <li>Mechanical system naming for supply air, extract air, outdoor air and exhaust air routes.</li>
+              <li>Equipment and duct-terminal schedule seed with airflow, duct diameter, velocity, pressure note and commissioning check fields.</li>
+              <li>Coordination checklist for access clearance, intake/exhaust separation, structural penetrations, acoustic risk and commissioning access.</li>
+              <li>Clear evidence boundary: this is a Revit-ready coordination package until a native `.rvt` file and Revit-exported screenshots are produced.</li>
+            </ul>
+          </div>
+          <aside class="panel">
+            <h3>Why This Matters Locally</h3>
+            <p>
+              New Zealand building-services employers often work around BIM coordination, Revit schedules,
+              marked-up plans and multidisciplinary model checks. This upgrade shifts the project from
+              a good mechanical layout into something closer to how HVAC/MEP work is coordinated in practice.
+            </p>
+            <p class="muted">
+              I have kept the wording honest: Revit MEP workflow and schedule preparation are complete; a
+              native construction-ready Revit model remains a next deliverable.
+            </p>
+          </aside>
+        </div>
+        <div class="actions">
+          <a class="button" href="../assets/reports/nz_ventilation_revit_mep_coordination_plan.md">Revit MEP coordination plan</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_revit_mep_schedule.csv">Revit schedule CSV</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_revit_mep_handoff_readme.md">Revit handoff README</a>
+          <a class="button secondary" href="../assets/images/nz_ventilation_revit_mep_coordination_sheet.svg">Open M-101 BIM sheet</a>
         </div>
       </section>
 
@@ -243,6 +284,7 @@
             <li>Estimated duct velocities and path pressure losses, then set preliminary fan-duty targets of about 80 Pa normal and 120 Pa boost.</li>
             <li>Added a manufacturer-based equipment check and selected Mitsubishi Electric Lossnay LGH-35RVX3-E as the preliminary MVHR unit size.</li>
             <li>Generated a 2D DXF ventilation plan so the system can be reviewed in AutoCAD as well as SolidWorks.</li>
+            <li>Added a Revit MEP coordination package with view/sheet structure, system naming, BIM schedule fields and coordination checks.</li>
             <li>Automated the visual system model with C# SolidWorks API, producing 151 named features plus STEP, STL, PNG and component-list exports.</li>
             <li>Added stakeholder requirements, trade study and FMEA so the project shows systems-engineering judgement.</li>
             <li>Built a sensor-validation and commissioning plan using CO2, humidity, airflow, fan power and control-state data.</li>
@@ -256,12 +298,14 @@
             <a class="button" href="../assets/models/nz_home_ventilation_system.step">STEP model</a>
             <a class="button" href="../assets/models/smart_ventilation_validation_kit.step">Validation kit STEP</a>
             <a class="button" href="../assets/images/nz_ventilation_m101_design_review_sheet.svg">M-101 review sheet</a>
+            <a class="button" href="../assets/images/nz_ventilation_revit_mep_coordination_sheet.svg">Revit MEP sheet</a>
             <a class="button secondary" href="https://github.com/zxie588-alt/nz-home-ventilation-system">Source repo</a>
             <a class="button secondary" href="../assets/models/nz_home_ventilation_system.stl">STL model</a>
             <a class="button secondary" href="../assets/models/smart_ventilation_validation_kit.stl">Validation kit STL</a>
             <a class="button secondary" href="../assets/cad/nz_home_ventilation_layout.dxf">DXF plan</a>
             <a class="button secondary" href="../assets/reports/nz_home_ventilation_component_list.csv">Component list</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_airflow_schedule.csv">Airflow schedule</a>
+            <a class="button secondary" href="../assets/reports/nz_ventilation_revit_mep_schedule.csv">Revit MEP schedule</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_duct_pressure_estimate.csv">Pressure estimate</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_equipment_selection.md">Equipment selection</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_local_context.md">NZ context notes</a>
@@ -335,7 +379,7 @@
             <ul class="detail-list">
               <li><strong>Excel / Google Sheets:</strong> airflow schedule, duct sizing, pressure-loss estimate and fan selection note.</li>
               <li><strong>AutoCAD:</strong> 2D ventilation plan, duct route communication and future drawing-sheet development.</li>
-              <li><strong>Revit MEP:</strong> future BIM upgrade if licensed access is available.</li>
+              <li><strong>Revit MEP:</strong> BIM coordination workflow, view/sheet plan, system naming and schedule handoff added in this update.</li>
               <li><strong>SolidWorks:</strong> current visual 3D system model and mechanical layout demonstration.</li>
               <li><strong>EnergyPlus / IES VE / Fluent / CFX:</strong> later-stage energy or airflow simulation after basic sizing is complete.</li>
             </ul>
