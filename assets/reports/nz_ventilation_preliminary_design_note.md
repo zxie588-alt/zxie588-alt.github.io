@@ -100,9 +100,9 @@ These targets include margin for filters, grilles, flexible connections, balanci
 - No manufacturer diffuser, grille, damper or weather-hood pressure-loss data.
 - No acoustic calculation or noise criteria.
 - No formal AS/NZS 1668.2 design table extraction.
-- Revit MEP coordination package added as a BIM handoff layer; a native checked `.rvt` model remains outside the current public evidence set.
+- Native Revit 2026 MEP coordination model added as a BIM handoff layer, with plan/3D/schedule sheets, system naming, airflow notes and a simple clash-check note.
 - No building-consent pathway or professional review.
 
 ## Recommended Next Upgrade
 
-The strongest next portfolio upgrade is to open the Revit-ready schedule and coordination package in a native Revit session, create real duct elements and families, then export Revit screenshots and schedules after checking routing, tags and access clearances. The current public package includes the BIM naming logic, sheet/view plan, terminal schedule fields and AutoCAD-readable DXF plan.
+The strongest next portfolio upgrade is to replace the simplified portfolio families with project/manufacturer Revit families, add a real architectural background, then run a fuller coordination review against structural, ceiling and service-zone constraints. The current public package includes a native RVT file, BIM naming logic, three portfolio sheets, terminal schedule fields and AutoCAD-readable DXF plan.

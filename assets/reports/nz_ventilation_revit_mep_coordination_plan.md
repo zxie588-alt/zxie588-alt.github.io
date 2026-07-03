@@ -1,10 +1,10 @@
 # Revit MEP Coordination Plan - NZ Residential MVHR / ERV
 
-This note records the Revit/BIM coordination layer added to the NZ residential MVHR / ERV ventilation project. It is a portfolio-level BIM workflow and documentation package, not a consent design or construction issue drawing.
+This note records the native Revit/BIM coordination layer added to the NZ residential MVHR / ERV ventilation project. It is a portfolio-level coordination model and documentation package, not a consent design or construction issue drawing.
 
 ## Purpose
 
-The original ventilation project already included SolidWorks geometry, a DXF plan, airflow schedule, pressure-loss estimate, equipment selection and commissioning notes. The Revit upgrade adds the part that New Zealand building-services consultancies are more likely to recognise: model coordination, schedules, tagged views, drawing issue control and clash-review thinking.
+The original ventilation project already included SolidWorks geometry, a DXF plan, airflow schedule, pressure-loss estimate, equipment selection and commissioning notes. The Revit upgrade adds the part that New Zealand building-services consultancies are more likely to recognise: native model coordination, sheet views, schedules, tagged systems, drawing-review comments and clash-review thinking.
 
 ## Revit Model Scope
 
@@ -12,7 +12,7 @@ Model discipline: Mechanical / HVAC
 
 Level of development: portfolio coordination model, approximately LOD 200-300 depending on element type.
 
-Main model elements to be represented in Revit MEP:
+Main model elements represented in the Revit 2026 model:
 
 - MVHR / ERV unit envelope with maintenance-clearance zone.
 - Supply air, extract air, outdoor air and exhaust air duct systems.
@@ -24,20 +24,18 @@ Main model elements to be represented in Revit MEP:
 
 ## Views and Sheets
 
-Recommended Revit browser structure:
+Created Revit browser structure:
 
-- `M-101 Ventilation Plan - Level 1`
-- `M-201 MVHR Equipment and Duct Coordination`
-- `M-301 Airflow Schedule`
-- `M-401 Commissioning and Validation Notes`
-- `3D-MEP Coordination View`
+- `RX MVHR coordination plan`
+- `RX MVHR 3D coordination view`
+- `RX MVHR airflow schedule`
+- `RX drawing review and clash check`
 
-Recommended sheet package:
+Created sheet package:
 
-- `M-101`: MVHR / ERV ventilation layout with system colours, duct sizes and airflow tags.
-- `M-201`: equipment location, service access and route coordination.
-- `M-301`: airflow and terminal schedule exported from the model.
-- `M-401`: commissioning sensors, CO2/RH/pressure/power checks and evidence-gap notes.
+- `RX-MVHR-001`: MVHR / ERV coordination plan with system colours, terminals and airflow tags.
+- `RX-MVHR-002`: 3D MEP coordination view showing routed supply/extract ducts, MVHR unit and wall penetrations.
+- `RX-MVHR-003`: airflow schedule, NZ context note, five drawing-review comments and simple clash-check statement.
 
 ## Naming and System Conventions
 
@@ -60,7 +58,7 @@ Element naming:
 
 ## Schedule Fields
 
-The attached CSV schedule is intended to be recreated as a Revit duct-terminal/equipment schedule:
+The Revit sheet includes a starter airflow schedule. The attached CSV mirrors the schedule fields used for review:
 
 - Mark
 - System
@@ -88,17 +86,18 @@ Minimum model review checklist:
 
 Completed in the public portfolio:
 
-- Revit MEP coordination workflow.
-- Revit-ready schedule and naming convention.
-- Drawing/sheet index and coordination checklist.
+- Native Revit 2026 `.rvt` coordination model.
+- One-level residential layout with MVHR equipment, supply/extract routes, terminals and wall penetrations.
+- Three Revit portfolio sheets: plan, 3D coordination view and airflow/review notes.
+- Schedule, naming convention, drawing-review comments and simple clash-check note.
 - DXF and SolidWorks outputs that can be used as model references.
 
-Still requiring a native Revit session and professional review:
+Still requiring project-specific professional review:
 
-- Native `.rvt` model with real Revit duct elements and families.
-- Architectural background model based on an actual dwelling.
-- Revit schedule export from modelled MEP elements.
-- Clash detection against structural and architectural models.
+- Architectural background model based on an actual dwelling or client brief.
+- Final Revit duct/terminal families selected from project or manufacturer libraries.
+- Full clash detection against structural, architectural and ceiling/service-zone models.
+- Pressure-loss, acoustic, diffuser/grille and commissioning values verified against final manufacturer data.
 - Construction documentation and consent-ready compliance review.
 
 ## Resume-Safe Wording
@@ -107,8 +106,12 @@ Use:
 
 > Added a Revit MEP coordination workflow to a NZ residential MVHR / ERV project, including BIM naming conventions, sheet/view plan, duct-terminal schedule fields, access-clearance checks and commissioning handoff notes.
 
+Better after the native model update:
+
+> Built a native Revit 2026 MEP coordination model for a NZ residential MVHR / ERV case study, including a one-level house layout, MVHR unit, supply/extract duct routes, diffusers/grilles, airflow schedule, three portfolio sheets, drawing-review comments and a simple clash-check note.
+
 Avoid:
 
 > Completed a construction-ready Revit model.
 
-The second statement is not safe until a native Revit file, screenshots and schedule exports are available.
+The second statement is still not safe because the model is a portfolio coordination case, not a professional construction or consent package.

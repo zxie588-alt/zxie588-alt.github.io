@@ -1,26 +1,28 @@
-# Revit MEP Handoff README
+# Native Revit MEP Handoff README
 
-Folder purpose: this public portfolio package gives a Revit user enough structure to rebuild the MVHR / ERV design as a native Revit MEP coordination model.
+Folder purpose: this public portfolio package records the native Revit 2026 MVHR / ERV coordination model and the evidence files used on the portfolio site.
 
 ## Inputs
 
 - `../cad/nz_home_ventilation_layout.dxf` - 2D plan reference.
 - `../models/nz_home_ventilation_system.step` - SolidWorks geometry reference.
-- `nz_ventilation_revit_mep_schedule.csv` - duct-terminal and equipment schedule seed.
+- `../models/small_residential_mvhr_revit_mep_coordination_v4.rvt` - native Revit 2026 portfolio coordination model.
+- `../images/real_revit_mvhr_plan_coordination_v4.png` - exported/cropped Revit plan screenshot.
+- `../images/real_revit_mvhr_3d_coordination_v4.png` - exported/cropped Revit 3D screenshot.
+- `../images/real_revit_mvhr_airflow_schedule_v4.png` - exported/cropped airflow schedule screenshot.
+- `nz_ventilation_revit_mep_schedule.csv` - duct-terminal and equipment schedule reference.
 - `nz_ventilation_revit_mep_coordination_plan.md` - view/sheet/naming/checklist plan.
 
-## Suggested Revit Steps
+## Revit Model Contents
 
-1. Start a mechanical project from the local Revit 2026 template.
-2. Link/import the DXF as a plan reference on Level 1.
-3. Create four duct systems: `SA-01`, `EA-01`, `OA-01`, `EX-01`.
-4. Place the MVHR unit envelope as `MVHR-01`.
-5. Route main ducts and branches using the schedule diameters and airflow targets.
-6. Place duct terminals and assign marks from the schedule.
-7. Create a duct-terminal schedule with Mark, System, Room, Airflow, Diameter and Commissioning Check.
-8. Create `M-101`, `M-201`, `M-301` and `M-401` sheets.
-9. Export schedule CSV and screenshots after a native Revit file is created.
+1. One-level simplified residential layout.
+2. MVHR/ERV mechanical equipment envelope and access zone.
+3. Supply air, extract air, outdoor intake and exhaust route intent.
+4. Diffusers/grilles and wall-penetration markers.
+5. Plan view, 3D coordination view and airflow/review drafting view.
+6. Sheets `RX-MVHR-001`, `RX-MVHR-002` and `RX-MVHR-003`.
+7. Five drawing-review comments and a simple clash/penetration coordination note.
 
 ## Current Boundary
 
-This folder is a Revit-ready BIM coordination package. It does not yet contain a native `.rvt` file because the public portfolio should not claim a construction-ready Revit model until the model has been opened, checked, screenshot and exported from Revit.
+This folder now contains a native Revit portfolio model and screenshots. It should still be described as a portfolio coordination model, not as construction documentation, consent documentation or a professional compliance statement.
