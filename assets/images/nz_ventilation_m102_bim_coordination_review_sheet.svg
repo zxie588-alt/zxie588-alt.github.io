@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">M-102 MVHR Building Services Coordination Review Sheet</title>
+  <desc id="desc">Portfolio review sheet for a small residential MVHR Revit MEP coordination project showing design duty, duct sizing, pressure loss, equipment selection and issue log.</desc>
+  <defs>
+    <style>
+      .sheet { fill: #fbfaf6; }
+      .ink { fill: #17212b; font-family: Arial, Helvetica, sans-serif; }
+      .muted { fill: #5d6673; font-family: Arial, Helvetica, sans-serif; }
+      .line { stroke: #17212b; stroke-width: 2; fill: none; }
+      .thin { stroke: #9099a5; stroke-width: 1.2; fill: none; }
+      .blue { fill: #2166c2; }
+      .orange { fill: #d17a1d; }
+      .green { fill: #20855a; }
+      .grey { fill: #59636d; }
+      .red { fill: #c73434; }
+      .panel { fill: #ffffff; stroke: #17212b; stroke-width: 2; }
+      .soft { fill: #eef3f7; }
+      .tag { fill: #17212b; font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 700; }
+      .h1 { font-size: 30px; font-weight: 700; }
+      .h2 { font-size: 22px; font-weight: 700; }
+      .body { font-size: 18px; }
+      .small { font-size: 15px; }
+      .tiny { font-size: 13px; }
+    </style>
+  </defs>
+
+  <rect class="sheet" x="0" y="0" width="1600" height="1000"/>
+  <rect class="line" x="34" y="34" width="1532" height="932"/>
+  <rect class="thin" x="58" y="58" width="1484" height="884"/>
+
+  <text class="ink h1" x="84" y="105">M-102 BUILDING SERVICES COORDINATION REVIEW</text>
+  <text class="muted body" x="84" y="137">Small Residential MVHR / ERV Revit MEP Coordination | Ricardo Xie | Portfolio design package</text>
+  <text class="muted small" x="84" y="164">Purpose: show duct sizing logic, fan-duty allowance, manufacturer selection and open coordination issues.</text>
+
+  <rect class="panel" x="84" y="200" width="430" height="300"/>
+  <text class="ink h2" x="108" y="234">Design Duty</text>
+  <text class="muted body" x="108" y="272">Normal supply</text><text class="tag" x="330" y="272">60 L/s</text>
+  <text class="muted body" x="108" y="312">Normal extract</text><text class="tag" x="330" y="312">45 L/s</text>
+  <text class="muted body" x="108" y="352">Boost extract check</text><text class="tag" x="330" y="352">85 L/s</text>
+  <text class="muted body" x="108" y="392">Normal fan allowance</text><text class="tag" x="330" y="392">80 Pa</text>
+  <text class="muted body" x="108" y="432">Boost fan allowance</text><text class="tag" x="330" y="432">120 Pa</text>
+  <text class="muted small" x="108" y="470">Preliminary only. Final balancing, acoustic and filter losses to be verified.</text>
+
+  <rect class="panel" x="545" y="200" width="455" height="300"/>
+  <text class="ink h2" x="568" y="234">Duct Velocity Check</text>
+  <line class="thin" x1="568" y1="256" x2="970" y2="256"/>
+  <text class="muted small" x="568" y="286">Route</text><text class="muted small" x="735" y="286">Airflow</text><text class="muted small" x="835" y="286">Dia.</text><text class="muted small" x="910" y="286">Vel.</text>
+  <text class="ink small" x="568" y="320">Supply main</text><text class="ink small" x="735" y="320">60 L/s</text><text class="ink small" x="835" y="320">180</text><text class="ink small" x="910" y="320">2.36</text>
+  <text class="ink small" x="568" y="354">Supply branch</text><text class="ink small" x="735" y="354">20 L/s</text><text class="ink small" x="835" y="354">130</text><text class="ink small" x="910" y="354">1.51</text>
+  <text class="ink small" x="568" y="388">Extract main</text><text class="ink small" x="735" y="388">45 L/s</text><text class="ink small" x="835" y="388">160</text><text class="ink small" x="910" y="388">2.24</text>
+  <text class="ink small" x="568" y="422">Kitchen branch</text><text class="ink small" x="735" y="422">25 L/s</text><text class="ink small" x="835" y="422">125</text><text class="ink small" x="910" y="422">2.04</text>
+  <text class="ink small" x="568" y="456">Boost branch</text><text class="ink small" x="735" y="456">50 L/s</text><text class="ink small" x="835" y="456">150</text><text class="ink small" x="910" y="456">2.83</text>
+  <text class="muted tiny" x="568" y="482">Velocity in m/s; diameters in mm equivalent. Manufacturer terminals pending.</text>
+
+  <rect class="panel" x="1030" y="200" width="430" height="300"/>
+  <text class="ink h2" x="1054" y="234">Equipment Selection</text>
+  <text class="muted body" x="1054" y="278">Concept unit</text>
+  <text class="tag" x="1054" y="315">Mitsubishi Lossnay LGH-35RVX3-E</text>
+  <text class="muted small" x="1054" y="350">Why selected:</text>
+  <text class="ink small" x="1072" y="382">- Covers 60 L/s normal duty with headroom.</text>
+  <text class="ink small" x="1072" y="412">- 97 L/s at 100% default point supports boost check.</text>
+  <text class="ink small" x="1072" y="442">- 150 mm spigots need transition review.</text>
+  <text class="muted tiny" x="1054" y="476">Final selection requires current fan curve, filters, noise and installer review.</text>
+
+  <rect class="panel" x="84" y="540" width="706" height="310"/>
+  <text class="ink h2" x="108" y="574">BIM Coordination Issue Log</text>
+  <line class="thin" x1="108" y1="596" x2="760" y2="596"/>
+  <text class="muted small" x="108" y="624">ID</text><text class="muted small" x="190" y="624">Issue</text><text class="muted small" x="635" y="624">Status</text>
+  <text class="ink small" x="108" y="658">DR-01</text><text class="ink small" x="190" y="658">Supply 60 L/s vs extract 45 L/s needs final balancing mode.</text><text class="red small" x="635" y="658">Open</text>
+  <text class="ink small" x="108" y="692">DR-02</text><text class="ink small" x="190" y="692">MVHR service clearance needs real access hatch/cupboard check.</text><text class="red small" x="635" y="692">Open</text>
+  <text class="ink small" x="108" y="726">DR-03</text><text class="ink small" x="190" y="726">Intake/exhaust wall penetrations need separation and flashing review.</text><text class="red small" x="635" y="726">Open</text>
+  <text class="ink small" x="108" y="760">DR-04</text><text class="ink small" x="190" y="760">Generic terminals need manufacturer pressure-drop/noise data.</text><text class="red small" x="635" y="760">Open</text>
+  <text class="ink small" x="108" y="794">CL-01</text><text class="ink small" x="190" y="794">Supply trunk crosses internal wall line; opening/framing review required.</text><text class="orange small" x="635" y="794">Review</text>
+  <text class="muted tiny" x="108" y="828">Evidence file: nz_ventilation_bim_coordination_issue_log.csv</text>
+
+  <rect class="panel" x="820" y="540" width="640" height="310"/>
+  <text class="ink h2" x="844" y="574">Pressure-Loss Review</text>
+  <line class="thin" x1="844" y1="596" x2="1430" y2="596"/>
+  <text class="muted small" x="844" y="624">Mode</text><text class="muted small" x="1035" y="624">Critical path</text><text class="muted small" x="1300" y="624">Estimate</text>
+  <text class="ink small" x="844" y="658">Normal supply</text><text class="ink small" x="1035" y="658">Longest supply branch</text><text class="tag small" x="1300" y="658">~24 Pa</text>
+  <text class="ink small" x="844" y="692">Normal extract</text><text class="ink small" x="1035" y="692">Kitchen/laundry branch</text><text class="tag small" x="1300" y="692">~27 Pa</text>
+  <text class="ink small" x="844" y="726">Outdoor/exhaust</text><text class="ink small" x="1035" y="726">Wall hoods/sleeves</text><text class="tag small" x="1300" y="726">~17 Pa</text>
+  <text class="ink small" x="844" y="760">Boost extract</text><text class="ink small" x="1035" y="760">Kitchen boost path</text><text class="tag small" x="1300" y="760">~48 Pa</text>
+  <text class="muted small" x="844" y="806">Design allowances retained: 80 Pa normal, 120 Pa boost until real terminal, filter,</text>
+  <text class="muted small" x="844" y="832">acoustic and installer data are confirmed.</text>
+
+  <rect class="line" x="84" y="880" width="1376" height="48"/>
+  <text class="ink small" x="108" y="911">References: MBIE G4/AS1 context, Tenancy Services ventilation standard, Mitsubishi Electric NZ Lossnay LGH-RVX3-E data. This sheet is for portfolio review only.</text>
+</svg>

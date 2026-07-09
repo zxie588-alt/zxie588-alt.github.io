@@ -38,8 +38,8 @@
           </div>
           <div class="snapshot-item">
             <span>Deliverables</span>
-            <strong>Native Revit model, 3 sheets, DXF and CAD pack</strong>
-            <p>Revit 2026 model, coordination plan, 3D view, airflow schedule, review notes and SolidWorks/AutoCAD exports.</p>
+            <strong>Native Revit model, review pack, DXF and CAD evidence</strong>
+            <p>Revit 2026 model, coordination plan, 3D view, airflow schedule, review notes, issue log and SolidWorks/AutoCAD exports.</p>
           </div>
           <div class="snapshot-item">
             <span>Tools</span>
@@ -48,8 +48,8 @@
           </div>
           <div class="snapshot-item">
             <span>Key numbers</span>
-            <strong>60 L/s normal, 85 L/s boost</strong>
-            <p>Preliminary fan-duty targets: about 80 Pa normal and 120 Pa boost external static pressure.</p>
+            <strong>60 L/s supply, 45 L/s extract, 85 L/s boost check</strong>
+            <p>Preliminary Revit schedule plus pressure-loss review; final balancing remains a commissioning item.</p>
           </div>
           <div class="snapshot-item">
             <span>NZ context</span>
@@ -73,8 +73,8 @@
 
       <div class="stats">
         <div class="stat"><strong>151</strong>Named CAD bodies and features</div>
-        <div class="stat"><strong>60 L/s</strong>Normal balanced supply and extract flow</div>
-        <div class="stat"><strong>3 sheets</strong>Revit plan, 3D coordination view and airflow/review sheet</div>
+        <div class="stat"><strong>60 / 45 L/s</strong>Current Revit supply / extract schedule</div>
+        <div class="stat"><strong>Review pack</strong>Revit sheets plus M-102 pressure and issue-log review</div>
         <div class="stat"><strong>LGH-35</strong>Selected MVHR unit for normal and boost duty</div>
         <div class="stat"><strong>85 L/s</strong>Boost target linked to commissioning and control logic</div>
       </div>
@@ -120,8 +120,8 @@
               <li>Native Revit 2026 RVT file with separate sheets: RX-MVHR-001 plan, RX-MVHR-002 3D view and RX-MVHR-003 airflow/review notes.</li>
               <li>Mechanical system naming for supply air, extract air, outdoor intake and exhaust air routes.</li>
               <li>MVHR unit, duct routes, diffusers/grilles and wall-penetration markers shown in plan and 3D.</li>
-              <li>Airflow schedule with 20 L/s supply terminals, 20-25 L/s extract terminals and MVHR balancing note.</li>
-              <li>Five drawing-review comments covering balance, access clearance, final diffuser selection, pressure loss and clash/penetration coordination.</li>
+              <li>Airflow schedule with 20 L/s supply terminals, 20-25 L/s extract terminals and an explicit balancing-to-be-verified note.</li>
+              <li>Five drawing-review comments covering balancing, access clearance, final diffuser selection, pressure loss and clash/penetration coordination.</li>
             </ul>
           </div>
           <aside class="panel">
@@ -144,6 +144,43 @@
           <a class="button secondary" href="../assets/reports/nz_ventilation_revit_mep_handoff_readme.md">Revit handoff README</a>
           <a class="button secondary" href="../assets/images/real_revit_mvhr_3d_coordination_v4.png">Open Revit 3D screenshot</a>
           <a class="button secondary" href="../assets/images/real_revit_mvhr_airflow_schedule_v4.png">Open airflow schedule screenshot</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Building Services Coordination Review</h2>
+        <p class="lead">
+          I added a follow-on review package around the Revit model: duct velocity checks, pressure-loss
+          summary, preliminary MVHR equipment selection and a BIM coordination issue log. This is the part
+          that makes the project closer to how a small HVAC/MEP task would be reviewed in practice.
+        </p>
+        <img class="project-image" src="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg" alt="M-102 building services coordination review sheet with duct sizing, pressure loss and issue log">
+        <div class="split">
+          <div class="panel">
+            <h3>New Review Deliverables</h3>
+            <ul class="detail-list">
+              <li>M-102 review sheet summarising design duty, duct velocity, pressure-loss risk and equipment selection.</li>
+              <li>Duct sizing and pressure-loss summary with normal/boost duty and review actions.</li>
+              <li>BIM coordination issue log separating design-review items from clash/penetration checks.</li>
+              <li>Updated Mitsubishi Lossnay LGH-35RVX3-E selection note with explicit final-review limits.</li>
+              <li>Building-services cover letter template using this project as the main evidence.</li>
+            </ul>
+          </div>
+          <aside class="panel">
+            <h3>Why It Helps Applications</h3>
+            <p>
+              Employers do not only want to see that I can place ducts in Revit. They also need to see that
+              I can track assumptions, flag unresolved coordination items and explain what still needs a
+              senior engineer, supplier or installer to confirm.
+            </p>
+          </aside>
+        </div>
+        <div class="actions">
+          <a class="button" href="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg">Open M-102 review sheet</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_duct_sizing_pressure_loss_summary.md">Duct sizing / pressure summary</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_bim_coordination_issue_log.csv">BIM issue log CSV</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_equipment_selection.md">Equipment selection note</a>
+          <a class="button secondary" href="../assets/reports/building_services_hvac_cover_letter_template.md">HVAC cover letter template</a>
         </div>
       </section>
 
@@ -256,9 +293,18 @@
         <p class="lead">
           I added a drawing-style review sheet and supporting engineering notes so the project can be
           discussed like a small professional package: references, fan duty, energy sense check, acoustic
-          risk, manufacturing plan, future physical testing and evidence-gap tracking.
+          risk, manufacturing plan, coordination review, future physical testing and evidence-gap tracking.
         </p>
-        <img class="project-image" src="../assets/images/nz_ventilation_m101_design_review_sheet.svg" alt="M-101 design review sheet for the smart ventilation project">
+        <div class="evidence-gallery">
+          <figure class="evidence-shot evidence-contain">
+            <img src="../assets/images/nz_ventilation_m101_design_review_sheet.svg" alt="M-101 design review sheet for the smart ventilation project">
+            <figcaption>M-101 design review sheet: system layout, validation kit and engineering evidence pack.</figcaption>
+          </figure>
+          <figure class="evidence-shot evidence-contain">
+            <img src="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg" alt="M-102 BIM coordination review sheet for the MVHR project">
+            <figcaption>M-102 building-services review sheet: duct sizing, pressure loss, equipment selection and coordination issue log.</figcaption>
+          </figure>
+        </div>
         <div class="split">
           <div class="panel">
             <h3>Added Engineering Evidence</h3>
@@ -266,6 +312,7 @@
               <li>M-101 style design review sheet with system layout, airflow schedule, validation kit and future test items.</li>
               <li>NZ reference matrix mapping G4, G4/AS1, H1, Healthy Homes and manufacturer data to project evidence.</li>
               <li>Fan curve, energy and noise sense check for the LGH-35 preliminary selection.</li>
+              <li>M-102 coordination review sheet with duct sizing, pressure-loss summary and BIM issue log.</li>
               <li>Manufacturing package for the SolidWorks validation kit: BOM, cost estimate, assembly sequence and safety notes.</li>
               <li>Future physical test-item list covering CO2, RH, pressure and power checks for the next hardware step.</li>
             </ul>
@@ -284,7 +331,10 @@
         </div>
         <div class="actions">
           <a class="button" href="../assets/images/nz_ventilation_m101_design_review_sheet.svg">Open M-101 review sheet</a>
+          <a class="button" href="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg">Open M-102 review sheet</a>
           <a class="button secondary" href="../assets/reports/nz_ventilation_reference_check_matrix.md">NZ reference matrix</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_duct_sizing_pressure_loss_summary.md">Duct sizing / pressure summary</a>
+          <a class="button secondary" href="../assets/reports/nz_ventilation_bim_coordination_issue_log.csv">BIM issue log</a>
           <a class="button secondary" href="../assets/reports/nz_ventilation_fan_energy_noise_check.md">Fan / energy / noise check</a>
           <a class="button secondary" href="../assets/reports/smart_validation_kit_manufacturing_package.md">Manufacturing package</a>
           <a class="button secondary" href="../assets/reports/smart_validation_kit_bom_cost.csv">BOM and cost CSV</a>
@@ -299,10 +349,11 @@
           <ul class="detail-list">
             <li>Translated a residential MVHR / ERV design brief into routed supply, extract, outdoor-intake and exhaust systems.</li>
             <li>Connected the CAD model to New Zealand building-services context: NZBC G4 ventilation, H1 energy efficiency and Healthy Homes point checks.</li>
-            <li>Built a balanced normal operating case: 60 L/s supply and 60 L/s extract, equal to about 216 m3/h.</li>
+            <li>Documented the current Revit coordination schedule as 60 L/s supply and 45 L/s preliminary extract, with final balancing tracked as a design-review item.</li>
             <li>Separated boost / extractor checks from normal heat-recovery operation, with an 85 L/s boost extract target.</li>
             <li>Estimated duct velocities and path pressure losses, then set preliminary fan-duty targets of about 80 Pa normal and 120 Pa boost.</li>
             <li>Added a manufacturer-based equipment check and selected Mitsubishi Electric Lossnay LGH-35RVX3-E as the preliminary MVHR unit size.</li>
+            <li>Raised a BIM coordination issue log covering balancing, service access, wall penetrations, terminal data, controls and clash-review items.</li>
             <li>Generated a 2D DXF ventilation plan so the system can be reviewed in AutoCAD as well as SolidWorks.</li>
             <li>Built a native Revit 2026 MEP coordination model with three portfolio sheets, plan/3D views, system naming, schedule evidence and coordination checks.</li>
             <li>Automated the visual system model with C# SolidWorks API, producing 151 named features plus STEP, STL, PNG and component-list exports.</li>
@@ -318,6 +369,7 @@
             <a class="button" href="../assets/models/nz_home_ventilation_system.step">STEP model</a>
             <a class="button" href="../assets/models/smart_ventilation_validation_kit.step">Validation kit STEP</a>
             <a class="button" href="../assets/images/nz_ventilation_m101_design_review_sheet.svg">M-101 review sheet</a>
+            <a class="button" href="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg">M-102 review sheet</a>
             <a class="button" href="../assets/models/small_residential_mvhr_revit_mep_coordination_v4.rvt">Native Revit model</a>
             <a class="button" href="../assets/images/real_revit_mvhr_3d_coordination_v4.png">Revit 3D screenshot</a>
             <a class="button" href="../assets/images/real_revit_mvhr_airflow_schedule_v4.png">Revit airflow sheet</a>
@@ -329,6 +381,8 @@
             <a class="button secondary" href="../assets/reports/nz_ventilation_airflow_schedule.csv">Airflow schedule</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_revit_mep_schedule.csv">Revit MEP schedule</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_duct_pressure_estimate.csv">Pressure estimate</a>
+            <a class="button secondary" href="../assets/reports/nz_ventilation_duct_sizing_pressure_loss_summary.md">Pressure summary</a>
+            <a class="button secondary" href="../assets/reports/nz_ventilation_bim_coordination_issue_log.csv">BIM issue log</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_equipment_selection.md">Equipment selection</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_local_context.md">NZ context notes</a>
             <a class="button secondary" href="../assets/reports/nz_ventilation_commissioning_test_plan.md">Test plan</a>
@@ -355,10 +409,11 @@
         <h2>Preliminary Sizing Results</h2>
         <div class="split">
           <div class="panel">
-            <h3>Normal Balanced Mode</h3>
+            <h3>Current Revit Coordination Schedule</h3>
             <ul class="detail-list">
-              <li>Supply: four diffusers at 15 L/s each, total 60 L/s.</li>
-              <li>Extract: kitchen 30 L/s, bathroom 20 L/s and laundry 10 L/s, total 60 L/s.</li>
+              <li>Supply: bedroom 1, bedroom 2 and living terminals at 20 L/s each, total 60 L/s.</li>
+              <li>Extract: bathroom 20 L/s and kitchen/laundry 25 L/s, total 45 L/s.</li>
+              <li>Design review item: final MVHR balancing strategy still needs supplier data, damper settings and commissioning measurement.</li>
               <li>Nominal whole-dwelling sense check: 216 m3/h over about 230 m3, or 0.94 ACH.</li>
               <li>Typical velocities: 2.36 m/s in 180 mm main ducts and 1.13 m/s in 130 mm supply branches.</li>
             </ul>
@@ -369,7 +424,7 @@
               <li>Boost extract check: kitchen 50 L/s, bathroom 25 L/s and laundry 10 L/s.</li>
               <li>Highest normal path estimate: kitchen extract path at about 34 Pa before equipment allowances.</li>
               <li>Highest boost path estimate: kitchen boost path at about 72 Pa before equipment allowances.</li>
-              <li>Portfolio fan targets: 60 L/s at about 80 Pa normal, 85 L/s at about 120 Pa boost.</li>
+              <li>Portfolio fan targets: 60 L/s supply design at about 80 Pa allowance, 85 L/s boost extract check at about 120 Pa.</li>
               <li>Preliminary unit: LGH-35RVX3-E, selected because its 97 L/s at 160 Pa maximum point covers the boost target with headroom.</li>
             </ul>
           </div>

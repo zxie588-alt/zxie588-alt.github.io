@@ -86,7 +86,7 @@ FeatureName,Category,System,Material,Notes
 "Outlet_Grille_Louvre_1","Outlet grille","Validation rig","Dark hardware","Outlet grille louvre"
 "Outlet_Grille_Louvre_2","Outlet grille","Validation rig","Dark hardware","Outlet grille louvre"
 "Outlet_Grille_Louvre_3","Outlet grille","Validation rig","Dark hardware","Outlet grille louvre"
-"Callout_Normal_60Lps","Callout","Documentation","Normal air marker","Normal balanced target: 60 L/s"
+"Callout_Normal_60Lps","Callout","Documentation","Normal air marker","Normal supply target: 60 L/s"
 "Callout_Boost_85Lps","Callout","Documentation","Boost air marker","Boost validation target: 85 L/s"
 "Callout_CSV_Dashboard","Callout","Documentation","Label white","CSV log to dashboard workflow"
 "Callout_Commissioning","Callout","Documentation","Label white","Commissioning test rig evidence"

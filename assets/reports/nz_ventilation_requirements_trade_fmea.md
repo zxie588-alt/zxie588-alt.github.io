@@ -6,7 +6,7 @@ This document shows the systems-engineering layer behind the ventilation concept
 
 | Stakeholder | Need | Design response |
 | --- | --- | --- |
-| Occupants | Fresh air, moisture control, low noise and comfort | Balanced normal ventilation, boost logic and future acoustic check |
+| Occupants | Fresh air, moisture control, low noise and comfort | Supply/extract ventilation schedule, final balancing check, boost logic and future acoustic check |
 | Homeowner / landlord | Practical, maintainable and justifiable system | Equipment selection note, commissioning checklist and service access assumptions |
 | Installer | Clear duct routes, terminal labels and commissioning targets | DXF plan, airflow schedule and test plan |
 | Building-services reviewer | Traceable assumptions and limitations | NZ local context note, pressure estimate and limitation list |
@@ -17,7 +17,7 @@ This document shows the systems-engineering layer behind the ventilation concept
 
 | ID | Requirement | Rationale | Verification method |
 | --- | --- | --- | --- |
-| R-01 | Provide balanced normal ventilation at 60 L/s supply and 60 L/s extract. | Keep MVHR concept balanced and easy to commission. | Airflow schedule plus commissioning test T-01 |
+| R-01 | Provide a current coordination schedule of 60 L/s supply and 45 L/s preliminary extract, with final balanced operation to be confirmed. | Keep the MVHR concept reviewable without overstating the unresolved balancing step. | Airflow schedule plus commissioning test T-01 |
 | R-02 | Provide a boost target of 85 L/s for moisture or high-CO2 events. | Cover kitchen/bathroom point-check logic and demand response. | Dashboard state change plus test T-02/T-03/T-04 |
 | R-03 | Keep main duct velocity below about 3 m/s in normal operation. | Reduce pressure loss and noise risk at preliminary stage. | Duct velocity schedule |
 | R-04 | Select a concept MVHR unit with headroom above normal and boost targets. | Avoid undersizing the system. | Equipment selection note |
@@ -38,7 +38,7 @@ This document shows the systems-engineering layer behind the ventilation concept
 
 | State | Entry trigger | Exit trigger | Action |
 | --- | --- | --- | --- |
-| Normal | Default state and all inputs below thresholds. | CO2 or RH exceeds threshold. | 60 L/s supply and 60 L/s extract. |
+| Normal | Default state and all inputs below thresholds. | CO2 or RH exceeds threshold. | 60 L/s supply and 45 L/s preliminary extract schedule; final balance to be commissioned. |
 | Boost | CO2 above 1000 ppm, RH above 65%, or kitchen/bathroom event. | CO2 below 850 ppm and RH below 60% for a timed period. | 85 L/s target and higher fan duty. |
 | Purge | Severe CO2 or humidity event, or post-shower timer. | Timed clearing complete or values recovered. | Keep boost target and flag user/commissioning note. |
 | Fault safe | Sensor missing, out of range or stale data. | Sensor returns valid data. | Hold normal mode or boost if moisture source is known. |
@@ -57,7 +57,7 @@ This document shows the systems-engineering layer behind the ventilation concept
 
 ## Design Review Questions
 
-- Does the system still read as balanced MVHR rather than extract-only ventilation?
+- Does the system still read as an MVHR coordination package while honestly flagging the unresolved balancing step?
 - Does the selected unit have enough external static pressure margin after real grilles, filters and silencers are added?
 - Are the Healthy Homes kitchen/bathroom checks treated as point checks rather than a blanket compliance claim?
 - Can the installer understand the airflow schedule without reading the full project narrative?

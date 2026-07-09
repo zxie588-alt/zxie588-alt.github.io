@@ -24,7 +24,7 @@
   <circle cx="710" cy="322" r="18" fill="#dff7df" stroke="#181818" stroke-width="2"/>
   <circle cx="724" cy="542" r="18" fill="#ffe5d1" stroke="#181818" stroke-width="2"/>
   <text x="112" y="638" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#181818">System colours: Supply Air / Extract Air / Outdoor Air / Exhaust Air</text>
-  <text x="112" y="666" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#181818">Main design case: 60 L/s balanced normal operation, 85 L/s boost extract check</text>
+  <text x="112" y="666" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#181818">Main design case: 60 L/s supply, 45 L/s extract schedule, 85 L/s boost extract check</text>
 
   <rect x="836" y="210" width="648" height="226" rx="10" fill="#ffffff" stroke="#181818" stroke-width="3"/>
   <text x="864" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" fill="#181818">Revit Browser Setup</text>

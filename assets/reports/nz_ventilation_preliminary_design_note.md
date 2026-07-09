@@ -24,17 +24,17 @@ Sources checked on 24 June 2026:
 - https://www.building.govt.nz/building-code-compliance/h-energy-efficiency/h1-energy-efficiency
 - https://www.tenancy.govt.nz/healthy-homes/ventilation-standard/
 
-## Proposed Normal Operating Mode
+## Current Normal Operating Mode
 
-The normal mode is a balanced MVHR / ERV case:
+The latest Revit MEP coordination model records the current schedule as:
 
 - Total supply: 60 L/s, or 216 m3/h.
-- Total extract: 60 L/s, or 216 m3/h.
+- Total extract: 45 L/s, or 162 m3/h.
 - Nominal whole-dwelling air-change sense check: 216 m3/h / 230 m3 = 0.94 ACH.
-- Supply distribution: four terminals at 15 L/s each.
-- Extract distribution: kitchen 30 L/s, bathroom 20 L/s, laundry 10 L/s.
+- Supply distribution: three terminals at 20 L/s each.
+- Extract distribution: bathroom 20 L/s and kitchen/laundry 25 L/s.
 
-This mode is intentionally balanced so that the model reads as a heat-recovery ventilation system rather than a purely extract-only system.
+The earlier balanced concept target is retained as a design objective, but the current portfolio model deliberately marks final balancing as a design-review and commissioning item rather than claiming the system is already complete.
 
 ## Boost / Extractor Check Mode
 
@@ -49,14 +49,15 @@ This boost mode is a design target only. It needs a selected MVHR/fan curve, aco
 
 ## Duct Velocity Results
 
-Normal mode:
+Current Revit coordination mode:
 
 - 180 mm supply main at 60 L/s: 2.36 m/s.
-- 130 mm supply branches at 15 L/s: 1.13 m/s.
-- 170 mm extract main at 60 L/s: 2.64 m/s.
-- 120 mm kitchen extract branch at 30 L/s: 2.65 m/s.
+- 130 mm supply branches at 20 L/s: about 1.51 m/s.
+- 160 mm extract main at 45 L/s: about 2.24 m/s.
+- 125 mm kitchen/laundry extract branch at 25 L/s: about 2.04 m/s.
 - 120 mm bathroom extract branch at 20 L/s: 1.77 m/s.
-- 180 mm outdoor intake/exhaust at 60 L/s: 2.36 m/s.
+- 180 mm outdoor intake at 60 L/s: 2.36 m/s.
+- 160 mm exhaust route at 45 L/s: about 2.24 m/s.
 
 Boost mode:
 
@@ -82,13 +83,13 @@ This is a preliminary path comparison. It does not include manufacturer data for
 
 The calculated path losses are low because the CAD model uses short, smooth concept ductwork and simplified fittings:
 
-- Highest normal-mode path estimate: kitchen extract path, about 34 Pa.
-- Highest supply path estimate: about 19 Pa.
+- Highest current extract path estimate: kitchen/laundry extract path, about 27 Pa before global allowances.
+- Highest current supply path estimate: about 24 Pa before global allowances.
 - Highest boost-mode path estimate: kitchen boost path, about 72 Pa.
 
 For a portfolio-level design target, the project should state:
 
-- Normal mode fan target: 60 L/s at about 80 Pa external static pressure.
+- Normal mode fan target: 60 L/s supply design at about 80 Pa external static pressure allowance, with extract balancing to be verified.
 - Boost mode fan target: 85 L/s at about 120 Pa external static pressure.
 
 These targets include margin for filters, grilles, flexible connections, balancing and real equipment pressure drops. A manufacturer-based concept check was added against Mitsubishi Electric Lossnay LGH-RVX3-E data, with LGH-35RVX3-E selected as the preferred concept unit because it covers the 85 L/s boost target with headroom.

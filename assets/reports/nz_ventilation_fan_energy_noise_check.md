@@ -6,7 +6,7 @@ This note strengthens the preliminary MVHR / ERV equipment selection by linking 
 
 | Mode | Airflow target | External static pressure target | Use case |
 | --- | ---: | ---: | --- |
-| Normal balanced | 60 L/s supply and 60 L/s extract | about 80 Pa | Continuous or regular low-noise ventilation |
+| Current Revit coordination | 60 L/s supply and 45 L/s preliminary extract | about 80 Pa | Continuous or regular low-noise ventilation; final balancing to be verified |
 | Boost / clearing | 85 L/s extract-equivalent target | about 120 Pa | Cooking, shower or high-CO2 event |
 
 ## Concept Unit Check
@@ -20,7 +20,7 @@ Relevant published points used in the project:
 
 Reasoning:
 
-- Normal duty of 60 L/s at about 80 Pa sits below the 75% default point, leaving commissioning margin.
+- Normal supply duty of 60 L/s at about 80 Pa sits below the 75% default point, leaving commissioning margin.
 - Boost duty of 85 L/s at about 120 Pa sits below the 100% default point, leaving headroom.
 - LGH-25RVX3-E is close to normal duty but does not have enough boost headroom.
 - LGH-50RVX3-E is capable but likely oversized for the concept dwelling unless real pressure losses increase.

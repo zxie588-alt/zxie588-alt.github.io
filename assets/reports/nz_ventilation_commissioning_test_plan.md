@@ -6,8 +6,9 @@ This document upgrades the MVHR / ERV case study from a CAD and sizing exercise 
 
 Validate that the concept system can be explained as a controllable, measurable residential ventilation system:
 
-- Normal balanced operation at 60 L/s supply and 60 L/s extract.
-- Boost operation at 85 L/s supply/extract equivalent for moisture or CO2 events.
+- Current Revit coordination schedule: 60 L/s supply and 45 L/s preliminary extract.
+- Final balanced MVHR operation to be confirmed by supplier data, damper settings and commissioning measurement.
+- Boost operation at 85 L/s extract-equivalent for moisture or CO2 events.
 - Data capture for CO2, relative humidity, indoor temperature, outdoor temperature, fan mode and indicative airflow.
 - Control logic that moves between normal, boost and purge states based on measurable inputs.
 - A commissioning record that can be reviewed by a building-services, product-development or manufacturing engineering interviewer.
@@ -44,7 +45,7 @@ Validate that the concept system can be explained as a controllable, measurable 
 
 | Test ID | Test | Procedure | Acceptance criterion |
 | --- | --- | --- | --- |
-| T-01 | Normal balanced airflow | Set system to normal mode and record supply/extract targets. | Supply and extract targets are both 60 L/s; balancing error target within +/-10% when real measurements are available. |
+| T-01 | Normal airflow and balancing review | Set system to normal mode and record supply/extract targets. | Current targets are 60 L/s supply and 45 L/s extract; final balanced setpoints to be agreed and measured within +/-10% once real terminals and dampers are selected. |
 | T-02 | Kitchen boost response | Simulate cooking event or raise kitchen RH input above threshold. | System changes to boost mode and records 85 L/s target until RH returns below threshold. |
 | T-03 | Bathroom boost response | Simulate shower event with RH above threshold. | Boost mode starts and remains active for a timed clearing period. |
 | T-04 | CO2 demand response | Raise CO2 above 1000 ppm in dashboard or sensor stream. | System recommends boost or purge and logs decision reason. |

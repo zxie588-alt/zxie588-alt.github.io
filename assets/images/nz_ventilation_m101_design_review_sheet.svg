@@ -21,7 +21,7 @@
   <path d="M344 458 H160" fill="none" stroke="#00896f" stroke-width="5" marker-end="url(#arrowFresh)"/>
   <text x="140" y="420" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#005f58">Outdoor intake</text>
   <text x="610" y="420" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#5e6a70">Exhaust</text>
-  <text x="110" y="492" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#5e6a70">Normal balanced mode: 60 L/s supply + 60 L/s extract</text>
+  <text x="110" y="492" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#5e6a70">Current Revit schedule: 60 L/s supply + 45 L/s extract; balance to verify</text>
 
   <rect x="840" y="160" width="680" height="360" fill="#f6f8f7" stroke="#1f2a2e" stroke-width="2"/>
   <text x="862" y="194" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#1f2a2e">2. SolidWorks Validation Kit</text>
@@ -53,7 +53,7 @@
   <text x="622" y="650" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#1f2a2e">Evidence</text>
   <text x="102" y="690" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1f2a2e">Normal</text>
   <text x="235" y="684" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1f2a2e">60 L/s supply</text>
-  <text x="235" y="706" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1f2a2e">+ 60 L/s extract</text>
+  <text x="235" y="706" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1f2a2e">+ 45 L/s extract</text>
   <text x="438" y="690" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1f2a2e">60 L/s @ about 80 Pa</text>
   <text x="622" y="690" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1f2a2e">Sizing sheet</text>
   <text x="102" y="730" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1f2a2e">Boost</text>
