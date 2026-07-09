@@ -575,6 +575,10 @@ h3 {
   background: linear-gradient(180deg, #ffffff 0%, #e7f3ed 100%);
 }
 
+.accent-sun {
+  background: linear-gradient(180deg, #ffffff 0%, #fff7d8 100%);
+}
+
 .accent-orange {
   background: linear-gradient(180deg, #ffffff 0%, #fff0df 100%);
 }
