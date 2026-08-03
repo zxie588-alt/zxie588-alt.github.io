@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+
 :root {
   color-scheme: light;
   --bg: #f6f1e8;
@@ -16,6 +18,10 @@
   --green: #16a34a;
   --yellow: #ffd24a;
   --shadow: 0 18px 0 rgba(24, 24, 24, 0.08);
+  --font-head: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, Arial, sans-serif;
+  --shadow-soft: 0 12px 30px -14px rgba(24, 24, 24, 0.28);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 * {
@@ -28,16 +34,19 @@ html {
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   background:
-    radial-gradient(circle at 18% 8%, rgba(255, 210, 74, 0.36), transparent 28%),
-    radial-gradient(circle at 86% 18%, rgba(17, 138, 178, 0.18), transparent 28%),
-    linear-gradient(rgba(24, 24, 24, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(24, 24, 24, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 15% 5%, rgba(255, 210, 74, 0.30), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(17, 138, 178, 0.15), transparent 32%),
+    linear-gradient(rgba(24, 24, 24, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 24, 24, 0.028) 1px, transparent 1px),
     var(--bg);
-  background-size: auto, auto, 32px 32px, 32px 32px, auto;
+  background-size: auto, auto, 34px 34px, 34px 34px, auto;
+  background-attachment: fixed, fixed, scroll, scroll, scroll;
   color: var(--text);
-  line-height: 1.55;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -84,8 +93,10 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-family: var(--font-head);
   font-weight: 700;
-  letter-spacing: 0;
+  font-size: 18px;
+  letter-spacing: -0.01em;
   color: var(--text);
 }
 
@@ -145,8 +156,9 @@ a:hover {
 h1,
 h2,
 h3 {
-  line-height: 1.16;
-  letter-spacing: 0;
+  font-family: var(--font-head);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
   overflow-wrap: anywhere;
 }
 
@@ -436,21 +448,27 @@ h3 {
   align-items: center;
   justify-content: center;
   min-height: 42px;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  padding: 9px 14px;
-  background: var(--accent);
+  border: 1px solid var(--accent-dark);
+  border-radius: 8px;
+  padding: 9px 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   color: #ffffff;
-  font-weight: 700;
-  box-shadow: 0 8px 18px rgba(0, 124, 115, 0.16);
-  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+  font-family: var(--font-head);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 22px -8px rgba(0, 124, 115, 0.5);
+  transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), filter 200ms var(--ease);
 }
 
 .button:hover {
-  background: var(--accent-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(0, 95, 88, 0.22);
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 16px 28px -10px rgba(0, 95, 88, 0.55);
   text-decoration: none;
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 .button.secondary {
@@ -1465,5 +1483,187 @@ h3 {
   .stat,
   .honest-note {
     max-width: calc(100vw - 48px);
+  }
+}
+
+/* ============================================================
+   VISUAL REFRESH 2026 — depth, motion, micro-interactions
+   Additive layer: never hides content unless JS confirms support.
+   ============================================================ */
+
+/* Section eyebrows read as small technical labels */
+.eyebrow {
+  font-family: var(--font-head);
+}
+
+/* Nav links: animated underline + clearer hover */
+.nav-links a {
+  position: relative;
+  color: var(--text);
+  padding: 3px 1px;
+  font-weight: 600;
+  transition: color 160ms var(--ease);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 240ms var(--ease);
+}
+
+.nav-links a:hover {
+  color: var(--accent-dark);
+  text-decoration: none;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Smooth depth transitions on the main cards */
+.showcase-card,
+.fit-card,
+.stat,
+.credential-card,
+.experience-feature,
+.panel,
+.proof-strip div {
+  transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
+}
+
+.fit-card:hover,
+.stat:hover,
+.credential-card:hover,
+.proof-strip div:hover {
+  transform: translateY(-4px);
+  box-shadow: 11px 13px 0 rgba(24, 24, 24, 0.10);
+}
+
+.showcase-card:hover {
+  transform: translateY(-4px) rotate(0deg);
+  box-shadow: 14px 14px 0 rgba(0, 111, 103, 0.18);
+}
+
+.experience-feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 10px 16px 34px -18px rgba(24, 24, 24, 0.5);
+}
+
+.panel:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Tags get a small bounce */
+.tag,
+.hero-mini-tags span {
+  transition: transform 140ms var(--ease);
+}
+
+.tag:hover,
+.hero-mini-tags span:hover {
+  transform: translateY(-2px);
+}
+
+/* Hero entrance — elements rise in on load (self-contained, always ends visible) */
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.editorial-hero .eyebrow,
+.editorial-hero h1,
+.editorial-hero .lead,
+.editorial-hero .hero-mini-tags,
+.editorial-hero .work-rights-note,
+.editorial-hero .actions,
+.hero-showcase {
+  animation: riseIn 720ms var(--ease) both;
+}
+
+.editorial-hero h1 { animation-delay: 70ms; }
+.editorial-hero .lead { animation-delay: 150ms; }
+.editorial-hero .hero-mini-tags { animation-delay: 230ms; }
+.editorial-hero .work-rights-note { animation-delay: 300ms; }
+.editorial-hero .actions { animation-delay: 360ms; }
+.hero-showcase { animation-delay: 430ms; }
+
+/* Scroll reveal — ONLY active when <html> has .has-js (added by an
+   inline script gated on IntersectionObserver support). Without JS,
+   every element is fully visible. */
+html.has-js :is(
+  .proof-strip > div,
+  .fit-card,
+  .project-deck,
+  .project-card,
+  .experience-feature,
+  .credential-card,
+  .stat,
+  .section > .section-heading,
+  #capabilities > h2,
+  #contact > h2
+) {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+}
+
+html.has-js :is(
+  .proof-strip > div,
+  .fit-card,
+  .project-deck,
+  .project-card,
+  .experience-feature,
+  .credential-card,
+  .stat,
+  .section > .section-heading,
+  #capabilities > h2,
+  #contact > h2
+).in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Clear keyboard focus */
+a:focus-visible,
+.button:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html.has-js :is(
+    .proof-strip > div, .fit-card, .project-deck, .project-card,
+    .experience-feature, .credential-card, .stat,
+    .section > .section-heading, #capabilities > h2, #contact > h2
+  ) {
+    opacity: 1;
+    transform: none;
   }
 }

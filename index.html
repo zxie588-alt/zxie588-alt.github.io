@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ricardo Xie Engineering Portfolio</title>
     <meta name="description" content="Mechanical engineering internship portfolio for Ricardo Xie, with project evidence in HVAC, CAD, simulation, manufacturing and systems engineering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script src="assets/js/project_carousel.js" defer></script>
+    <script>
+      // Enable scroll-reveal only when the browser can support it cleanly.
+      // Without this class, all content stays fully visible (no JS dependency).
+      try {
+        if ("IntersectionObserver" in window &&
+            !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          document.documentElement.classList.add("has-js");
+        }
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -572,5 +584,53 @@
       Ricardo Xie | Auckland, New Zealand | zxie588@aucklanduni.ac.nz |
       <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/">LinkedIn</a>
     </footer>
+
+    <script>
+      // Scroll-reveal: reveal target blocks as they enter the viewport.
+      // Fully fail-safe — any error reveals everything immediately.
+      (function () {
+        var html = document.documentElement;
+        if (!html.classList.contains("has-js")) return;
+
+        var selector = [
+          ".proof-strip > div", ".fit-card", ".project-deck", ".project-card",
+          ".experience-feature", ".credential-card", ".stat",
+          ".section > .section-heading", "#capabilities > h2", "#contact > h2"
+        ].join(",");
+
+        var revealAll = function () {
+          try {
+            document.querySelectorAll(selector).forEach(function (el) {
+              el.classList.add("in-view");
+            });
+          } catch (e) { html.classList.remove("has-js"); }
+        };
+
+        try {
+          var targets = Array.prototype.slice.call(document.querySelectorAll(selector));
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                io.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+          targets.forEach(function (el, i) {
+            // Subtle stagger within groups for a livelier cascade.
+            el.style.transitionDelay = (i % 4) * 60 + "ms";
+            io.observe(el);
+          });
+
+          // Safety net: if anything is still hidden shortly after load, show it.
+          window.addEventListener("load", function () {
+            setTimeout(revealAll, 2500);
+          });
+        } catch (e) {
+          revealAll();
+        }
+      })();
+    </script>
   </body>
 </html>
