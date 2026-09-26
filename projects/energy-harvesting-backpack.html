@@ -27,9 +27,10 @@
       <p class="lead">
         I joined this University of Auckland research project after earlier students had explored suspended-load
         backpack mechanisms and the research group had developed a bidirectional rotating electromagnetic generator.
-        I have now built the suspended-load platform shown below, integrating the group's generator with a
-        rack-and-pinion transmission, twin guides, elastic bands and 3D-printed components. I also participated
-        in doctoral-researcher-led testing and device demonstrations.
+        I designed and built the suspended-load platform shown below: the full backpack CAD and mechanical design,
+        laser-cut acrylic plates, 3D-printed parts, a welded generator support structure, and all of the wiring on
+        the group's generator prototype. I also participated in doctoral-researcher-led testing and device
+        demonstrations.
       </p>
 
       <section class="snapshot" aria-label="Research snapshot">
@@ -37,8 +38,8 @@
         <div class="snapshot-grid">
           <div class="snapshot-item">
             <span>My responsibility</span>
-            <strong>Mechanical platform design and physical build</strong>
-            <p>CAD, printed components, mechanical assembly, fit checks and wiring.</p>
+            <strong>Platform design, build and generator wiring</strong>
+            <p>Backpack CAD and mechanical design, laser cutting, 3D printing, welding, assembly, all generator wiring and electrical fault-finding.</p>
           </div>
           <div class="snapshot-item">
             <span>Supervision</span>
@@ -71,10 +72,10 @@
       <img class="project-image" style="max-height:720px;object-fit:contain" src="../assets/images/kineload-physical-platform.png" alt="Physical suspended-load platform built by Ricardo, with twin guides, elastic bands and integrated generator">
 
       <div class="stats">
-        <div class="stat"><strong>Built</strong>Suspended-load mechanical platform</div>
-        <div class="stat"><strong>Integrated</strong>Rack-and-pinion generator input</div>
-        <div class="stat"><strong>Hands-on</strong>3D printing, assembly and soldering</div>
-        <div class="stat"><strong>Team testing</strong>Participation under doctoral researchers</div>
+        <div class="stat"><strong>±35 mm</strong>Vertical payload travel on twin guide rods</div>
+        <div class="stat"><strong>70 mm ≈ 1 rev</strong>Full rack stroke to generator rotation</div>
+        <div class="stat"><strong>Tens of kg</strong>Design payload of the suspended platform</div>
+        <div class="stat"><strong>Volt-level</strong>Open-circuit voltage at the coil terminals (team bench test)</div>
       </div>
 
       <section class="split">
@@ -113,8 +114,9 @@
               <li>Built a modular SolidWorks assembly around a fixed rear plate and moving payload plate.</li>
               <li>Built the guide, rack, pinion and generator-mount interfaces for the physical platform.</li>
               <li>Prepared an exploded view, bilingual BOM, motion views and manufacturing layouts.</li>
-              <li>Exported plate DXFs plus STEP and STL files for fabrication review.</li>
-              <li>3D-printed parts, assembled the platform and soldered electrical connections.</li>
+              <li>Exported plate DXFs and laser-cut the acrylic plates; kept a fixed mounting-hole pattern so the drive can be upgraded without recutting the plates.</li>
+              <li>3D-printed parts, welded the generator support structure and assembled the platform.</li>
+              <li>Wired every coil on the group's generator prototype and brought the coils together to a single output.</li>
               <li>Learned to account for printed-part clearance when a nominal 5 mm hole did not accept an M5 bolt.</li>
               <li>Participated in doctoral-researcher-led bench testing and demonstrations of storage-assisted phone charging and pulse-oximeter operation.</li>
             </ul>
@@ -127,6 +129,49 @@
               printing, assembly access and practical tolerances. Their feedback becomes the next CAD revision or test.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Fault-Finding: When the Generator Gave No Output</h2>
+        <div class="split">
+          <div class="panel">
+            <ol class="detail-list">
+              <li><strong>Symptom.</strong> After assembly, the generator produced no output at the terminals.</li>
+              <li><strong>Method.</strong> The coils are wired together to one output, so a single break anywhere kills the whole circuit. I checked continuity with a multimeter joint by joint along the coil chain instead of guessing.</li>
+              <li><strong>Cause.</strong> A coil lead had been worn through by friction against an internal contact surface.</li>
+              <li><strong>Result.</strong> After the repair, the output came back.</li>
+            </ol>
+          </div>
+          <aside class="panel">
+            <h3>What It Taught Me</h3>
+            <p>
+              In a rotating electromechanical assembly, wiring is a mechanical design problem too. Leads that pass near
+              moving or rubbing surfaces need routing and protection that are designed in, not added after a failure.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>The Prototype in Use</h2>
+        <div class="evidence-gallery">
+          <figure class="evidence-shot evidence-contain">
+            <img src="../assets/images/backpack_worn_prototype.webp" alt="The suspended-load platform worn on a person's back" loading="lazy">
+            <figcaption>The platform worn on the back, with an LED load board mounted on top.</figcaption>
+          </figure>
+          <figure class="evidence-shot evidence-contain">
+            <img src="../assets/images/backpack_open_circuit_scope.webp" alt="Oscilloscope showing open-circuit voltage from the generator coils" loading="lazy">
+            <figcaption>Open-circuit voltage captured at the coil terminals during team testing.</figcaption>
+          </figure>
+          <figure class="evidence-shot evidence-contain">
+            <img src="../assets/images/backpack_phone_charging_demo.webp" alt="Phone showing charging while the wearer walks" loading="lazy">
+            <figcaption>Storage-assisted demonstration: the phone registers charging while the wearer walks. Led by doctoral researchers; I took part.</figcaption>
+          </figure>
+          <figure class="evidence-shot evidence-contain">
+            <img src="../assets/images/backpack_pulse_oximeter_demo.webp" alt="Pulse oximeter powered by energy harvested from walking" loading="lazy">
+            <figcaption>A commercial pulse oximeter powered by energy harvested from walking. Led by doctoral researchers; I took part.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -164,7 +209,7 @@
         <h2>Verification Boundary</h2>
         <div class="honest-note">
           <strong>What is real now</strong>
-          <span>My CAD/manufacturing work and physical platform build are complete evidence. The presentation also reports doctoral-researcher-led device demonstrations in which I participated.</span>
+          <span>My CAD, fabrication, wiring and physical platform build are complete evidence. Volt-level open-circuit voltage was observed at the coil terminals in team bench tests, and the device demonstrations were led by doctoral researchers with my participation.</span>
         </div>
         <div class="honest-note">
           <strong>What is still open</strong>
