@@ -1859,3 +1859,10 @@ button:focus-visible {
     linear-gradient(135deg, rgba(251, 191, 36, 0.10), rgba(45, 212, 191, 0.08)),
     var(--surface);
 }
+
+/* Measured-results table (backpack power test) */
+.table-wrap { overflow-x: auto; margin: 1rem 0 1.4rem; }
+.result-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 520px; }
+.result-table th, .result-table td { padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid color-mix(in srgb, var(--line) 18%, transparent); }
+.result-table thead th { font-family: var(--font-head); font-weight: 600; border-bottom: 2px solid var(--accent); }
+.result-table tbody tr:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
