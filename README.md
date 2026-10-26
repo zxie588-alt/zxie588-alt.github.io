@@ -1,46 +1,21 @@
-# Ricardo Xie Engineering Portfolio Site
+# Ricardo Xie: Engineering Portfolio
 
-This is a static portfolio website. It can be opened locally or published with GitHub Pages, Vercel, Netlify or any static hosting service.
+Portfolio of Ricardo (Zhicong) Xie, graduate mechanical engineer in Auckland, New Zealand
+(Master of Engineering Studies (Mechanical), University of Auckland, completing July 2027).
 
-## Local preview
+Live site: https://zxie588-alt.github.io/
 
-Open `index.html` in a browser.
+CV: https://zxie588-alt.github.io/assets/resumes/Ricardo_Xie_CV.pdf
 
-## Publish with GitHub Pages
+## Projects
 
-GitHub Pages can publish static HTML, CSS and JavaScript files from a GitHub repository. The current site is already structured for that because `index.html` is at the top level of this folder.
+- Energy-Harvesting Backpack: suspended-load platform design, build, coil wiring and power testing (University of Auckland research prototype, 2026)
+- NZ Home Ventilation with Heat Recovery (MVHR): airflow schedule, duct sizing, equipment selection, commissioning plan, Revit MEP model generated with the Revit API
+- Solar Chimney CFD: natural convection and conjugate heat transfer (course research project)
+- Composite Front Wing FEA (course project)
+- Outdoor IoT Sensor Enclosure (self-directed design study)
+- Dynamic Pig-Carcass Weighing System (undergraduate embedded project, 2022–2024)
 
-Fast path:
+## Contact
 
-1. Create a public GitHub repository, for example `engineering-portfolio`.
-2. Upload everything inside this `portfolio_site` folder to the repository root.
-3. In the repository, go to `Settings` -> `Pages`.
-4. Set the publishing source to the `main` branch and root folder.
-5. Wait for the Pages build to finish, then use the published URL shown in `Settings` -> `Pages`.
-
-Expected public URL format if this is published as the user GitHub Pages site:
-
-`https://zxie588-alt.github.io/`
-
-Expected public URL format for a project site:
-
-`https://zxie588-alt.github.io/engineering-portfolio/`
-
-GitHub notes that Pages sites are publicly available on the internet, so remove private files before publishing.
-
-## Included projects
-
-- Smart NZ Home MVHR / ERV Ventilation System
-- Ruggedized Outdoor IoT Sensor Module
-- Solar Chimney CFD Reproduction and Critical Benchmark
-- Composite Formula SAE Front Wing Structural Analysis
-- Orbital AI Data Centre Systems Engineering Feasibility Study
-- Dynamic Livestock Weighing System as secondary mechatronics background
-
-## Before publishing
-
-- Replace placeholder wording if a project role needs more exact wording.
-- Replace the simulated commissioning CSV with measured sensor data after physical testing.
-- Keep the Revit MEP coordination package honest: publish the schedule/handoff evidence now, and add native Revit screenshots only after exporting them from a checked `.rvt` model.
-- Add a final PDF resume link when the resume is typeset.
-- Do not publish raw course reports, assignment files or editable DOCX submissions. Keep public evidence curated: case-study pages, selected result images, neutral design notes, calculation tables and clean model exports.
+zxie588@aucklanduni.ac.nz · https://www.linkedin.com/in/ricardo-xie-6394643b4/

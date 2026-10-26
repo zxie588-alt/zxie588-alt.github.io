@@ -1,419 +1,206 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ruggedized Outdoor IoT Sensor Module - Ricardo Xie</title>
+    <title>Ruggedised Outdoor IoT Sensor Enclosure | Ricardo Xie</title>
+    <meta name="description" content="IoT enclosure design study: worst-case stress 5.55 MPa vs 40 MPa yield in Abaqus, SolidWorks CAD, Keil C. Ricardo Xie, graduate mechanical engineer.">
+    <link rel="canonical" href="https://zxie588-alt.github.io/projects/ruggedized-iot-sensor-module.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ruggedised Outdoor IoT Sensor Enclosure | Ricardo Xie">
+    <meta property="og:description" content="IoT enclosure design study: worst-case stress 5.55 MPa vs 40 MPa yield in Abaqus, SolidWorks CAD, Keil C. Ricardo Xie, graduate mechanical engineer.">
+    <meta property="og:url" content="https://zxie588-alt.github.io/projects/ruggedized-iot-sensor-module.html">
+    <meta property="og:image" content="https://zxie588-alt.github.io/assets/og/ruggedized-iot-sensor-module-social.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <script src="../assets/js/theme.js"></script>
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="../index.html">Ricardo Xie</a>
         <div class="nav-links">
           <a href="../index.html#projects">Projects</a>
-          <a href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module">Source repo</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#education">Education</a>
           <a href="../index.html#contact">Contact</a>
+          <a class="nav-cv" href="../assets/resumes/Ricardo_Xie_CV.pdf">CV</a>
         </div>
       </nav>
     </header>
 
-    <main class="project-main">
-      <p class="eyebrow">Hardware product engineering release package</p>
-      <h1>Ruggedized Outdoor IoT Sensor Module</h1>
+    <main class="project-main" id="main">
+      <p class="eyebrow">Self-directed design study · CAD, FEA and firmware</p>
+      <h1>Ruggedised Outdoor IoT Sensor Enclosure</h1>
       <p class="lead">
-        A hardware/product engineering portfolio project focused on enclosure design, electronics packaging,
-        firmware boundaries, DFM notes and early validation logic. The strongest evidence is the SolidWorks
-        CAD package, Abaqus screening cases, Keil/uVision firmware source and engineering release notes.
+        An enclosure concept for a battery-powered field sensor, designed in SolidWorks and checked in Abaqus:
+        in all three load cases, peak stress stays at least seven times below the assumed material yield.
+      </p>
+      <p>
+        <strong>My role:</strong> self-directed design study, with no physical prototype yet. I wrote the requirements,
+        modelled the enclosure in SolidWorks, ran three Abaqus screening load cases, structured the embedded C
+        firmware in Keil and built a thermal model of the sealed box.
       </p>
 
-      <section class="snapshot" aria-label="Engineering snapshot">
-        <h2>Engineering Snapshot</h2>
-        <div class="snapshot-grid">
-          <div class="snapshot-item">
-            <span>My role</span>
-            <strong>Mechanical package owner</strong>
-            <p>Defined enclosure layout, sealing path, fastening path, service access and validation plan.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Deliverables</span>
-            <strong>CAD, FEA exports, firmware package</strong>
-            <p>SolidWorks assembly, STEP/STL, Abaqus screening images, Keil C project and release notes.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Tools</span>
-            <strong>SolidWorks, Abaqus, Keil</strong>
-            <p>CAD package and source-code screenshots are real files opened from the local project.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Design focus</span>
-            <strong>Rugged enclosure for field sensing</strong>
-            <p>Screw bosses, gasket stack-up, PCB/battery placeholders, strap mount and cable/service features.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Evidence status</span>
-            <strong>Design package with clear next tests</strong>
-            <p>Good for CAD/DFM/validation discussion; physical prototype, EDA layout and field tests remain next work.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Best-fit roles</span>
-            <strong>Product, hardware, mechatronics</strong>
-            <p>Useful evidence for enclosure design, sensor packaging and early validation internships.</p>
-          </div>
-        </div>
-      </section>
-
-      <img class="project-image" src="../assets/images/cover_iot_module_closeup.png" alt="Close-up view of the ruggedized outdoor IoT sensor module assembly">
-
-      <div class="image-grid">
-        <img src="../assets/images/real_iot_solidworks_side_view.png" alt="Side-view SolidWorks screenshot of the ruggedized IoT assembly">
-        <img src="../assets/images/real_iot_solidworks_lid_detail.png" alt="SolidWorks close-up screenshot showing lid and gasket detail">
-      </div>
-
       <div class="stats">
-        <div class="stat"><strong>CAD V2</strong>Detailed SolidWorks enclosure package</div>
-        <div class="stat"><strong>12</strong>Initial engineering requirements</div>
-        <div class="stat"><strong>12</strong>Native CAD files across V1/V2</div>
-        <div class="stat"><strong>3</strong>Abaqus screening load cases</div>
-        <div class="stat"><strong>Keil</strong>Real source-code screenshot</div>
-        <div class="stat"><strong>Next test</strong>Prototype, sealing, EDA layout and hardware validation</div>
+        <div class="stat"><strong>3</strong>Abaqus load cases: strap pull, corner load, screw-boss clamp</div>
+        <div class="stat"><strong>5.55 MPa</strong>Worst-case peak stress (120 N corner load) vs 40 MPa assumed yield</div>
+        <div class="stat"><strong>0 errors</strong>Keil firmware build, 0 warnings</div>
+        <div class="stat"><strong>66.6 °C</strong>Peak internal temperature in a 240-minute sun-exposure model</div>
       </div>
 
-      <section class="split">
-        <div class="panel">
-          <h2>Why This Project Exists</h2>
-          <p>
-            This project complements the NZ ventilation case study. The ventilation project targets HVAC,
-            building services and commissioning. This project targets product engineering: enclosure design,
-            DFM, test fixtures, electronics packaging, firmware boundaries and reliability validation.
-          </p>
-          <ul class="detail-list">
-            <li>SolidWorks CAD V2 includes detailed lower enclosure, upper lid, gasket, PCB placeholder, battery placeholder and exploded assembly.</li>
-            <li>The model now makes the sealing path, fastening path, strap-mount path and service-access path visible.</li>
-            <li>Electronics work is presented as a documented design package with BOM, net ownership, power budget and firmware ownership notes.</li>
-            <li>Keil / embedded C now includes a state machine, pin map, startup file, scatter file and clean uVision ARMCM3 target build.</li>
-            <li>Abaqus is used for completed strap-mount pull, enclosure corner-load and screw-boss compression screening load cases.</li>
-            <li>Thermal exposure simulation identifies sealed-enclosure overheating risk and design actions before prototype testing.</li>
-          </ul>
-        </div>
-        <aside class="panel">
-          <h2>Evidence Boundary</h2>
-          <p>
-            This page shows planning documents, SolidWorks CAD V1/V2, three Abaqus screening FEA load cases,
-            firmware architecture, low-power MCU device-pack readiness and an engineering release package.
-            The boundary is clear: IP rating, physical test data, production readiness, final PCB design,
-            commissioned PLC logic and validated firmware belong to the next hardware stage. The screenshot
-            gallery below uses real tool output or exported project files.
-          </p>
-        </aside>
-      </section>
+      <img class="project-image" src="../assets/images/cover_iot_module_closeup-web.webp" alt="Close-up of the ruggedised outdoor IoT sensor enclosure assembly in SolidWorks" width="1060" height="760" decoding="async" loading="eager" fetchpriority="high">
 
       <section class="section">
-        <h2>CAD V2 Deliverables</h2>
-        <div class="split">
-          <div class="panel">
-            <h3>SolidWorks Model Set</h3>
-            <ul class="detail-list">
-              <li>Lower enclosure with screw boss rings, PCB standoff rings, gasket groove intent, internal ribs and battery restraint clips.</li>
-              <li>Upper lid with counterbored screw-pad intent, membrane clamp ring, gasket compression ribs and label recess.</li>
-              <li>Rear strap-mount lugs, side service/debug port boss and front cable-gland ring.</li>
-              <li>More detailed PCB and battery envelopes for package checking.</li>
-              <li>Detailed exploded assembly plus native SolidWorks, STEP and STL outputs.</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h3>Engineering Definition</h3>
-            <ul class="detail-list">
-              <li>Requirements matrix covering enclosure, sealing, mounting, electronics, firmware and validation.</li>
-              <li>System architecture linking mechanical design, firmware boundaries and validation fixtures.</li>
-              <li>Initial DFMEA for gasket, strap mount, screw boss, service port, battery restraint, thermal risk and assembly error.</li>
-              <li>CAD design log documenting current limitations and next modelling tasks.</li>
-            </ul>
-          </div>
+        <h2>Enclosure design (SolidWorks)</h2>
+        <p>
+          Two versions of the model set (V1 and V2): lower enclosure, lid, gasket, PCB and battery envelopes and an
+          exploded assembly, exported to STEP and STL. Parts and assemblies are generated by SolidWorks API scripts,
+          so the model can be rebuilt after each design change.
+        </p>
+        <ul class="detail-list">
+          <li><strong>Sealing:</strong> gasket groove in the base, compression ribs on the lid and a clamp ring for the sensor membrane.</li>
+          <li><strong>Fastening:</strong> screw-boss rings, counterbored screw pads on the lid and internal ribs.</li>
+          <li><strong>Mounting and service:</strong> rear strap-mount lugs, a side service/debug port boss and a front cable-gland ring.</li>
+          <li><strong>Packaging:</strong> PCB standoff rings, battery restraint clips and PCB/battery envelopes for package checks.</li>
+          <li><strong>Definition:</strong> requirements matrix (12 initial requirements), DFMEA and DFM checklist.</li>
+        </ul>
+        <div class="image-grid">
+          <img src="../assets/images/real_iot_solidworks_exploded_overview-web.webp" alt="SolidWorks exploded assembly of the IoT enclosure with the feature tree visible" width="1620" height="1018" decoding="async" loading="lazy">
+          <img src="../assets/images/real_iot_solidworks_lid_detail-web.webp" alt="SolidWorks close-up of the lid, gasket path and internal stack-up" width="1379" height="945" decoding="async" loading="lazy">
         </div>
-        <img class="project-image" src="../assets/images/rugged_iot_system_architecture.svg" alt="Ruggedized outdoor IoT sensor module architecture diagram">
         <div class="actions">
-          <a class="button" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module">Source repo</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module">Source repo</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/cad/solidworks">SolidWorks files</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/exports">STEP/STL exports</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/cad_design_log.md">CAD design log</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/project_brief.md">Project brief</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/requirements_matrix.csv">Requirements matrix</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/dfmea_seed.csv">DFMEA seed</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/toolchain_plan.md">Toolchain plan</a>
         </div>
       </section>
 
       <section class="section">
-        <h2>Abaqus Strap-Mount FEA</h2>
+        <h2>FEA screening (Abaqus)</h2>
         <p>
-          A screening Abaqus 2025 load case was added for the rear strap-mount lugs. The simplified model applies a
-          150 N total strap pull, split across the two lug holes, using an assumed PC-ABS material and C3D10 solid mesh.
+          Three static load cases in Abaqus 2025, each built by a Python script, using an assumed PC-ABS material
+          (40 MPa yield reference) with simplified geometry and supports. The corner load governs.
         </p>
-        <div class="stats">
-          <div class="stat"><strong>150 N</strong>Total strap pull load</div>
-          <div class="stat"><strong>1.57 MPa</strong>Maximum von Mises stress</div>
-          <div class="stat"><strong>0.010 mm</strong>Maximum displacement</div>
-          <div class="stat"><strong>25.47</strong>Screening yield ratio</div>
+        <p class="table-scroll-hint">On small screens, swipe the table to see all columns.</p>
+        <div class="table-wrap" role="region" aria-label="Scrollable results table" tabindex="0">
+          <table class="result-table">
+            <caption>Screening results (yield ratio = 40 MPa assumed yield ÷ peak von Mises stress)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Load case</th>
+                <th scope="col">Load</th>
+                <th scope="col">Peak von Mises</th>
+                <th scope="col">Peak displacement</th>
+                <th scope="col">Yield ratio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Strap-mount pull (two rear lugs)</td>
+                <td>150 N</td>
+                <td>1.57 MPa</td>
+                <td>0.010 mm</td>
+                <td>25.47</td>
+              </tr>
+              <tr>
+                <td>Corner load (drop/handling)</td>
+                <td>120 N equivalent static</td>
+                <td>5.55 MPa</td>
+                <td>0.021 mm</td>
+                <td>7.21</td>
+              </tr>
+              <tr>
+                <td>Screw-boss clamp</td>
+                <td>90 N</td>
+                <td>1.20 MPa</td>
+                <td>0.005 mm</td>
+                <td>33.36</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="split">
-          <div>
-            <img class="project-image" src="../assets/images/strap_lug_mises_contour_v1.png" alt="Abaqus von Mises stress contour for strap-mount lug screening case">
-          </div>
-          <div>
-            <img class="project-image" src="../assets/images/strap_lug_displacement_contour_v1.png" alt="Abaqus displacement contour for strap-mount lug screening case">
-          </div>
+        <div class="image-grid">
+          <img src="../assets/images/strap_lug_mises_contour_v1-web.webp" alt="Abaqus von Mises stress contour for the 150 N strap-mount pull case" width="803" height="534" decoding="async" loading="lazy">
+          <img src="../assets/images/corner_load_mises_contour_v1-web.webp" alt="Abaqus von Mises stress contour for the 120 N enclosure corner-load case" width="803" height="534" decoding="async" loading="lazy">
+          <img src="../assets/images/screw_boss_mises_contour_v1-web.webp" alt="Abaqus von Mises stress contour for the 90 N screw-boss clamp case" width="803" height="534" decoding="async" loading="lazy">
         </div>
-        <p>
-          This is early screening FEA: the geometry, support boundary and material values are simplified. It is useful
-          design evidence for load-path thinking, not a certified safety factor or physical validation result.
-        </p>
         <div class="actions">
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/fea/abaqus/strap_lug_static_v1">FEA output folder</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/strap_lug_static_v1/strap_lug_fea_report_v1.md">FEA report</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/scripts/build_abaqus_strap_lug_fea_v1.py">Abaqus script</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/strap_lug_static_v1/strap_lug_fea_report_v1.md">Strap-pull report</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/corner_load_static_v1/corner_load_fea_report_v1.md">Corner-load report</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/screw_boss_compression_v1/screw_boss_fea_report_v1.md">Screw-boss report</a>
         </div>
       </section>
 
       <section class="section">
-        <h2>Abaqus Corner-Load FEA</h2>
+        <h2>Electronics and firmware structure (Keil C)</h2>
         <p>
-          A second Abaqus 2025 load case screens early drop/handling risk. The simplified enclosure plate surrogate
-          applies a 120 N equivalent static load to one outer corner, with four screw-line support patches representing
-          the fastening load path.
+          Embedded C in Keil µVision, organised as a state machine (boot, self-test, sleep, sample, filter, transmit,
+          low-battery, fault and service), plus sensor-driver and power-monitor modules, startup code and a linker
+          scatter file.
         </p>
-        <div class="stats">
-          <div class="stat"><strong>120 N</strong>Equivalent static corner load</div>
-          <div class="stat"><strong>5.55 MPa</strong>Maximum von Mises stress</div>
-          <div class="stat"><strong>0.021 mm</strong>Maximum displacement</div>
-          <div class="stat"><strong>7.21</strong>Screening yield ratio</div>
-        </div>
-        <div class="split">
-          <div>
-            <img class="project-image" src="../assets/images/corner_load_mises_contour_v1.png" alt="Abaqus von Mises stress contour for enclosure corner-load screening case">
-          </div>
-          <div>
-            <img class="project-image" src="../assets/images/corner_load_displacement_contour_v1.png" alt="Abaqus displacement contour for enclosure corner-load screening case">
-          </div>
-        </div>
-        <p>
-          This result documents how the design would be screened before a physical drop test. It is not a dynamic
-          impact certification, but it shows the load-case definition, boundary-condition thinking and evidence control.
-        </p>
-        <div class="actions">
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/fea/abaqus/corner_load_static_v1">FEA output folder</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/corner_load_static_v1/corner_load_fea_report_v1.md">FEA report</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/scripts/build_abaqus_corner_load_fea_v1.py">Abaqus script</a>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Abaqus Screw-Boss Compression FEA</h2>
-        <p>
-          A third Abaqus 2025 load case screens assembly risk at the screw boss. The model uses an axisymmetric
-          local plate and boss section, applying a 90 N equivalent screw clamp load to the top annular contact edge.
-        </p>
-        <div class="stats">
-          <div class="stat"><strong>90 N</strong>Equivalent screw clamp load</div>
-          <div class="stat"><strong>1.20 MPa</strong>Maximum von Mises stress</div>
-          <div class="stat"><strong>0.005 mm</strong>Maximum displacement</div>
-          <div class="stat"><strong>33.36</strong>Screening yield ratio</div>
-        </div>
-        <div class="split">
-          <div>
-            <img class="project-image" src="../assets/images/screw_boss_mises_contour_v1.png" alt="Abaqus von Mises stress contour for screw-boss compression screening case">
-          </div>
-          <div>
-            <img class="project-image" src="../assets/images/screw_boss_displacement_contour_v1.png" alt="Abaqus displacement contour for screw-boss compression screening case">
-          </div>
-        </div>
-        <p>
-          This is a design-screening result for boss compression and cracking risk. It does not model detailed
-          threads, torque scatter, creep, inserts or a physical pull-out test.
-        </p>
-        <div class="actions">
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/fea/abaqus/screw_boss_compression_v1">FEA output folder</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/fea/abaqus/screw_boss_compression_v1/screw_boss_fea_report_v1.md">FEA report</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/scripts/build_abaqus_screw_boss_compression_fea_v1.py">Abaqus script</a>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Electronics + Firmware Architecture</h2>
-        <p>
-          The project links the mechanical enclosure to a Keil/uVision firmware project,
-          STM32L4 low-power device-pack audit and PCB design package
-          and candidate MCU porting plan. The current evidence covers component candidates, connection-level
-          net ownership, power-budget assumptions, state-machine behaviour, battery/sensor fault handling
-          and the sealed service/debug interface.
-        </p>
-        <img class="project-image" src="../assets/images/iot_electronics_firmware_architecture.svg" alt="Electronics and firmware architecture diagram for the ruggedized IoT sensor module">
-        <img class="project-image" src="../assets/images/iot_sensor_module_schematic_v1.svg" alt="Schematic draft for the ruggedized outdoor IoT sensor module electronics package">
-        <div class="split">
-          <div class="panel">
-            <h3>Electronics Evidence</h3>
-            <ul class="detail-list">
-              <li>Proteus is not used as visual evidence here because the current `.pdsprj` opens to an empty schematic canvas.</li>
-              <li>PCB design package includes board-level BOM, netlist, placement plan, stackup and DRC-style review, but not a native EDA layout screenshot.</li>
-              <li>Connection-level netlist linking each electrical signal to firmware ownership, mechanical packaging and validation intent.</li>
-              <li>Candidate component table and early power budget for sleep, sample/filter, transmit-boundary, low-battery and service modes.</li>
-              <li>Mechanical links to PCB envelope, battery restraint, sealed service/debug port and sensor membrane opening.</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h3>Firmware Evidence</h3>
-            <ul class="detail-list">
-              <li>Keil/uVision ARMCM3 prototype target build verified through the local uVision command-line launcher.</li>
-              <li>Clean ARM Compiler 6 / ARMCLANG build result: 0 errors, 0 warnings.</li>
-              <li>Program size from the verified target build: Code 500 bytes, RO-data 80 bytes, RW-data 0 bytes, ZI-data 1024 bytes.</li>
-              <li>STM32L4xx device pack installed and audited; STM32L432KCUx selected as the next low-power candidate MCU path.</li>
-              <li>Candidate STM32L432 pin allocation and porting plan separate the current prototype build from the future board-specific target.</li>
-              <li>Embedded C source structure includes state machine, sensor-driver abstraction, power monitor, startup assembly and linker scatter file.</li>
-              <li>Pin map and firmware architecture note covering sleep, sampling, filtering, transmit, low-battery, fault and service states.</li>
-            </ul>
-          </div>
-        </div>
-        <img class="project-image" src="../assets/images/iot_firmware_state_machine.svg" alt="Firmware state machine diagram for ruggedized IoT sensor module">
+        <ul class="detail-list">
+          <li>Clean ARM Compiler 6 build for an ARMCM3 prototype target: 0 errors, 0 warnings, 500 bytes of code.</li>
+          <li>STM32L432KCUx selected as the low-power candidate MCU, with a pin allocation and porting plan.</li>
+          <li>Connection-level netlist and power budget link each signal to its firmware owner and to the enclosure: PCB envelope, battery restraint, sealed service port and sensor membrane.</li>
+        </ul>
+        <img class="project-image" src="../assets/images/iot_firmware_state_machine.svg" alt="Firmware state machine for the IoT sensor: boot, self-test, sleep, sample, filter, transmit, low-battery, fault and service states" width="1100" height="520" decoding="async" loading="lazy">
         <div class="actions">
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/firmware/keil/iot_sensor_module_mdk">Keil firmware package</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/keil_uv4_build_log.txt">uVision build log</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/keil_uv4_build_summary_v1.md">Build summary</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/device_pack_audit_v1.md">Device-pack audit</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/stm32l432_candidate_pinout_v1.csv">STM32L432 pinout</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/keil_uv4_build_log.txt">Build log</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/firmware/keil/iot_sensor_module_mdk/stm32l432_porting_plan_v1.md">Porting plan</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/pcb_concept_v1">PCB design package</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/pcb_concept_v1/drc_clearance_review_v1.md">PCB DRC-style review</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/proteus/schematic_v1">Schematic notes</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/schematic_netlist_v1.csv">Netlist</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/electronics/proteus/schematic_v1/power_budget_v1.csv">Power budget</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/electronics_firmware_integration.md">Integration note</a>
         </div>
       </section>
 
       <section class="section">
-        <h2>Real Tool Screenshots and Exports</h2>
+        <h2>Thermal check</h2>
         <p>
-          This gallery uses screenshots or exports from actual project files. It separates completed CAD/FEA/firmware
-          evidence from electronics and automation items that still need native-tool capture or physical testing.
+          A lumped thermal model (Python) of the sealed enclosure combines a warm ambient ramp, solar heat input and
+          electronics duty-cycle pulses over 240 minutes. Peak internal temperature reached 66.6 °C, above the 55 °C
+          warning level, so direct sun exposure needs mitigation:
         </p>
-        <div class="evidence-gallery">
-          <figure class="evidence-shot">
-            <img src="../assets/images/real_iot_solidworks_exploded_overview.png" alt="SolidWorks assembly screenshot for ruggedized IoT sensor module">
-            <figcaption>SolidWorks Premium 2018 screenshot with the exploded assembly and feature tree visible.</figcaption>
-          </figure>
-          <figure class="evidence-shot">
-            <img src="../assets/images/real_iot_solidworks_lid_detail.png" alt="SolidWorks close-up screenshot for ruggedized IoT sensor module">
-            <figcaption>SolidWorks close-up showing lid, gasket path, internal stack-up and selected geometry.</figcaption>
-          </figure>
-          <figure class="evidence-shot">
-            <img src="../assets/images/real_keil_code_editor.png" alt="Keil uVision source code screenshot for ruggedized IoT sensor module firmware">
-            <figcaption>Keil/uVision screenshot with project tree, source tabs and embedded C logic visible.</figcaption>
-          </figure>
-          <figure class="evidence-shot">
-            <img src="../assets/images/strap_lug_mises_contour_v1.png" alt="Abaqus von Mises export for strap lug load case">
-            <figcaption>Abaqus/Standard export for the 150 N strap-lug screening load case.</figcaption>
-          </figure>
-          <figure class="evidence-shot">
-            <img src="../assets/images/corner_load_mises_contour_v1.png" alt="Abaqus von Mises export for corner-load load case">
-            <figcaption>Abaqus/Standard export for the enclosure corner-load screening case.</figcaption>
-          </figure>
-          <figure class="evidence-shot">
-            <img src="../assets/images/screw_boss_mises_contour_v1.png" alt="Abaqus von Mises export for screw boss load case">
-            <figcaption>Abaqus/Standard export for the screw-boss compression screening case.</figcaption>
-          </figure>
-          <figure class="evidence-shot">
-            <img src="../assets/images/real_iot_solidworks_side_view.png" alt="Side-view SolidWorks screenshot for ruggedized IoT sensor module">
-            <figcaption>Side-view SolidWorks screenshot showing the exploded spacing and component stack-up.</figcaption>
-          </figure>
-        </div>
-        <div class="honest-note">
-          <p><strong>Next evidence to add:</strong> native EDA schematic/layout screenshots, DRC output, populated PCB images and PLC/HMI screenshots if the validation fixture is developed further.</p>
-        </div>
+        <ul class="detail-list">
+          <li>Lighter enclosure colour and shaded mounting.</li>
+          <li>Lower radio and LED duty cycle.</li>
+          <li>Review of the vent membrane.</li>
+        </ul>
+        <img class="project-image" src="../assets/images/thermal_exposure_plot_v1.svg" alt="Simulated internal temperature of the sealed enclosure over 240 minutes, peaking at 66.6 °C" width="1200" height="720" decoding="async" loading="lazy">
         <div class="actions">
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/electronics/pcb_concept_v1">PCB evidence folder</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/automation/plc_test_fixture_v1">PLC fixture package</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/automation/plc_test_fixture_v1/iec61131/st_sensor_fixture_controller.st">IEC 61131-3 ST code</a>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Thermal Exposure Simulation</h2>
-        <p>
-          A lumped thermal RC model was added to screen sealed-enclosure temperature risk before physical
-          hardware exists. The model combines a warm ambient ramp, external solar/lamp heat input and
-          electronics duty-cycle pulses from the firmware transmit boundary.
-        </p>
-        <div class="stats">
-          <div class="stat"><strong>240 min</strong>Simulated exposure window</div>
-          <div class="stat"><strong>66.6 C</strong>Peak internal temperature</div>
-          <div class="stat"><strong>55 C</strong>Warning reference</div>
-          <div class="stat"><strong>Risk</strong>Direct exposure needs mitigation</div>
-        </div>
-        <img class="project-image" src="../assets/images/thermal_exposure_plot_v1.svg" alt="Thermal exposure simulation plot for sealed outdoor IoT enclosure">
-        <p>
-          The result is intentionally treated as a risk flag, not a pass claim. Suggested actions include
-          lighter enclosure colour, shaded mounting, reduced radio/LED duty cycle, vent membrane review and
-          future internal/external temperature logging.
-        </p>
-        <div class="actions">
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/data/thermal_exposure_model_v1">Thermal data folder</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/data/thermal_exposure_model_v1/thermal_exposure_report_v1.md">Thermal report</a>
           <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/scripts/build_thermal_exposure_model_v1.py">Model script</a>
         </div>
       </section>
 
       <section class="section">
-        <h2>Engineering Release Package</h2>
+        <h2>Next steps</h2>
         <p>
-          A release package was added to make the project read like an engineering deliverable rather than
-          only a modelling exercise. It includes drawing sheets, V2 BOM, DFM review, assembly instruction and a
-          verification matrix that separates completed evidence from future physical validation.
+          Build a physical prototype and run strap-pull, spray, drop and temperature-logging tests against the FEA
+          and thermal predictions, then lay out the PCB.
         </p>
-        <div class="split">
-          <div>
-            <img class="project-image" src="../assets/images/iot_sensor_module_v2_dimensioned_overview.svg" alt="Dimensioned overview drawing for the ruggedized IoT sensor module">
-          </div>
-          <div>
-            <img class="project-image" src="../assets/images/iot_sensor_module_v2_assembly_callouts.svg" alt="Assembly callout drawing for the ruggedized IoT sensor module">
-          </div>
-        </div>
-        <img class="project-image" src="../assets/images/iot_sensor_module_v2_inspection_control_sheet.svg" alt="Inspection-control drawing for the ruggedized IoT sensor module">
-        <div class="split">
-          <div class="panel">
-            <h3>Release Contents</h3>
-            <ul class="detail-list">
-              <li>Drawing register with dimensioned overview and assembly callout sheets.</li>
-              <li>Inspection-control sheet with preliminary datum strategy, CTQ characteristics and inspection method intent.</li>
-              <li>V2 BOM linked to current evidence and next actions.</li>
-              <li>DFM checklist covering gasket compression, bosses, strap lugs, service port and cable gland.</li>
-              <li>Assembly work instruction for gasket, PCB, battery, lid and service-port checks.</li>
-              <li>PLC-style test fixture control package for repeatable spray, thermal, cooldown and fault validation cycles.</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h3>Validation Control</h3>
-            <ul class="detail-list">
-              <li>Verification matrix traces CAD, FEA, firmware and electronics evidence to requirements.</li>
-              <li>Firmware evidence separates the clean ARMCM3 prototype build from the STM32L4 candidate MCU path.</li>
-              <li>CTQ inspection table links package features to datums, tolerances and future evidence.</li>
-              <li>Software-completion boundary note separates completed digital evidence from hardware, supplier and proprietary-tool blockers.</li>
-              <li>Physical pull, spray, drop and thermal tests are clearly marked as future work.</li>
-              <li>Evidence gap register was updated so the project does not overclaim maturity.</li>
-            </ul>
-          </div>
-        </div>
+      </section>
+
+      <section class="section">
+        <h2>Get in touch</h2>
+        <p>
+          I am completing my Master of Engineering Studies (Mechanical) at the University of Auckland in July 2027
+          and am looking for graduate mechanical engineering roles in New Zealand.
+        </p>
         <div class="actions">
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/engineering_release_package.md">Release package note</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/drawings">Drawing package</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/drawing_control_plan.md">Drawing control plan</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/drawings/inspection_characteristics_v1.csv">Inspection CTQs</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/software_completion_boundary_v1.md">Completion boundary</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/tree/main/automation/plc_test_fixture_v1">PLC fixture package</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/dfm_checklist.md">DFM checklist</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/ruggedized-iot-sensor-module/blob/main/docs/verification_validation_matrix.csv">Verification matrix</a>
+          <a class="button" href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+          <a class="button secondary" href="mailto:zxie588@aucklanduni.ac.nz?subject=Outdoor%20IoT%20enclosure%20project">Email me</a>
+          <a class="button secondary" href="../index.html#projects">More projects</a>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      Ricardo Xie · Graduate mechanical engineer, Auckland ·
+      <a href="mailto:zxie588@aucklanduni.ac.nz">zxie588@aucklanduni.ac.nz</a> ·
+      <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a> ·
+      <a href="https://github.com/zxie588-alt" rel="me">GitHub</a> ·
+      <a href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+    </footer>
   </body>
 </html>

@@ -1,4 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+/* Self-hosted fonts (Google Fonts is unreachable from some networks, e.g. mainland China). */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url("assets/fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url("assets/fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500 700; font-display: swap;
+  src: url("assets/fonts/space-grotesk-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500 700; font-display: swap;
+  src: url("assets/fonts/space-grotesk-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 
 :root {
   color-scheme: light;
@@ -25,7 +37,7 @@
   --glow-1: rgba(255, 210, 74, 0.28);
   --glow-2: rgba(17, 138, 178, 0.13);
   --grid-dot: rgba(24, 24, 24, 0.05);
-  --img-bg: var(--img-bg);
+  --img-bg: linear-gradient(135deg, #f1eee7, #fffdf8);
 }
 
 :root[data-theme="dark"] {
@@ -70,7 +82,7 @@ body {
     radial-gradient(var(--grid-dot) 1px, transparent 1.6px),
     var(--bg);
   background-size: auto, auto, 24px 24px, auto;
-  background-attachment: fixed, fixed, fixed, scroll;
+  background-attachment: scroll;
   color: var(--text);
   transition: background-color 300ms var(--ease), color 300ms var(--ease);
   line-height: 1.6;
@@ -136,6 +148,8 @@ a:hover {
   border-radius: 50%;
   background: linear-gradient(135deg, var(--red), var(--yellow));
   box-shadow: 14px 0 0 var(--accent);
+  margin-right: 14px;
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -1861,8 +1875,138 @@ button:focus-visible {
 }
 
 /* Measured-results table (backpack power test) */
+.project-image-contain { max-height: 720px; object-fit: contain; }
+.table-scroll-hint { display: none; color: var(--muted); font-size: 0.9rem; }
+.table-wrap:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 560px) {
+  .table-scroll-hint { display: block; margin: 0.8rem 0 0; }
+}
 .table-wrap { overflow-x: auto; margin: 1rem 0 1.4rem; }
 .result-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 520px; }
 .result-table th, .result-table td { padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid color-mix(in srgb, var(--line) 18%, transparent); }
 .result-table thead th { font-family: var(--font-head); font-weight: 600; border-bottom: 2px solid var(--accent); }
 .result-table tbody tr:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+
+/* ==========================================================================
+   Graduate refresh (Oct 2026): accessibility, mobile header, dark-mode fixes,
+   new homepage components and print styles.
+   ========================================================================== */
+html { scroll-padding-top: 92px; }
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100;
+  background: var(--text);
+  color: var(--surface);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.skip-link:focus { top: 12px; text-decoration: none; }
+
+/* Minimum readable size for small labels. */
+.tag, .hero-mini-tags span, .showcase-card span, .metric-line, .result-line { font-size: 13px; }
+
+.nav-links a { padding: 6px 2px; }
+.nav-links .nav-cv {
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Key facts under the hero headline. */
+.key-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+  max-width: 1080px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.key-facts li {
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 10px 14px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.key-facts strong { display: block; font-family: var(--font-head); font-size: 17px; }
+
+.fit-grid.fit-grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.fit-card ul { margin: 0 0 14px; padding-left: 18px; }
+.fit-card li { margin: 4px 0; }
+
+.project-grid.minor-grid { margin-top: 26px; }
+.project-grid.minor-grid .project-card { grid-template-columns: minmax(180px, 0.3fr) minmax(0, 1fr); min-height: 170px; }
+.project-grid.minor-grid .project-card img { min-height: 170px; }
+.project-grid.minor-grid .card-body { padding: 18px 24px; }
+.plain-intro { font-weight: 600; color: var(--text); }
+
+.exp-list { display: grid; gap: 14px; }
+.exp-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px 18px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 16px 18px;
+}
+.exp-item h3 { margin: 0; font-size: 19px; }
+.exp-item .exp-when { color: var(--muted); font-weight: 700; font-size: 14px; white-space: nowrap; }
+.exp-item p, .exp-item ul { grid-column: 1 / -1; margin: 0; }
+.exp-item ul { padding-left: 18px; }
+.exp-item .actions { grid-column: 1 / -1; margin-top: 6px; }
+
+.skills-table { width: 100%; border-collapse: collapse; background: var(--surface); border: 2px solid var(--line); }
+.skills-table th, .skills-table td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.skills-table th { width: 22%; font-family: var(--font-head); }
+.skills-table .level { color: var(--muted); font-weight: 600; }
+
+.coursework { margin: 10px 0 0; padding-left: 18px; }
+
+@media (max-width: 820px) {
+  .site-header { position: static; }
+  html { scroll-padding-top: 12px; }
+  .nav { flex-wrap: wrap; gap: 8px 16px; padding: 12px 16px; }
+  .nav-links { flex-wrap: wrap; overflow-x: visible; gap: 6px 14px; width: 100%; padding-bottom: 4px; }
+  .nav-links a { white-space: nowrap; padding: 10px 2px; }
+  .editorial-hero h1 { font-size: clamp(32px, 8.5vw, 44px); }
+  .project-main .section { padding-left: 0; padding-right: 0; max-width: none; }
+  .exp-item { grid-template-columns: 1fr; }
+  .exp-item .exp-when { white-space: normal; }
+  .skills-table th { width: 32%; }
+  .hero-copy { display: flex; flex-direction: column; }
+  .hero-copy .actions { order: 1; margin-top: 18px; }
+  .hero-copy .key-facts { order: 2; }
+  .nav-links .nav-cv { order: -1; }
+  .proof-strip { display: none; }
+}
+
+/* Dark-mode legibility fixes. */
+:root[data-theme="dark"] .button { color: #042f2e; }
+:root[data-theme="dark"] .button.secondary { color: var(--text); }
+:root[data-theme="dark"] .photo-tile figcaption,
+:root[data-theme="dark"] .model-frame span { background: rgba(14, 18, 22, 0.85); color: var(--text); }
+.key-facts li, .exp-item, .skills-table { color: var(--text); }
+:root[data-theme="dark"] .key-facts li,
+:root[data-theme="dark"] .exp-item,
+:root[data-theme="dark"] .skills-table { border-color: var(--line); }
+:root[data-theme="dark"] .nav-links .nav-cv { border-color: var(--accent); }
+
+@media print {
+  :root { --bg: #fff; --surface: #fff; --text: #000; --muted: #333; }
+  body { background: #fff; }
+  .site-header, .theme-toggle, .actions, .skip-link, .deck-control, .deck-dots { display: none !important; }
+  * { box-shadow: none !important; animation: none !important; transition: none !important; }
+  html.has-js * { opacity: 1 !important; transform: none !important; }
+  .project-card, .exp-item, .fit-card, .key-facts li { break-inside: avoid; }
+  img { max-height: 9cm; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; }
+}

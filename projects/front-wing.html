@@ -1,128 +1,153 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Composite Front Wing FEA - Ricardo Xie</title>
+    <title>Composite Front Wing FEA (Formula SAE-style load cases) | Ricardo Xie</title>
+    <meta name="description" content="Composite front wing FEA in Abaqus: 74% peak utilisation at 1.17 kg, 77% lighter than the first layup. Ricardo Xie, graduate mechanical engineer.">
+    <link rel="canonical" href="https://zxie588-alt.github.io/projects/front-wing.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Composite Front Wing FEA (Formula SAE-style load cases) | Ricardo Xie">
+    <meta property="og:description" content="Composite front wing FEA in Abaqus: 74% peak utilisation at 1.17 kg, 77% lighter than the first layup. Ricardo Xie, graduate mechanical engineer.">
+    <meta property="og:url" content="https://zxie588-alt.github.io/projects/front-wing.html">
+    <meta property="og:image" content="https://zxie588-alt.github.io/assets/og/front-wing-social.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <script src="../assets/js/theme.js"></script>
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="../index.html">Ricardo Xie</a>
         <div class="nav-links">
           <a href="../index.html#projects">Projects</a>
-          <a href="https://github.com/zxie588-alt/composite-front-wing-fea">Source repo</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#education">Education</a>
           <a href="../index.html#contact">Contact</a>
+          <a class="nav-cv" href="../assets/resumes/Ricardo_Xie_CV.pdf">CV</a>
         </div>
       </nav>
     </header>
 
-    <main class="project-main">
-      <p class="eyebrow">FEA and composite structures</p>
-      <h1>Composite Formula SAE Front Wing Structural Analysis</h1>
+    <main class="project-main" id="main">
+      <p class="eyebrow">University of Auckland course project · FEA</p>
+      <h1>Composite Front Wing FEA (Formula SAE-style load cases)</h1>
       <p class="lead">
-        A composite laminate and Abaqus shell FEA project for a Formula SAE front wing main element,
-        balancing stiffness, strength and mass under aerodynamic, cornering and bump load cases.
+        Laminate design and finite-element analysis of a carbon-fibre race-car front wing: the final layup carries
+        the worst-case 4.1 g bump load at 74% of its allowable stress and weighs about 1.17 kg, 77% lighter than the
+        first design.
+      </p>
+      <p>
+        <strong>My role:</strong> a University of Auckland course project using Formula SAE-style loads (not Formula
+        SAE team work). I designed the laminate, built the Abaqus shell model, applied the three load cases, ran the
+        ply-level stress checks and iterated the layup for mass.
       </p>
 
-      <section class="snapshot" aria-label="Engineering snapshot">
-        <h2>Engineering Snapshot</h2>
-        <div class="snapshot-grid">
-          <div class="snapshot-item">
-            <span>My role</span>
-            <strong>FEA and laminate analyst</strong>
-            <p>Built the Abaqus shell model, load cases, laminate checks and mass-driven design iteration.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Deliverables</span>
-            <strong>Mesh, load cases, stress results</strong>
-            <p>Composite shell model, result images, utilisation checks and source repository.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Tools</span>
-            <strong>Abaqus/Standard</strong>
-            <p>S4R shell elements, laminate definitions and local refinement around attachment regions.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Key numbers</span>
-            <strong>54,998 elements, 74% utilisation</strong>
-            <p>Final main-element mass estimate about 1.17 kg after layup iteration.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Evidence status</span>
-            <strong>Simulation project</strong>
-            <p>Shows load-path and composite judgement; not a physical coupon or track test.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Best-fit roles</span>
-            <strong>Simulation / design verification</strong>
-            <p>Best used for roles needing FEA setup, assumptions and result interpretation.</p>
-          </div>
-        </div>
-      </section>
-
       <div class="stats">
-        <div class="stat"><strong>54,998</strong>Final shell elements</div>
-        <div class="stat"><strong>74%</strong>Peak stress utilisation under governing case</div>
-        <div class="stat"><strong>77%</strong>Estimated mass reduction from initial layup</div>
+        <div class="stat"><strong>74%</strong>Peak stress utilisation, governing bump case (safety factor 1.5)</div>
+        <div class="stat"><strong>1.17 kg</strong>Final mass of the wing main element</div>
+        <div class="stat"><strong>77%</strong>Mass reduction from the initial layup</div>
+        <div class="stat"><strong>54,998</strong>S4R shell elements; under 0.3% change in peak displacement vs a coarse mesh</div>
       </div>
 
-      <section class="split">
-        <div class="panel">
-          <h2>Engineering Capability Shown</h2>
-          <ul class="detail-list">
-            <li>Converted aerodynamic, cornering and bump scenarios into Abaqus load cases for a composite front-wing structure.</li>
-            <li>Built an S4R shell-element laminate model with local refinement around attachment regions where stress concentration mattered.</li>
-            <li>Checked ply-level stresses against fatigue and ultimate allowables rather than only reading global displacement contours.</li>
-            <li>Iterated from an over-designed layup to a lighter quasi-isotropic laminate while retaining strength and stiffness margin.</li>
-          </ul>
-        </div>
-        <aside class="panel">
-          <h2>Key Evidence</h2>
-          <p>
-            The final model used 54,998 shell elements. The governing load case reached about 74% peak stress
-            utilisation with SF = 1.5, and the final main-element mass estimate was about 1.17 kg.
-          </p>
-          <div class="actions">
-            <a class="button secondary" href="https://github.com/zxie588-alt/composite-front-wing-fea">Source repo</a>
-          </div>
-        </aside>
-      </section>
-
       <section class="section">
-        <h2>Verification & Limits</h2>
-        <div class="split">
-          <div class="panel">
-            <h3>Checks Used</h3>
-            <ul class="detail-list">
-              <li>Used a shell model with local mesh refinement around attachment regions where load transfer and stress concentration mattered most.</li>
-              <li>Compared displacement and stress patterns across aerodynamic, cornering and bump scenarios instead of relying on one contour plot.</li>
-              <li>Reported ply-level utilisation against fatigue and ultimate allowables, with the governing result kept below the chosen design margin.</li>
-              <li>Kept mass estimate visible so the iteration reads as a strength-to-weight trade, not only a pass/fail stress check.</li>
-            </ul>
-          </div>
-          <aside class="panel">
-            <h3>Current Boundary</h3>
-            <p>
-              This is a simulation and laminate-judgement project. It does not include coupon testing,
-              adhesive/joint testing, aerodynamic tunnel data or track validation. The next useful upgrade
-              would be a documented mesh-convergence table and physical coupon comparison for the selected laminate.
-            </p>
-          </aside>
+        <h2>Load cases and results</h2>
+        <p class="table-scroll-hint">On small screens, swipe the table to see all columns.</p>
+        <div class="table-wrap" role="region" aria-label="Scrollable results table" tabindex="0">
+          <table class="result-table">
+            <caption>Peak response of the final laminate (working-load deflection limit 10 mm)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Load case</th>
+                <th scope="col">Loading</th>
+                <th scope="col">Criterion</th>
+                <th scope="col">Peak displacement</th>
+                <th scope="col">Utilisation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>High-speed straight</td>
+                <td>173.2 N downforce, 27.0 N drag</td>
+                <td>Infinite fatigue life</td>
+                <td>0.056 mm</td>
+                <td>1.9%</td>
+              </tr>
+              <tr>
+                <td>Cornering</td>
+                <td>27.5 m/s² lateral</td>
+                <td>Infinite fatigue life</td>
+                <td>0.385 mm</td>
+                <td>6.1%</td>
+              </tr>
+              <tr>
+                <td>Bump</td>
+                <td>4.1 g vertical</td>
+                <td>Ultimate, safety factor 1.5</td>
+                <td>2.096 mm</td>
+                <td>74.0%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </section>
-
-      <section class="section">
-        <h2>Selected Results</h2>
+        <p>
+          The governing failure mode is transverse compression in the unidirectional plies next to the rod-end
+          attachments under the bump case, remaining 26% below the chosen allowable stress, which includes a safety factor of 1.5.
+        </p>
         <div class="image-grid">
-          <img src="../assets/images/front_wing_02.png" alt="Abaqus mesh view of Formula SAE front wing">
-          <img src="../assets/images/front_wing_03.png" alt="Abaqus displacement contour for front wing bump case">
-          <img src="../assets/images/front_wing_04.png" alt="Abaqus stress result for composite front wing">
-          <img src="../assets/images/front_wing_05.png" alt="Composite laminate result visual for front wing analysis">
+          <img src="../assets/images/front_wing_02-web.webp" alt="Abaqus shell mesh of the front wing main element" width="1631" height="765" decoding="async" loading="eager" fetchpriority="high">
+          <img src="../assets/images/front_wing_03-web.webp" alt="Abaqus displacement contour for the front wing bump case" width="1157" height="762" decoding="async" loading="lazy">
+          <img src="../assets/images/front_wing_04-web.webp" alt="Abaqus transverse stress (S22) contour for the bump case, peaking at the rod-end attachments" width="1164" height="762" decoding="async" loading="lazy">
+          <img src="../assets/images/front_wing_05-web.webp" alt="Ply coverage and fibre orientation map for the eight-ply laminate" width="923" height="566" decoding="async" loading="lazy">
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>How I modelled it</h2>
+        <ul class="detail-list">
+          <li>Abaqus/Standard S4R shell model with one composite layup; mesh refined to 3 mm at the eight rod-end attachments, 5 mm at the leading and trailing edges and 10 mm elsewhere.</li>
+          <li>Mesh check under the bump case: peak displacement changed by less than 0.3% between a coarse mesh of about 6,000 elements and the final 54,998-element mesh.</li>
+          <li>Rod-ends modelled as spherical joints through kinematic couplings (translations fixed, rotations free).</li>
+          <li>Ply-level maximum-stress check against fatigue allowables for the working cases and ultimate allowables ÷ 1.5 for the bump case.</li>
+          <li>Honeycomb core considered and rejected: the double-curved surface complicates core machining and bonding, and the adhesive films alone would add about 400 g/m².</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Design iteration</h2>
+        <ul class="detail-list">
+          <li>Initial layup: 2.45 mm thick, about 3,750 g/m², under 2% utilisation in every case, so heavily over-designed.</li>
+          <li>Final layup: symmetric, balanced [woven 0° / UD ±45° / UD 0°]s, eight plies, 0.89 mm thick, 850 g/m².</li>
+          <li>Result: 77% lighter, all three load cases still met, and working-load deflection under 0.4 mm against the 10 mm limit.</li>
+        </ul>
+        <p><strong>Next steps:</strong> local ply drop-offs in the low-stress mid-span to save more mass, and coupon tests of the selected laminate.</p>
+        <div class="actions">
+          <a class="button secondary" href="https://github.com/zxie588-alt/composite-front-wing-fea">Source repo (Abaqus model)</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Get in touch</h2>
+        <p>
+          I am completing my Master of Engineering Studies (Mechanical) at the University of Auckland in July 2027
+          and am looking for graduate mechanical engineering roles in New Zealand.
+        </p>
+        <div class="actions">
+          <a class="button" href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+          <a class="button secondary" href="mailto:zxie588@aucklanduni.ac.nz?subject=Composite%20front%20wing%20FEA%20project">Email me</a>
+          <a class="button secondary" href="../index.html#projects">More projects</a>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      Ricardo Xie · Graduate mechanical engineer, Auckland ·
+      <a href="mailto:zxie588@aucklanduni.ac.nz">zxie588@aucklanduni.ac.nz</a> ·
+      <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a> ·
+      <a href="https://github.com/zxie588-alt" rel="me">GitHub</a> ·
+      <a href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+    </footer>
   </body>
 </html>

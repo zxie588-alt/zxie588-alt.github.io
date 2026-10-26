@@ -1,205 +1,164 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Smart NZ Home Ventilation System - Ricardo Xie</title>
+    <title>NZ Home Ventilation with Heat Recovery | Ricardo Xie</title>
+    <meta name="description" content="60 L/s supply, 45 L/s extract, 85 L/s boost: NZ home heat-recovery ventilation, Revit model automated in C#. By Ricardo Xie, graduate mechanical engineer.">
+    <link rel="canonical" href="https://zxie588-alt.github.io/projects/nz-home-ventilation.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="NZ Home Ventilation with Heat Recovery | Ricardo Xie">
+    <meta property="og:description" content="60 L/s supply, 45 L/s extract, 85 L/s boost: NZ home heat-recovery ventilation, Revit model automated in C#. By Ricardo Xie, graduate mechanical engineer.">
+    <meta property="og:url" content="https://zxie588-alt.github.io/projects/nz-home-ventilation.html">
+    <meta property="og:image" content="https://zxie588-alt.github.io/assets/og/nz-home-ventilation-social.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <script src="../assets/js/theme.js"></script>
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="../index.html">Ricardo Xie</a>
         <div class="nav-links">
           <a href="../index.html#projects">Projects</a>
-          <a href="https://github.com/zxie588-alt/nz-home-ventilation-system">Source repo</a>
-          <a href="../assets/models/nz_home_ventilation_system.step">STEP model</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#education">Education</a>
           <a href="../index.html#contact">Contact</a>
+          <a class="nav-cv" href="../assets/resumes/Ricardo_Xie_CV.pdf">CV</a>
         </div>
       </nav>
     </header>
 
-    <main class="project-main">
-      <p class="eyebrow">Main NZ building services and validation project</p>
-      <h1>Smart NZ Residential MVHR / ERV Ventilation System</h1>
+    <main class="project-main" id="main">
+      <p class="eyebrow">Self-directed building services project</p>
+      <h1>NZ Home Ventilation with Heat Recovery</h1>
       <p class="lead">
-        A self-directed New Zealand residential ventilation case study that connects CAD layout, local
-        building-services context, airflow scheduling, duct velocity, pressure-loss estimation, equipment
-        selection, sensor validation workflow and a lightweight digital-twin dashboard.
+        Whole-house ventilation with heat recovery for a New Zealand home: 60&nbsp;L/s supply, 45&nbsp;L/s extract
+        and an 85&nbsp;L/s boost check, with duct sizing, pressure-loss checks and a Revit 2026 model.
       </p>
-
-      <section class="snapshot" aria-label="Engineering snapshot">
-        <h2>Engineering Snapshot</h2>
-        <div class="snapshot-grid">
-          <div class="snapshot-item">
-            <span>My role</span>
-            <strong>Building-services design owner</strong>
-            <p>Built the layout, airflow schedule, pressure estimate, equipment selection and commissioning plan.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Deliverables</span>
-            <strong>Native Revit model, review pack, DXF and CAD evidence</strong>
-            <p>Revit 2026 model, coordination plan, 3D view, airflow schedule, review notes, issue log and SolidWorks/AutoCAD exports.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Tools</span>
-            <strong>SolidWorks, Revit MEP, AutoCAD/DXF</strong>
-            <p>Generated system layout, native Revit MEP coordination model, STEP/STL exports and component lists.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Key numbers</span>
-            <strong>60 L/s supply, 45 L/s extract, 85 L/s boost check</strong>
-            <p>Preliminary Revit schedule plus pressure-loss review; final balancing remains a commissioning item.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>NZ context</span>
-            <strong>G4, H1, Healthy Homes awareness</strong>
-            <p>Used code context as design guidance, not as a professional compliance certificate.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Best-fit roles</span>
-            <strong>HVAC / MEP / building services</strong>
-            <p>Best opened by consulting and facilities teams looking for drawing and calculation discipline.</p>
-          </div>
-        </div>
-      </section>
-
-      <img class="project-image" src="../assets/images/cover_nz_ventilation_closeup.png" alt="Close-up view of residential ventilation layout">
-
-      <div class="image-grid">
-        <img src="../assets/images/real_nz_ventilation_plan_solidworks.png" alt="Top-view SolidWorks screenshot of the NZ home ventilation system">
-        <img src="../assets/images/real_nz_ventilation_kit_solidworks.png" alt="SolidWorks screenshot of the ventilation validation kit">
+      <p>
+        <strong>My role:</strong> self-directed, end to end. I set the airflow schedule, sized the ducts, estimated
+        pressure losses, selected the heat-recovery (MVHR) unit, automated the Revit model with a C# Revit API script
+        and wrote the commissioning test plan.
+      </p>
+      <p class="muted">
+        Relevant coursework: MECHENG 715 Building Services at the University of Auckland, Semester 2 2026.
+      </p>
+      <div class="tags">
+        <span class="tag">MVHR / heat recovery</span>
+        <span class="tag">Revit 2026</span>
+        <span class="tag">C# Revit API</span>
+        <span class="tag">SolidWorks</span>
+        <span class="tag">DXF</span>
+        <span class="tag">Python</span>
       </div>
+
+      <img class="project-image" src="../assets/images/cover_nz_ventilation_closeup-web.webp" alt="SolidWorks model of the ventilation layout: blue supply ducts, orange extract ducts and the heat-recovery unit" width="860" height="720" decoding="async" loading="eager" fetchpriority="high">
 
       <div class="stats">
-        <div class="stat"><strong>151</strong>Named CAD bodies and features</div>
-        <div class="stat"><strong>60 / 45 L/s</strong>Current Revit supply / extract schedule</div>
-        <div class="stat"><strong>Review pack</strong>Revit sheets plus M-102 pressure and issue-log review</div>
-        <div class="stat"><strong>LGH-35</strong>Selected MVHR unit for normal and boost duty</div>
-        <div class="stat"><strong>85 L/s</strong>Boost target linked to commissioning and control logic</div>
+        <div class="stat"><strong>60 L/s</strong>Supply: bedroom 1, bedroom 2 and living at 20&nbsp;L/s each</div>
+        <div class="stat"><strong>45 L/s</strong>Extract: bathroom 20&nbsp;L/s, kitchen/laundry 25&nbsp;L/s</div>
+        <div class="stat"><strong>85 L/s</strong>Boost extract check: kitchen, bathroom and laundry</div>
+        <div class="stat"><strong>80 / 120 Pa</strong>Fan-duty allowance, normal / boost</div>
+        <div class="stat"><strong>LGH-35</strong>Selected MVHR unit: 97&nbsp;L/s at 160&nbsp;Pa</div>
       </div>
 
       <section class="section">
-        <h2>2D Ventilation Plan</h2>
-        <img class="project-image" src="../assets/images/nz_ventilation_plan_schematic.svg" alt="2D schematic plan of the NZ residential MVHR ventilation layout">
-        <div class="actions">
-          <a class="button secondary" href="../assets/cad/nz_home_ventilation_layout.dxf">Download DXF plan</a>
+        <h2>Key results</h2>
+        <div class="split">
+          <div class="panel">
+            <h3>Airflow and duct sizing</h3>
+            <ul class="detail-list">
+              <li>Whole-house check: 216&nbsp;m³/h through about 230&nbsp;m³, or 0.94 air changes per hour.</li>
+              <li>2.36&nbsp;m/s in the 180&nbsp;mm supply main and 1.51&nbsp;m/s in the 130&nbsp;mm supply branches: a low-velocity design for quiet operation.</li>
+              <li>2.24&nbsp;m/s in the 160&nbsp;mm extract main; 2.83&nbsp;m/s in the 150&nbsp;mm kitchen branch at boost.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Pressure loss and unit selection</h3>
+            <ul class="detail-list">
+              <li>Critical normal path: kitchen/laundry extract at about 27&nbsp;Pa before allowances (longest supply branch about 24&nbsp;Pa).</li>
+              <li>Critical boost path: kitchen boost extract at about 48&nbsp;Pa before allowances.</li>
+              <li>Fan-duty allowances: about 80&nbsp;Pa (normal) and 120&nbsp;Pa (boost) external static pressure, with margin above the path estimates.</li>
+              <li>Selected the Mitsubishi Electric Lossnay LGH-35RVX3-E: its 97&nbsp;L/s at 160&nbsp;Pa point covers the 85&nbsp;L/s boost check. The LGH-25 had limited boost headroom; the LGH-50 was likely oversized for this house.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section class="section">
-        <h2>Native Revit MEP Coordination Model</h2>
-        <p class="lead">
-          I rebuilt the ventilation case in Revit 2026 as a small residential MEP coordination model.
-          The package now includes a one-level house layout, MVHR equipment, colour-coded supply and
-          extract duct routes, outdoor intake/exhaust penetrations, diffusers/grilles, a 3D coordination
-          view, an airflow schedule, five drawing-review comments and a simple clash-check note.
+        <h2>Revit model, generated with C#</h2>
+        <p>
+          I automated the Revit 2026 model with a C# Revit API script. The script generates the house layout, the MVHR
+          unit, the colour-coded supply and extract duct layout, the outdoor intake and exhaust penetrations, the airflow
+          schedule and the drawing sheets. The images below are exported from those sheets.
         </p>
         <div class="evidence-gallery">
           <figure class="evidence-shot evidence-contain">
-            <img src="../assets/images/real_revit_mvhr_3d_coordination_v4.png" alt="Revit 2026 3D coordination view showing MVHR supply and extract duct routes">
-            <figcaption>Revit 2026 3D coordination view: MVHR unit, supply ducts, extract ducts and outdoor wall penetrations.</figcaption>
+            <img src="../assets/images/real_revit_mvhr_3d_coordination_v4-web.webp" alt="Revit 2026 3D coordination view showing MVHR supply and extract duct routes" width="921" height="556" decoding="async" loading="lazy">
+            <figcaption>3D coordination view: MVHR unit, supply ducts (blue), extract ducts (orange), intake and exhaust.</figcaption>
           </figure>
           <figure class="evidence-shot evidence-contain">
-            <img src="../assets/images/real_revit_mvhr_plan_coordination_v4.png" alt="Revit 2026 coordination plan showing supply and extract air routes">
-            <figcaption>Plan view evidence: blue supply air to bedrooms/living, orange extract air from bathroom and kitchen/laundry.</figcaption>
+            <img src="../assets/images/real_revit_mvhr_plan_coordination_v4-web.webp" alt="Revit 2026 coordination plan showing supply and extract air routes" width="966" height="533" decoding="async" loading="lazy">
+            <figcaption>Plan view: supply to bedrooms and living; extract from bathroom and kitchen/laundry.</figcaption>
           </figure>
           <figure class="evidence-shot evidence-contain">
-            <img src="../assets/images/real_revit_mvhr_airflow_schedule_v4.png" alt="Revit airflow schedule sheet for the residential MVHR project">
-            <figcaption>Airflow schedule and NZ context note exported from the Revit sheet set.</figcaption>
+            <img src="../assets/images/real_revit_mvhr_airflow_schedule_v4-web.webp" alt="Revit airflow schedule sheet for the residential MVHR project" width="986" height="511" decoding="async" loading="lazy">
+            <figcaption>Airflow schedule exported from the Revit sheet set.</figcaption>
           </figure>
           <figure class="evidence-shot evidence-contain">
-            <img src="../assets/images/real_revit_mvhr_sheet_plan_v4.png" alt="Full Revit sheet with coordination plan">
-            <figcaption>Full sheet evidence: RX-MVHR-001 coordination plan from the native Revit project.</figcaption>
+            <img src="../assets/images/real_revit_mvhr_sheet_plan_v4-web.webp" alt="Full Revit sheet with coordination plan" width="1284" height="722" decoding="async" loading="lazy">
+            <figcaption>Sheet RX-MVHR-001: coordination plan.</figcaption>
           </figure>
-        </div>
-        <div class="split">
-          <div class="panel">
-            <h3>What I Added</h3>
-            <ul class="detail-list">
-              <li>Native Revit 2026 RVT file with separate sheets: RX-MVHR-001 plan, RX-MVHR-002 3D view and RX-MVHR-003 airflow/review notes.</li>
-              <li>Mechanical system naming for supply air, extract air, outdoor intake and exhaust air routes.</li>
-              <li>MVHR unit, duct routes, diffusers/grilles and wall-penetration markers shown in plan and 3D.</li>
-              <li>Airflow schedule with 20 L/s supply terminals, 20-25 L/s extract terminals and an explicit balancing-to-be-verified note.</li>
-              <li>Five drawing-review comments covering balancing, access clearance, final diffuser selection, pressure loss and clash/penetration coordination.</li>
-            </ul>
-          </div>
-          <aside class="panel">
-            <h3>Why This Matters Locally</h3>
-            <p>
-              New Zealand building-services employers often work around BIM coordination, Revit schedules,
-              marked-up plans and multidisciplinary model checks. This upgrade shifts the project from
-              a good mechanical layout into something closer to how HVAC/MEP work is coordinated in practice.
-            </p>
-            <p class="muted">
-              The model is still portfolio-level, not a consent or construction drawing, but it now uses a
-              real Revit file and real Revit screenshots rather than a placeholder BIM diagram.
-            </p>
-          </aside>
-        </div>
-        <div class="actions">
-          <a class="button" href="../assets/models/small_residential_mvhr_revit_mep_coordination_v4.rvt">Download native RVT model</a>
-          <a class="button" href="../assets/reports/nz_ventilation_revit_mep_coordination_plan.md">Revit MEP coordination plan</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_revit_mep_schedule.csv">Revit schedule CSV</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_revit_mep_handoff_readme.md">Revit handoff README</a>
-          <a class="button secondary" href="../assets/images/real_revit_mvhr_3d_coordination_v4.png">Open Revit 3D screenshot</a>
-          <a class="button secondary" href="../assets/images/real_revit_mvhr_airflow_schedule_v4.png">Open airflow schedule screenshot</a>
         </div>
       </section>
 
       <section class="section">
-        <h2>Building Services Coordination Review</h2>
-        <p class="lead">
-          I added a follow-on review package around the Revit model: duct velocity checks, pressure-loss
-          summary, preliminary MVHR equipment selection and a BIM coordination issue log. This is the part
-          that makes the project closer to how a small HVAC/MEP task would be reviewed in practice.
+        <h2>Coordination review</h2>
+        <p>
+          One review sheet (M-102) brings together the design duty, duct velocities, pressure losses, unit selection and
+          the coordination issue log.
         </p>
-        <img class="project-image" src="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg" alt="M-102 building services coordination review sheet with duct sizing, pressure loss and issue log">
-        <div class="split">
-          <div class="panel">
-            <h3>New Review Deliverables</h3>
-            <ul class="detail-list">
-              <li>M-102 review sheet summarising design duty, duct velocity, pressure-loss risk and equipment selection.</li>
-              <li>Duct sizing and pressure-loss summary with normal/boost duty and review actions.</li>
-              <li>BIM coordination issue log separating design-review items from clash/penetration checks.</li>
-              <li>Updated Mitsubishi Lossnay LGH-35RVX3-E selection note with explicit final-review limits.</li>
-              <li>Building-services cover letter template using this project as the main evidence.</li>
-            </ul>
-          </div>
-          <aside class="panel">
-            <h3>Why It Helps Applications</h3>
-            <p>
-              Employers do not only want to see that I can place ducts in Revit. They also need to see that
-              I can track assumptions, flag unresolved coordination items and explain what still needs a
-              senior engineer, supplier or installer to confirm.
-            </p>
-          </aside>
+        <img class="project-image" src="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg" alt="M-102 building services coordination review sheet with duct sizing, pressure loss and issue log" width="1600" height="1000" decoding="async" loading="lazy">
+        <ul class="detail-list">
+          <li>Open issues logged: final supply/extract balancing mode, MVHR service clearance, intake/exhaust wall penetrations and manufacturer terminal data.</li>
+          <li>Simple clash check of the duct routes against the walls, with framing and access-panel checks logged for review.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Concept layout and validation kit</h2>
+        <p>
+          The first concept layout was modelled in SolidWorks and drawn as a 2D DXF plan; it used four
+          15&nbsp;L/s supply terminals, and the Revit model refines this to three 20&nbsp;L/s terminals. I also modelled
+          a validation kit: a 150&nbsp;mm test duct with a CO₂/humidity sensor pod, upstream and downstream pressure taps,
+          an ESP32 electronics tray, fan module, flow straightener and outlet grille. Both SolidWorks models were generated
+          with C# SolidWorks API scripts and exported to STEP and STL. The kit is modelled, not yet built.
+        </p>
+        <div class="image-grid">
+          <img src="../assets/images/nz_ventilation_plan_schematic.svg" alt="2D schematic of the early concept ventilation plan" width="1200" height="800" decoding="async" loading="lazy">
+          <img src="../assets/images/real_nz_ventilation_plan_solidworks-web.webp" alt="Top-view SolidWorks screenshot of the NZ home ventilation system" width="1267" height="927" decoding="async" loading="lazy">
         </div>
-        <div class="actions">
-          <a class="button" href="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg">Open M-102 review sheet</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_duct_sizing_pressure_loss_summary.md">Duct sizing / pressure summary</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_bim_coordination_issue_log.csv">BIM issue log CSV</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_equipment_selection.md">Equipment selection note</a>
-          <a class="button secondary" href="../assets/reports/building_services_hvac_cover_letter_template.md">HVAC cover letter template</a>
+        <div class="image-grid">
+          <img src="../assets/images/real_nz_ventilation_kit_solidworks-web.webp" alt="SolidWorks screenshot of the ventilation validation kit" width="1309" height="940" decoding="async" loading="lazy">
+          <img src="../assets/images/nz_ventilation_m101_design_review_sheet.svg" alt="M-101 design review sheet for the smart ventilation project" width="1600" height="1100" decoding="async" loading="lazy">
         </div>
       </section>
 
       <section class="section">
-        <h2>Sensor Validation and Digital Twin</h2>
-        <p class="lead">
-          The next upgrade turns the model into a measurable system: CO2, humidity, temperature, airflow
-          target and fan-power data feed a commissioning log and dashboard, so the design can be reviewed
-          as a testable engineering workflow rather than only a drawing.
+        <h2>Commissioning dashboard</h2>
+        <p>
+          The commissioning test plan sets seven tests, from airflow balancing to CO₂ and humidity boost response. The
+          dashboard below shows the control logic: it moves between normal, boost and recovery modes as CO₂ and humidity
+          cross their thresholds. It runs on simulated sample events; no physical sensor data yet.
         </p>
-        <img class="project-image" src="../assets/images/nz_ventilation_sensor_validation_architecture.svg" alt="Sensor validation architecture for the smart ventilation system">
+        <img class="project-image" src="../assets/images/nz_ventilation_sensor_validation_architecture.svg" alt="Sensor validation architecture for the smart ventilation system" width="1160" height="520" decoding="async" loading="lazy">
 
         <div class="dashboard-shell" data-ventilation-dashboard>
-          <h3>Interactive Control Prototype</h3>
-          <p class="muted">
-            Move through sample commissioning events and adjust thresholds to see how the system changes
-            between normal, boost and recovery states.
-          </p>
+          <h3>Interactive control prototype</h3>
+          <p class="muted">Move the sliders to change the sample event and the boost thresholds.</p>
           <div class="dashboard-controls">
             <label class="dashboard-control">
               Sample event
@@ -228,7 +187,7 @@
             <div class="dashboard-card"><span>Fan power</span><strong id="dashPower">-</strong></div>
           </div>
           <div class="chart-wrap">
-            <canvas id="ventilationTrend" width="860" height="320" aria-label="CO2 and relative humidity trend chart"></canvas>
+            <canvas id="ventilationTrend" width="860" height="320" role="img" aria-label="CO2 and relative humidity trend chart"></canvas>
           </div>
           <div class="decision-box">
             <strong>Control decision</strong>
@@ -236,235 +195,64 @@
             <p class="muted" id="controlValues">-</p>
           </div>
         </div>
+      </section>
 
+      <section class="section">
+        <h2>New Zealand design references</h2>
+        <ul class="detail-list">
+          <li><a href="https://www.building.govt.nz/building-code-compliance/g-services-and-facilities/g4-ventilation">NZ Building Code G4 Ventilation</a>: outdoor air supply and extract ventilation.</li>
+          <li><a href="https://www.building.govt.nz/building-code-compliance/h-energy-efficiency/h1-energy-efficiency">NZ Building Code H1 Energy Efficiency</a>: ventilation and HVAC energy performance.</li>
+          <li><a href="https://www.tenancy.govt.nz/healthy-homes/ventilation-standard/">Healthy Homes ventilation standard</a>: kitchen and bathroom extract checks.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Downloads</h2>
+        <p class="table-scroll-hint">On small screens, swipe the table to see all columns.</p>
+        <div class="table-wrap" role="region" aria-label="Scrollable results table" tabindex="0">
+          <table class="result-table">
+            <caption class="muted">Project files. Reports open as formatted pages on GitHub.</caption>
+            <thead>
+              <tr><th scope="col">File</th><th scope="col">Format</th><th scope="col">What it is</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="../assets/images/real_revit_mvhr_sheet_plan_v4.png">Revit plan sheet</a></td><td>PNG image</td><td>Sheet RX-MVHR-001, coordination plan with airflow labels</td></tr>
+              <tr><td><a href="../assets/images/real_revit_mvhr_3d_coordination_v4.png">Revit 3D view</a></td><td>PNG image</td><td>3D coordination view of the MVHR unit and duct layout</td></tr>
+              <tr><td><a href="../assets/images/real_revit_mvhr_airflow_schedule_v4.png">Airflow schedule sheet</a></td><td>PNG image</td><td>Terminal-by-terminal supply and extract airflow schedule</td></tr>
+              <tr><td><a href="../assets/models/small_residential_mvhr_revit_mep_coordination_v4.rvt" download>Revit model</a></td><td>RVT, 5.9&nbsp;MB</td><td>Revit 2026 model generated by the C# script; needs Autodesk Revit 2026</td></tr>
+              <tr><td><a href="https://github.com/zxie588-alt/nz-home-ventilation-system/blob/main/docs/nz_ventilation_duct_sizing_pressure_loss_summary.md">Duct sizing and pressure-loss summary</a></td><td>Report (GitHub)</td><td>Design duty, duct velocities and critical-path pressure losses</td></tr>
+              <tr><td><a href="https://github.com/zxie588-alt/nz-home-ventilation-system/blob/main/docs/nz_ventilation_equipment_selection.md">Equipment selection note</a></td><td>Report (GitHub)</td><td>LGH-25 / LGH-35 / LGH-50 comparison and selection reasoning</td></tr>
+              <tr><td><a href="https://github.com/zxie588-alt/nz-home-ventilation-system/blob/main/docs/nz_ventilation_commissioning_test_plan.md">Commissioning test plan</a></td><td>Report (GitHub)</td><td>Seven tests with procedures and acceptance criteria</td></tr>
+              <tr><td><a href="../assets/cad/nz_home_ventilation_layout.dxf" download>2D concept plan</a></td><td>DXF, 6&nbsp;KB</td><td>Early four-terminal concept layout for AutoCAD</td></tr>
+            </tbody>
+          </table>
+        </div>
         <div class="actions">
-          <a class="button" href="../assets/reports/nz_ventilation_commissioning_test_plan.md">Commissioning test plan</a>
-          <a class="button secondary" href="../assets/data/nz_ventilation_commissioning_sample.csv">Sample commissioning CSV</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_digital_twin_method.md">Digital twin method</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_requirements_trade_fmea.md">Requirements / FMEA</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_sensor_bom.csv">Sensor BOM</a>
-          <a class="button secondary" href="../assets/cad/nz_ventilation_sensor_pod_plate.dxf">Sensor pod DXF</a>
+          <a class="button secondary" href="https://github.com/zxie588-alt/nz-home-ventilation-system">All files and scripts on GitHub</a>
         </div>
       </section>
 
       <section class="section">
-        <h2>SolidWorks Validation Kit</h2>
-        <p class="lead">
-          I also modelled a SolidWorks validation kit so the sensor and commissioning workflow has a
-          physical mechanical context: a 150 mm test duct, sensor pod, pressure taps, silicone tubes,
-          ESP32 electronics tray, fan module, flow straightener and outlet grille.
+        <h2>Next steps</h2>
+        <p>
+          Build the validation kit, log real CO₂, humidity and airflow data, and replace the generic grilles and diffusers
+          with manufacturer pressure-drop and noise data.
         </p>
-        <img class="project-image" src="../assets/images/real_nz_ventilation_kit_solidworks.png" alt="SolidWorks screenshot of the smart ventilation validation kit">
-        <div class="stats">
-          <div class="stat"><strong>91</strong>Named SolidWorks bodies/features</div>
-          <div class="stat"><strong>150 mm</strong>Duct test section</div>
-          <div class="stat"><strong>CO2 / RH / Pa</strong>Sensor and pressure validation layout</div>
-          <div class="stat"><strong>STEP + STL</strong>Exported for review and manufacturing discussion</div>
-        </div>
-        <div class="split">
-          <div class="panel">
-            <h3>What This Adds</h3>
-            <ul class="detail-list">
-              <li>Shows how the CO2/RH sensor package could be mechanically mounted and serviced.</li>
-              <li>Adds upstream/downstream pressure taps connected to a differential-pressure sensor module.</li>
-              <li>Links the digital dashboard to physical data sources: fan mode, airflow target, pressure, CO2 and humidity.</li>
-              <li>Gives hardware/product employers a concrete test-rig and packaging example, not only an HVAC drawing.</li>
-            </ul>
-          </div>
-          <aside class="panel">
-            <h3>Generated with SolidWorks API</h3>
-            <p>
-              The model was generated through a C# SolidWorks API script, then exported as native SLDPRT,
-              STEP, STL and PNG. This keeps the CAD package repeatable and connects mechanical modelling
-              with programming-based automation.
-            </p>
-          </aside>
-        </div>
         <div class="actions">
-          <a class="button" href="../assets/models/smart_ventilation_validation_kit.step">Download validation kit STEP</a>
-          <a class="button secondary" href="../assets/models/smart_ventilation_validation_kit.stl">Download validation kit STL</a>
-          <a class="button secondary" href="../assets/reports/smart_validation_kit_design_note.md">Validation kit design note</a>
-          <a class="button secondary" href="../assets/reports/smart_validation_kit_component_list.csv">Validation kit component list</a>
-          <a class="button secondary" href="https://github.com/zxie588-alt/nz-home-ventilation-system/tree/main/source/solidworks">Native SolidWorks file</a>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Engineering Review Pack</h2>
-        <p class="lead">
-          I added a drawing-style review sheet and supporting engineering notes so the project can be
-          discussed like a small professional package: references, fan duty, energy sense check, acoustic
-          risk, manufacturing plan, coordination review, future physical testing and evidence-gap tracking.
-        </p>
-        <div class="evidence-gallery">
-          <figure class="evidence-shot evidence-contain">
-            <img src="../assets/images/nz_ventilation_m101_design_review_sheet.svg" alt="M-101 design review sheet for the smart ventilation project">
-            <figcaption>M-101 design review sheet: system layout, validation kit and engineering evidence pack.</figcaption>
-          </figure>
-          <figure class="evidence-shot evidence-contain">
-            <img src="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg" alt="M-102 BIM coordination review sheet for the MVHR project">
-            <figcaption>M-102 building-services review sheet: duct sizing, pressure loss, equipment selection and coordination issue log.</figcaption>
-          </figure>
-        </div>
-        <div class="split">
-          <div class="panel">
-            <h3>Added Engineering Evidence</h3>
-            <ul class="detail-list">
-              <li>M-101 style design review sheet with system layout, airflow schedule, validation kit and future test items.</li>
-              <li>NZ reference matrix mapping G4, G4/AS1, H1, Healthy Homes and manufacturer data to project evidence.</li>
-              <li>Fan curve, energy and noise sense check for the LGH-35 preliminary selection.</li>
-              <li>M-102 coordination review sheet with duct sizing, pressure-loss summary and BIM issue log.</li>
-              <li>Manufacturing package for the SolidWorks validation kit: BOM, cost estimate, assembly sequence and safety notes.</li>
-              <li>Future physical test-item list covering CO2, RH, pressure and power checks for the next hardware step.</li>
-            </ul>
-          </div>
-          <aside class="panel">
-            <h3>Evidence Gap Register</h3>
-            <p>
-              The dashboard still uses simulated commissioning data. The evidence register keeps that visible
-              and separates completed portfolio evidence from future physical tests: CO2/RH data, measured
-              airflow, duct pressure, fan power, acoustic measurement and professional compliance review.
-            </p>
-            <p class="muted">
-              This prevents the project from overstating physical validation before hardware testing is actually done.
-            </p>
-          </aside>
-        </div>
-        <div class="actions">
-          <a class="button" href="../assets/images/nz_ventilation_m101_design_review_sheet.svg">Open M-101 review sheet</a>
-          <a class="button" href="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg">Open M-102 review sheet</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_reference_check_matrix.md">NZ reference matrix</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_duct_sizing_pressure_loss_summary.md">Duct sizing / pressure summary</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_bim_coordination_issue_log.csv">BIM issue log</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_fan_energy_noise_check.md">Fan / energy / noise check</a>
-          <a class="button secondary" href="../assets/reports/smart_validation_kit_manufacturing_package.md">Manufacturing package</a>
-          <a class="button secondary" href="../assets/reports/smart_validation_kit_bom_cost.csv">BOM and cost CSV</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_future_physical_test_items.md">Future physical test items</a>
-          <a class="button secondary" href="../assets/reports/nz_ventilation_evidence_gap_register.md">Evidence gap register</a>
-        </div>
-      </section>
-
-      <section class="split">
-        <div class="panel">
-          <h2>Engineering Capability Shown</h2>
-          <ul class="detail-list">
-            <li>Translated a residential MVHR / ERV design brief into routed supply, extract, outdoor-intake and exhaust systems.</li>
-            <li>Connected the CAD model to New Zealand building-services context: NZBC G4 ventilation, H1 energy efficiency and Healthy Homes point checks.</li>
-            <li>Documented the current Revit coordination schedule as 60 L/s supply and 45 L/s preliminary extract, with final balancing tracked as a design-review item.</li>
-            <li>Separated boost / extractor checks from normal heat-recovery operation, with an 85 L/s boost extract target.</li>
-            <li>Estimated duct velocities and path pressure losses, then set preliminary fan-duty targets of about 80 Pa normal and 120 Pa boost.</li>
-            <li>Added a manufacturer-based equipment check and selected Mitsubishi Electric Lossnay LGH-35RVX3-E as the preliminary MVHR unit size.</li>
-            <li>Raised a BIM coordination issue log covering balancing, service access, wall penetrations, terminal data, controls and clash-review items.</li>
-            <li>Generated a 2D DXF ventilation plan so the system can be reviewed in AutoCAD as well as SolidWorks.</li>
-            <li>Built a native Revit 2026 MEP coordination model with three portfolio sheets, plan/3D views, system naming, schedule evidence and coordination checks.</li>
-            <li>Automated the visual system model with C# SolidWorks API, producing 151 named features plus STEP, STL, PNG and component-list exports.</li>
-            <li>Added stakeholder requirements, trade study and FMEA so the project shows systems-engineering judgement.</li>
-            <li>Built a sensor-validation and commissioning plan using CO2, humidity, airflow, fan power and control-state data.</li>
-            <li>Created a Python Streamlit dashboard prototype and a web-based interactive control demonstrator.</li>
-            <li>Added a sensor-pod mounting DXF and BOM to show mechanical hardware/test-rig thinking.</li>
-            <li>Modelled a SolidWorks validation kit with test duct, sensor pod, pressure taps, electronics tray, fan module and flow straightener.</li>
-            <li>Packaged the work into a drawing-style review sheet, NZ reference matrix, fan/energy/noise note and manufacturing package.</li>
-          </ul>
-          <div class="actions">
-            <a class="button" href="../assets/reports/nz_ventilation_preliminary_design_note.md">Case-study note</a>
-            <a class="button" href="../assets/models/nz_home_ventilation_system.step">STEP model</a>
-            <a class="button" href="../assets/models/smart_ventilation_validation_kit.step">Validation kit STEP</a>
-            <a class="button" href="../assets/images/nz_ventilation_m101_design_review_sheet.svg">M-101 review sheet</a>
-            <a class="button" href="../assets/images/nz_ventilation_m102_bim_coordination_review_sheet.svg">M-102 review sheet</a>
-            <a class="button" href="../assets/models/small_residential_mvhr_revit_mep_coordination_v4.rvt">Native Revit model</a>
-            <a class="button" href="../assets/images/real_revit_mvhr_3d_coordination_v4.png">Revit 3D screenshot</a>
-            <a class="button" href="../assets/images/real_revit_mvhr_airflow_schedule_v4.png">Revit airflow sheet</a>
-            <a class="button secondary" href="https://github.com/zxie588-alt/nz-home-ventilation-system">Source repo</a>
-            <a class="button secondary" href="../assets/models/nz_home_ventilation_system.stl">STL model</a>
-            <a class="button secondary" href="../assets/models/smart_ventilation_validation_kit.stl">Validation kit STL</a>
-            <a class="button secondary" href="../assets/cad/nz_home_ventilation_layout.dxf">DXF plan</a>
-            <a class="button secondary" href="../assets/reports/nz_home_ventilation_component_list.csv">Component list</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_airflow_schedule.csv">Airflow schedule</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_revit_mep_schedule.csv">Revit MEP schedule</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_duct_pressure_estimate.csv">Pressure estimate</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_duct_sizing_pressure_loss_summary.md">Pressure summary</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_bim_coordination_issue_log.csv">BIM issue log</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_equipment_selection.md">Equipment selection</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_local_context.md">NZ context notes</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_commissioning_test_plan.md">Test plan</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_requirements_trade_fmea.md">Requirements / FMEA</a>
-            <a class="button secondary" href="../assets/reports/nz_ventilation_fan_energy_noise_check.md">Fan / energy / noise</a>
-            <a class="button secondary" href="../assets/reports/smart_validation_kit_manufacturing_package.md">Manufacturing package</a>
-          </div>
-        </div>
-        <aside class="panel">
-          <h2>Design Boundary</h2>
-          <p>
-            This is a portfolio-level preliminary design exercise. It is not a building consent design,
-            compliance certificate or professional engineering statement. The intent is to show that I can
-            connect a 3D ventilation layout with New Zealand building-services terminology, code awareness,
-            early-stage sizing logic and a validation pathway. The sample commissioning log is simulated until
-            physical sensors are connected. The remaining blockers are a real architectural background from a
-            live project, full manufacturer fan-curve overlay, final diffuser/grille data, measured airflow
-            balancing, acoustic check and professional compliance review.
-          </p>
-        </aside>
-      </section>
-
-      <section class="section">
-        <h2>Preliminary Sizing Results</h2>
-        <div class="split">
-          <div class="panel">
-            <h3>Current Revit Coordination Schedule</h3>
-            <ul class="detail-list">
-              <li>Supply: bedroom 1, bedroom 2 and living terminals at 20 L/s each, total 60 L/s.</li>
-              <li>Extract: bathroom 20 L/s and kitchen/laundry 25 L/s, total 45 L/s.</li>
-              <li>Design review item: final MVHR balancing strategy still needs supplier data, damper settings and commissioning measurement.</li>
-              <li>Nominal whole-dwelling sense check: 216 m3/h over about 230 m3, or 0.94 ACH.</li>
-              <li>Typical velocities: 2.36 m/s in 180 mm main ducts and 1.13 m/s in 130 mm supply branches.</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h3>Boost and Fan Duty</h3>
-            <ul class="detail-list">
-              <li>Boost extract check: kitchen 50 L/s, bathroom 25 L/s and laundry 10 L/s.</li>
-              <li>Highest normal path estimate: kitchen extract path at about 34 Pa before equipment allowances.</li>
-              <li>Highest boost path estimate: kitchen boost path at about 72 Pa before equipment allowances.</li>
-              <li>Portfolio fan targets: 60 L/s supply design at about 80 Pa allowance, 85 L/s boost extract check at about 120 Pa.</li>
-              <li>Preliminary unit: LGH-35RVX3-E, selected because its 97 L/s at 160 Pa maximum point covers the boost target with headroom.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>New Zealand Local Context</h2>
-        <div class="split">
-          <div class="panel">
-            <h3>References Used</h3>
-            <ul class="detail-list">
-              <li>
-                <a href="https://www.building.govt.nz/building-code-compliance/g-services-and-facilities/g4-ventilation">NZ Building Code G4 - Ventilation</a>:
-                requires ventilation to occupied spaces and covers outdoor air and extract ventilation.
-              </li>
-              <li>
-                <a href="https://www.building.govt.nz/building-code-compliance/h-energy-efficiency/h1-energy-efficiency">NZ Building Code H1 - Energy Efficiency</a>:
-                relevant because ventilation, uncontrolled airflow and HVAC systems affect energy performance.
-              </li>
-              <li>
-                <a href="https://www.tenancy.govt.nz/healthy-homes/ventilation-standard/">Healthy Homes ventilation standard</a>:
-                used as a practical residential reference for openable-area and kitchen/bathroom extract checks.
-              </li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h3>Software Direction</h3>
-            <ul class="detail-list">
-              <li><strong>Excel / Google Sheets:</strong> airflow schedule, duct sizing, pressure-loss estimate and fan selection note.</li>
-              <li><strong>AutoCAD:</strong> 2D ventilation plan, duct route communication and future drawing-sheet development.</li>
-              <li><strong>Revit MEP:</strong> native RVT model with plan/3D/schedule sheets, system naming, airflow schedule and coordination notes.</li>
-              <li><strong>SolidWorks:</strong> current visual 3D system model and mechanical layout demonstration.</li>
-              <li><strong>EnergyPlus / IES VE / Fluent / CFX:</strong> later-stage energy or airflow simulation after basic sizing is complete.</li>
-            </ul>
-          </div>
+          <a class="button" href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+          <a class="button secondary" href="mailto:zxie588@aucklanduni.ac.nz?subject=Graduate%20role%20-%20NZ%20home%20ventilation%20project">Email me</a>
+          <a class="button secondary" href="../index.html#projects">More projects</a>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      Ricardo Xie · Graduate mechanical engineer, Auckland ·
+      <a href="mailto:zxie588@aucklanduni.ac.nz">zxie588@aucklanduni.ac.nz</a> ·
+      <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a> ·
+      <a href="https://github.com/zxie588-alt" rel="me">GitHub</a> ·
+      <a href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+    </footer>
     <script src="../assets/js/nz_ventilation_dashboard.js"></script>
   </body>
 </html>

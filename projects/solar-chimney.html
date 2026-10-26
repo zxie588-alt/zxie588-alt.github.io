@@ -1,130 +1,110 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Solar Chimney Thermal-Fluid Simulation - Ricardo Xie</title>
+    <title>Solar Chimney CFD: Natural Convection and Conjugate Heat Transfer | Ricardo Xie</title>
+    <meta name="description" content="Solar chimney CFD in ANSYS Fluent: 36,847-cell mesh within 0.90% of the fine mesh. Course research project by Ricardo Xie, graduate mechanical engineer.">
+    <link rel="canonical" href="https://zxie588-alt.github.io/projects/solar-chimney.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Solar Chimney CFD: Natural Convection and Conjugate Heat Transfer | Ricardo Xie">
+    <meta property="og:description" content="Solar chimney CFD in ANSYS Fluent: 36,847-cell mesh within 0.90% of the fine mesh. Course research project by Ricardo Xie, graduate mechanical engineer.">
+    <meta property="og:url" content="https://zxie588-alt.github.io/projects/solar-chimney.html">
+    <meta property="og:image" content="https://zxie588-alt.github.io/assets/og/solar-chimney-social.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <script src="../assets/js/theme.js"></script>
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="../index.html">Ricardo Xie</a>
         <div class="nav-links">
           <a href="../index.html#projects">Projects</a>
-          <a href="https://github.com/zxie588-alt/solar-chimney-cfd">Source repo</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#education">Education</a>
           <a href="../index.html#contact">Contact</a>
+          <a class="nav-cv" href="../assets/resumes/Ricardo_Xie_CV.pdf">CV</a>
         </div>
       </nav>
     </header>
 
-    <main class="project-main">
-      <p class="eyebrow">CFD and heat transfer</p>
-      <h1>Solar Chimney Thermal-Fluid Simulation & Validation</h1>
+    <main class="project-main" id="main">
+      <p class="eyebrow">University of Auckland course research project</p>
+      <h1>Solar Chimney CFD: Natural Convection and Conjugate Heat Transfer</h1>
       <p class="lead">
-        A controlled CFD validation case study for a laboratory-scale solar chimney, focused on natural convection,
-        conjugate heat transfer, boundary-condition uncertainty and physical validation.
+        How fast does sun-heated air rise through a solar chimney? I modelled a published laboratory-scale chimney
+        (12 m collector, 8 m tower) in ANSYS Fluent; the 36,847-cell production mesh is within 0.90% of the
+        fine-mesh outlet velocity.
+      </p>
+      <p>
+        <strong>My role:</strong> I set up the Fluent and CFX models, ran the heat-input cases and the mesh study,
+        checked the results against first principles and wrote the technical report.
       </p>
 
-      <section class="snapshot" aria-label="Engineering snapshot">
-        <h2>Engineering Snapshot</h2>
-        <div class="snapshot-grid">
-          <div class="snapshot-item">
-            <span>My role</span>
-            <strong>CFD model builder and checker</strong>
-            <p>Set up the thermal-flow model and checked whether the boundary conditions made physical sense.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Deliverables</span>
-            <strong>CFD setup and validation checks</strong>
-            <p>Solver comparison, heat/mass balance checks, mesh sensitivity and result interpretation.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Tools</span>
-            <strong>ANSYS Fluent and CFX</strong>
-            <p>Conjugate heat transfer, ideal-gas air, coupled walls and buoyancy-driven flow.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Key judgement</span>
-            <strong>Rejected non-physical input</strong>
-            <p>Audited heat input instead of tuning the model to match a target value.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Evidence status</span>
-            <strong>Simulation benchmark</strong>
-            <p>Good evidence for CFD reasoning; physical validation would need better measured boundary data.</p>
-          </div>
-          <div class="snapshot-item">
-            <span>Best-fit roles</span>
-            <strong>CFD / thermal / analysis</strong>
-            <p>Best used for roles needing model credibility checks and engineering judgement.</p>
-          </div>
-        </div>
-      </section>
-
-      <img class="project-image" src="../assets/images/real_solar_chimney_cfd_results_page.png" alt="ANSYS CFD result page from the solar chimney project">
-
       <div class="stats">
-        <div class="stat"><strong>Tools</strong>ANSYS Fluent, ANSYS CFX</div>
-        <div class="stat"><strong>Methods</strong>CHT, mesh independence, heat and mass balance</div>
-        <div class="stat"><strong>Focus</strong>Buoyancy-driven flow and heat-input sensitivity</div>
+        <div class="stat"><strong>36,847</strong>Cells in the production mesh (2D axisymmetric)</div>
+        <div class="stat"><strong>0.90%</strong>Outlet-velocity difference to the fine mesh, across three grids</div>
+        <div class="stat"><strong>~299 K</strong>Temperature rise the reference paper's 12.2 m/s draught would need, against its reported 42–46 °C</div>
+        <div class="stat"><strong>3.75 of 92.7 kW</strong>Heat recovered by a direct solar-loading setup, so I rejected it</div>
       </div>
 
-      <section class="split">
-        <div class="panel">
-          <h2>Engineering Capability Shown</h2>
-          <ul class="detail-list">
-            <li>Defined a conjugate heat-transfer CFD model with air, absorber and transparent cover domains instead of treating heat input as a black-box setting.</li>
-            <li>Audited energy input and rejected a direct solar-loading setup after heat accounting showed it was not physically credible.</li>
-            <li>Used mesh independence, mass balance, heat balance, Reynolds/Rayleigh-number checks and buoyancy scaling as validation tools.</li>
-            <li>Compared Fluent and CFX behaviour under controlled assumptions and explained the limits of point-value validation when boundary data is incomplete.</li>
-          </ul>
-        </div>
-        <aside class="panel">
-          <h2>Key Evidence</h2>
-          <p>
-            The value of this project is the engineering judgement: boundary-condition diagnosis, heat-transfer
-            auditing, solver comparison and first-principles checks before accepting a simulation result.
-          </p>
-          <div class="actions">
-            <a class="button secondary" href="https://github.com/zxie588-alt/solar-chimney-cfd">Source repo</a>
-          </div>
-        </aside>
+      <img class="project-image" src="../assets/images/real_solar_chimney_cfd_results_page-web.webp" alt="Report page comparing the reference contours with three Fluent heat-input cases, for temperature and velocity" width="1224" height="1584" decoding="async" loading="eager" fetchpriority="high">
+
+      <section class="section">
+        <h2>Key finding</h2>
+        <p>
+          How the heat input is interpreted, not mesh resolution, controls the predicted draught. A buoyancy hand
+          calculation showed that the reference paper's 12.2 m/s draught would need a ~299 K temperature rise,
+          inconsistent with its reported 42–46 °C, so I treated it as an uncertain benchmark instead of tuning the
+          model to match it.
+        </p>
       </section>
 
       <section class="section">
-        <h2>Verification & Limits</h2>
-        <div class="split">
-          <div class="panel">
-            <h3>Checks Used</h3>
-            <ul class="detail-list">
-              <li>Checked mass balance and heat balance before accepting the velocity and temperature contours.</li>
-              <li>Used mesh-sensitivity checks and dimensionless-number estimates to test whether the simulated buoyancy behaviour was plausible.</li>
-              <li>Compared Fluent and CFX behaviour under controlled assumptions, then treated disagreement as a modelling clue rather than hiding it.</li>
-              <li>Audited heat input and rejected non-physical boundary settings instead of tuning the case only to match a target point.</li>
-            </ul>
-          </div>
-          <aside class="panel">
-            <h3>Current Boundary</h3>
-            <p>
-              The project is strongest as a critical CFD benchmark. It does not claim a fully validated
-              product design, because the original boundary data and laboratory measurement detail are limited.
-              Better validation would need measured inlet/outlet conditions, surface temperatures and a controlled
-              comparison dataset.
-            </p>
-          </aside>
+        <h2>The model</h2>
+        <ul class="detail-list">
+          <li>Fluent 2D axisymmetric model as the main workflow, with a preliminary 3D CFX model to compare solver and dimensionality effects.</li>
+          <li>Three coupled regions: ideal-gas air, a dry-soil absorber and a transparent polyethylene cover, linked by conjugate heat-transfer wall pairs.</li>
+          <li>Purely buoyancy-driven flow: pressure inlet and outlet with no imposed velocity; realizable k-epsilon turbulence, supported by Reynolds and Rayleigh number checks.</li>
+          <li>Three grids (5,763, 36,847 and 56,787 cells) with 12 inflation layers (1 mm first layer) at the walls and heat-transfer interfaces.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Checks before using the results</h2>
+        <ul class="detail-list">
+          <li><strong>Heat input:</strong> a direct solar-loading setup through the cover recovered only about 3.75 kW of the expected 92.7 kW (820 W/m² over 113 m²), so I used controlled soil heat sources whose total input could be verified.</li>
+          <li><strong>Balances:</strong> equal and opposite heat flow across the coupled air–soil walls; CFX inlet–outlet mass imbalance of about 0.026%.</li>
+          <li><strong>Plausibility:</strong> the effective-heat baseline gave 2.54 m/s outlet-average velocity (3.74 m/s peak), within the roughly 1.7–5.1 m/s reported for other pilot solar chimneys.</li>        </ul>
+        <p><strong>Next steps:</strong> compare against a dataset with measured inlet and outlet conditions and surface temperatures.</p>
+        <div class="actions">
+          <a class="button secondary" href="https://github.com/zxie588-alt/solar-chimney-cfd">Source repo (ANSYS Workbench archive)</a>
         </div>
       </section>
 
       <section class="section">
-        <h2>Methods Used</h2>
-        <div class="stats">
-          <div class="stat"><strong>Model setup</strong>Ideal-gas air, absorber, cover, coupled walls and gravity-driven flow.</div>
-          <div class="stat"><strong>Validation</strong>Mesh sensitivity, heat balance, mass balance and dimensionless-number checks.</div>
-          <div class="stat"><strong>Decision</strong>Rejected non-physical inputs instead of tuning the model to match a target.</div>
+        <h2>Get in touch</h2>
+        <p>
+          I am completing my Master of Engineering Studies (Mechanical) at the University of Auckland in July 2027
+          and am looking for graduate mechanical engineering roles in New Zealand.
+        </p>
+        <div class="actions">
+          <a class="button" href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+          <a class="button secondary" href="mailto:zxie588@aucklanduni.ac.nz?subject=Solar%20chimney%20CFD%20project">Email me</a>
+          <a class="button secondary" href="../index.html#projects">More projects</a>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      Ricardo Xie · Graduate mechanical engineer, Auckland ·
+      <a href="mailto:zxie588@aucklanduni.ac.nz">zxie588@aucklanduni.ac.nz</a> ·
+      <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a> ·
+      <a href="https://github.com/zxie588-alt" rel="me">GitHub</a> ·
+      <a href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+    </footer>
   </body>
 </html>
