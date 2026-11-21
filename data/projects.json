@@ -23,6 +23,61 @@
       "keywords": ["assembly", "servo", "biomimicry", "水母", "海蜇"]
     },
     {
+      "id": "flanged-three-way-fitting",
+      "title": "Flanged Three-Way Fitting",
+      "categories": [
+        "cad"
+      ],
+      "label": "SolidWorks · Training assessment 2.1",
+      "summary": "A training assessment model of a flanged three-way fitting, with blended branches and recessed lettering.",
+      "image": "assets/images/portfolio-training-pipe-2-1-iso.webp",
+      "size": [
+        579,
+        482
+      ],
+      "alt": "Isometric view of the fitting and its flanged connections.",
+      "fit": "cad",
+      "keywords": [
+        "三通",
+        "三通水管",
+        "三通管件",
+        "培训考核",
+        "管道",
+        "flange",
+        "pipe",
+        "tee",
+        "2.1"
+      ]
+    },
+    {
+      "id": "branched-pipe-elbow",
+      "title": "Branched Pipe Elbow",
+      "categories": [
+        "cad"
+      ],
+      "label": "SolidWorks · Training assessment 2.2",
+      "summary": "A training assessment model of a curved three-way pipe with a side branch and flanged connections.",
+      "image": "assets/images/portfolio-training-pipe-2-2-iso.webp",
+      "size": [
+        399,
+        364
+      ],
+      "alt": "Isometric view of the curved main pipe, side branch and flanges.",
+      "fit": "cad",
+      "keywords": [
+        "三通",
+        "三通水管",
+        "支管弯管",
+        "培训考核",
+        "水管",
+        "flange",
+        "pipe",
+        "elbow",
+        "tee",
+        "2.2"
+      ]
+    },
+    {
       "id": "football-launcher", "title": "Football Launcher", "categories": ["cad"],
       "label": "SolidWorks · Machine design", "summary": "A football training machine model with a ball feed, adjustable head and wheeled chassis.",
       "image": "assets/images/portfolio-football-iso.webp", "size": [557, 546], "alt": "SolidWorks assembly of the Football Launcher V2", "fit": "cad",
