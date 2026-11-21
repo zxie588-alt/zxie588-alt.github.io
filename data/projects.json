@@ -1,0 +1,92 @@
+{
+  "categories": [
+    {"id": "cad", "title": "CAD models", "description": "Mechanical assemblies, product design and building systems.", "home": true},
+    {"id": "physical", "title": "Physical prototypes", "description": "Built hardware, workshop demonstrations and measurements.", "home": true},
+    {"id": "simulation", "title": "Simulation and analysis", "description": "Thermal, airflow and structural studies.", "home": true},
+    {"id": "systems", "title": "Systems and controls"},
+    {"id": "community", "title": "Community and training"}
+  ],
+  "featured": ["energy-harvesting-backpack", "jellyfish-mechanism", "football-launcher", "nz-home-ventilation"],
+  "projects": [
+    {
+      "id": "energy-harvesting-backpack", "title": "Energy-Harvesting Backpack", "categories": ["physical"],
+      "label": "University of Auckland · Research prototype",
+      "summary": "Built and wired a suspended-load platform. The walking test averaged 55 mW at 4 km/h.",
+      "image": "assets/images/backpack_worn_prototype.webp", "size": [606, 806], "alt": "Completed energy-harvesting backpack being worn", "fit": "photo",
+      "featuredImage": {"image": "assets/images/kineload-physical-platform-web.webp", "size": [1200, 1600], "alt": "Prototype platform with guides, elastic suspension and generator", "fit": "photo"},
+      "keywords": ["SolidWorks", "generator", "power testing", "prototyping", "发电", "背包"]
+    },
+    {
+      "id": "jellyfish-mechanism", "title": "Biomimetic Jellyfish Mechanism", "categories": ["cad"],
+      "label": "SolidWorks · Mechanism design", "summary": "Eight radial blades, four servo linkages and revised guide brackets.",
+      "image": "assets/images/portfolio-jellyfish-iso.webp", "size": [576, 522], "alt": "Eight-blade jellyfish assembly in SolidWorks", "fit": "cad",
+      "keywords": ["assembly", "servo", "biomimicry", "水母", "海蜇"]
+    },
+    {
+      "id": "football-launcher", "title": "Football Launcher", "categories": ["cad"],
+      "label": "SolidWorks · Machine design", "summary": "A football training machine model with a ball feed, adjustable head and wheeled chassis.",
+      "image": "assets/images/portfolio-football-iso.webp", "size": [557, 546], "alt": "SolidWorks assembly of the Football Launcher V2", "fit": "cad",
+      "keywords": ["soccer", "equipment", "V2", "足球", "发射器"]
+    },
+    {
+      "id": "desktop-catapult", "title": "Motorised Desktop Catapult", "categories": ["cad", "physical"],
+      "label": "SolidWorks · Laser-cut prototype", "summary": "V5 motorised plywood mechanism, with a workshop video and downloadable model.",
+      "image": "assets/catapult/solidworks-v5.webp", "size": [642, 567], "alt": "Native SolidWorks view of the desktop catapult", "fit": "cad",
+      "categoryImages": {"physical": {"image": "assets/catapult/prototype.webp", "size": [880, 836], "alt": "Close-up photograph of the assembled plywood prototype", "fit": "photo"}},
+      "keywords": ["prototype", "video", "catapult", "投石机", "激光切割"]
+    },
+    {
+      "id": "nz-home-ventilation", "title": "NZ Home Ventilation with Heat Recovery", "categories": ["cad", "systems"],
+      "label": "Revit MEP · Building services", "summary": "Heat recovery, duct sizing and automated Revit modelling for a New Zealand home.",
+      "image": "assets/images/cover_nz_ventilation_closeup-web.webp", "size": [860, 720], "alt": "Three-dimensional heat-recovery ventilation layout", "fit": "cad",
+      "keywords": ["HVAC", "MVHR", "SolidWorks", "airflow", "C#", "通风", "暖通"]
+    },
+    {
+      "id": "ruggedized-iot-sensor-module", "title": "Outdoor IoT Sensor Enclosure", "categories": ["cad", "systems"],
+      "label": "SolidWorks · Product design", "summary": "An enclosure study integrating electronics, fasteners and mounting features.",
+      "image": "assets/images/cover_iot_module_closeup-web.webp", "size": [1060, 760], "alt": "SolidWorks model of an outdoor sensor housing", "fit": "cad",
+      "keywords": ["electronics", "Abaqus", "firmware", "sensor", "物联网", "外壳"]
+    },
+    {
+      "id": "solar-chimney", "title": "Solar Chimney CFD", "categories": ["simulation"],
+      "label": "ANSYS Fluent · Thermal and airflow analysis", "summary": "Conjugate heat transfer, a three-mesh independence study and a benchmark check.",
+      "image": "assets/images/portfolio-solar-results.webp", "size": [1020, 217], "alt": "CFD temperature and velocity contours from the solar chimney study", "fit": "plot",
+      "keywords": ["ANSYS", "CFD", "natural convection", "CFX", "太阳能", "流体", "热仿真"]
+    },
+    {
+      "id": "front-wing", "title": "Composite Front Wing FEA", "categories": ["simulation"],
+      "label": "Abaqus · Structural analysis", "summary": "74% peak stress utilisation in the governing load case at a final wing mass of 1.17 kg.",
+      "image": "assets/images/front_wing_03-web.webp", "size": [1157, 762], "alt": "Abaqus displacement plot for the composite front wing", "fit": "plot",
+      "keywords": ["finite element", "FEA", "carbon fibre", "前翼", "有限元", "复合材料"]
+    },
+    {
+      "id": "dynamic-weighing", "title": "Dynamic Pig-Carcass Weighing System", "categories": ["systems"],
+      "label": "STM32 · Embedded instrumentation", "summary": "An embedded load-cell system for weighing carcasses on a moving line.",
+      "image": "assets/images/dynamic_weighing_software_copyright_certificate-web.webp", "size": [1080, 1453], "alt": "Software copyright registration certificate for the weighing system", "fit": "plot",
+      "keywords": ["HX711", "embedded C", "load cell", "称重", "单片机"]
+    },
+    {
+      "id": "workshop-manufacturing-training", "title": "Workshop Manufacturing", "categories": ["physical", "community"],
+      "label": "CNC · Fabrication", "summary": "Machining, laser cutting and hands-on manufacturing practice.",
+      "image": "assets/images/workshop_cnc_milling_process-web.webp", "size": [1700, 1275], "alt": "CNC mill cutting a workpiece in the workshop", "fit": "photo",
+      "keywords": ["fabrication", "DXF", "3D printing", "机械加工", "数控"]
+    },
+    {
+      "id": "engineering-practice-automotive", "title": "Lab and Automotive Engineering Practice", "categories": ["community"],
+      "label": "Laboratory · Practical engineering", "summary": "Mechanics testing, robotic-arm control and an automotive structure training day.",
+      "image": "assets/images/experience_automotive_structure_walkthrough.jpg", "size": [1275, 1700], "alt": "Automotive structure training walkthrough", "fit": "photo",
+      "keywords": ["robotics", "workshop", "lab", "汽车", "实训"]
+    },
+    {
+      "id": "alot-volunteer", "title": "Auckland Library of Tools", "categories": ["community"],
+      "label": "Volunteering · Community workshop", "summary": "Explaining tools and helping people repair, share and make.",
+      "keywords": ["volunteer", "repair", "tools", "志愿者", "工具"]
+    },
+    {
+      "id": "media-photography-leadership", "title": "Photography and Media Leadership", "categories": ["community"],
+      "label": "Photography · Team leadership", "summary": "Photography and editorial work for student organisations in Auckland and at Huazhong Agricultural University.",
+      "image": "assets/images/photo_graduation_clocktower.jpg", "size": [1700, 1133], "alt": "Graduation photography near the University of Auckland ClockTower", "fit": "photo",
+      "keywords": ["CNPG", "editorial", "摄影", "媒体"]
+    }
+  ]
+}

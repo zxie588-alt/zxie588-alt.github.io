@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project catalogue | Ricardo Xie</title>
+    <meta name="description" content="Explore Ricardo Xie's mechanical engineering catalogue, including CAD models, physical prototypes, simulations and practical engineering projects.">
+    <link rel="canonical" href="https://zxie588-alt.github.io/catalog.html">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script src="assets/js/theme.js?v=2"></script>
+    <script src="assets/js/collections.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css?v=2">
+    <link rel="stylesheet" href="collections.css">
+  </head>
+  <body class="portfolio-catalog">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">RX</span><span>Ricardo Xie</span></a>
+        <div class="nav-links">
+          <a href="catalog.html" class="nav-current" aria-current="page">Projects</a>
+          <a href="index.html#fit">Expertise</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="nav-utilities">
+          <a class="nav-cv" href="assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="section catalog" data-catalog>
+      <header class="catalog-intro">
+        <p class="eyebrow">Ricardo Xie · Engineering portfolio</p>
+        <h1>Project catalogue</h1>
+        <p class="lead">CAD models, built prototypes, simulation studies and practical engineering work.</p>
+      </header>
+
+      <div class="catalog-controls" hidden>
+        <form class="catalog-search" role="search" aria-label="Search the project catalogue">
+          <label for="project-query">Search projects</label>
+          <div class="search-row"><input type="search" name="q" id="project-query" placeholder="Project name, tool or topic" autocomplete="off">
+          <button type="button" class="button secondary" data-catalog-reset>Reset</button></div>
+        </form>
+        <div class="catalog-filters" role="group" aria-label="Filter projects by category">
+          <button type="button" data-category="all" aria-pressed="true">All projects</button>
+          <button type="button" data-category="cad" aria-pressed="false">CAD models</button>
+          <button type="button" data-category="physical" aria-pressed="false">Physical prototypes</button>
+          <button type="button" data-category="simulation" aria-pressed="false">Simulation and analysis</button>
+          <button type="button" data-category="systems" aria-pressed="false">Systems and controls</button>
+          <button type="button" data-category="community" aria-pressed="false">Community and training</button>
+        </div>
+      </div>
+
+      <p class="catalog-count" role="status" id="catalog-count">13 projects</p>
+      <div class="catalog-empty" hidden><h2>No projects found</h2><p>Try a shorter search or choose a different category.</p></div>
+      <ul class="project-tiles catalog-results" aria-label="Projects" aria-describedby="catalog-count">
+          <li class="project-tile" data-categories="physical" data-keywords="SolidWorks generator power testing prototyping 发电 背包">
+            <a href="projects/energy-harvesting-backpack.html" class="project-tile-link">
+              <span class="project-art art-photo"><img src="assets/images/backpack_worn_prototype.webp" alt="Completed energy-harvesting backpack being worn" width="606" height="806" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">University of Auckland · Research prototype</p>
+                <h3>Energy-Harvesting Backpack</h3>
+                <p>Built and wired a suspended-load platform. The walking test averaged 55 mW at 4 km/h.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="cad" data-keywords="assembly servo biomimicry 水母 海蜇">
+            <a href="projects/jellyfish-mechanism.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/images/portfolio-jellyfish-iso.webp" alt="Eight-blade jellyfish assembly in SolidWorks" width="576" height="522" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Mechanism design</p>
+                <h3>Biomimetic Jellyfish Mechanism</h3>
+                <p>Eight radial blades, four servo linkages and revised guide brackets.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="cad" data-keywords="soccer equipment V2 足球 发射器">
+            <a href="projects/football-launcher.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/images/portfolio-football-iso.webp" alt="SolidWorks assembly of the Football Launcher V2" width="557" height="546" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Machine design</p>
+                <h3>Football Launcher</h3>
+                <p>A football training machine model with a ball feed, adjustable head and wheeled chassis.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="cad physical" data-keywords="prototype video catapult 投石机 激光切割">
+            <a href="projects/desktop-catapult.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/catapult/solidworks-v5.webp" alt="Native SolidWorks view of the desktop catapult" width="642" height="567" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Laser-cut prototype</p>
+                <h3>Motorised Desktop Catapult</h3>
+                <p>V5 motorised plywood mechanism, with a workshop video and downloadable model.</p>
+              </div>
+            </a>
+            <template data-cover-for="physical"><span class="project-art art-photo"><img src="assets/catapult/prototype.webp" alt="Close-up photograph of the assembled plywood prototype" width="880" height="836" loading="lazy" decoding="async"></span></template>
+          </li>
+          <li class="project-tile" data-categories="cad systems" data-keywords="HVAC MVHR SolidWorks airflow C# 通风 暖通">
+            <a href="projects/nz-home-ventilation.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/images/cover_nz_ventilation_closeup-web.webp" alt="Three-dimensional heat-recovery ventilation layout" width="860" height="720" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">Revit MEP · Building services</p>
+                <h3>NZ Home Ventilation with Heat Recovery</h3>
+                <p>Heat recovery, duct sizing and automated Revit modelling for a New Zealand home.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="cad systems" data-keywords="electronics Abaqus firmware sensor 物联网 外壳">
+            <a href="projects/ruggedized-iot-sensor-module.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/images/cover_iot_module_closeup-web.webp" alt="SolidWorks model of an outdoor sensor housing" width="1060" height="760" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Product design</p>
+                <h3>Outdoor IoT Sensor Enclosure</h3>
+                <p>An enclosure study integrating electronics, fasteners and mounting features.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="simulation" data-keywords="ANSYS CFD natural convection CFX 太阳能 流体 热仿真">
+            <a href="projects/solar-chimney.html" class="project-tile-link">
+              <span class="project-art art-plot"><img src="assets/images/portfolio-solar-results.webp" alt="CFD temperature and velocity contours from the solar chimney study" width="1020" height="217" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">ANSYS Fluent · Thermal and airflow analysis</p>
+                <h3>Solar Chimney CFD</h3>
+                <p>Conjugate heat transfer, a three-mesh independence study and a benchmark check.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="simulation" data-keywords="finite element FEA carbon fibre 前翼 有限元 复合材料">
+            <a href="projects/front-wing.html" class="project-tile-link">
+              <span class="project-art art-plot"><img src="assets/images/front_wing_03-web.webp" alt="Abaqus displacement plot for the composite front wing" width="1157" height="762" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">Abaqus · Structural analysis</p>
+                <h3>Composite Front Wing FEA</h3>
+                <p>74% peak stress utilisation in the governing load case at a final wing mass of 1.17 kg.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="systems" data-keywords="HX711 embedded C load cell 称重 单片机">
+            <a href="projects/dynamic-weighing.html" class="project-tile-link">
+              <span class="project-art art-plot"><img src="assets/images/dynamic_weighing_software_copyright_certificate-web.webp" alt="Software copyright registration certificate for the weighing system" width="1080" height="1453" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">STM32 · Embedded instrumentation</p>
+                <h3>Dynamic Pig-Carcass Weighing System</h3>
+                <p>An embedded load-cell system for weighing carcasses on a moving line.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="physical community" data-keywords="fabrication DXF 3D printing 机械加工 数控">
+            <a href="projects/workshop-manufacturing-training.html" class="project-tile-link">
+              <span class="project-art art-photo"><img src="assets/images/workshop_cnc_milling_process-web.webp" alt="CNC mill cutting a workpiece in the workshop" width="1700" height="1275" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">CNC · Fabrication</p>
+                <h3>Workshop Manufacturing</h3>
+                <p>Machining, laser cutting and hands-on manufacturing practice.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="community" data-keywords="robotics workshop lab 汽车 实训">
+            <a href="projects/engineering-practice-automotive.html" class="project-tile-link">
+              <span class="project-art art-photo"><img src="assets/images/experience_automotive_structure_walkthrough.jpg" alt="Automotive structure training walkthrough" width="1275" height="1700" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">Laboratory · Practical engineering</p>
+                <h3>Lab and Automotive Engineering Practice</h3>
+                <p>Mechanics testing, robotic-arm control and an automotive structure training day.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="community" data-keywords="volunteer repair tools 志愿者 工具">
+            <a href="projects/alot-volunteer.html" class="project-tile-link">
+              <span class="project-art project-art-text" aria-hidden="true">Volunteering</span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">Volunteering · Community workshop</p>
+                <h3>Auckland Library of Tools</h3>
+                <p>Explaining tools and helping people repair, share and make.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile" data-categories="community" data-keywords="CNPG editorial 摄影 媒体">
+            <a href="projects/media-photography-leadership.html" class="project-tile-link">
+              <span class="project-art art-photo"><img src="assets/images/photo_graduation_clocktower.jpg" alt="Graduation photography near the University of Auckland ClockTower" width="1700" height="1133" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">Photography · Team leadership</p>
+                <h3>Photography and Media Leadership</h3>
+                <p>Photography and editorial work for student organisations in Auckland and at Huazhong Agricultural University.</p>
+              </div>
+            </a>
+          </li>
+      </ul>
+      <div class="catalog-more" hidden><button type="button" class="button secondary">Show more projects</button></div>
+    </main>
+    <footer class="footer portfolio-footer">
+      <div class="footer-inner">
+        <div><a class="footer-name" href="index.html">Ricardo Xie</a><p>Mechanical engineering · Auckland, New Zealand</p></div>
+        <nav aria-label="Footer navigation">
+          <a href="catalog.html">Projects</a>
+          <a href="index.html#education">Education</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="mailto:zxie588@aucklanduni.ac.nz">Email</a>
+          <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a>
+          <a href="https://github.com/zxie588-alt" rel="me">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

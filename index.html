@@ -17,6 +17,8 @@
     <script src="assets/js/theme.js?v=2"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="portfolio.css?v=2">
+    <link rel="stylesheet" href="collections.css">
+    <script src="assets/js/collections.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -37,7 +39,7 @@
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">RX</span><span>Ricardo Xie</span></a>
         <div class="nav-links">
-          <a href="#projects">Projects</a>
+          <a href="catalog.html">Projects</a>
           <a href="#fit">Expertise</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
@@ -48,24 +50,197 @@
       </nav>
     </header>
     <main id="main">
-      <section class="portfolio-hero" aria-labelledby="home-title">
-        <div class="hero-layout">
-          <div class="hero-main">
+      <section class="gallery-masthead" aria-labelledby="home-title">
+        <div class="masthead-inner">
+          <div>
             <p class="eyebrow">Mechanical engineer · Auckland, New Zealand</p>
-            <h1 id="home-title">I design, build and test <span>mechanical hardware.</span></h1>
-            <p class="hero-description">I take engineering projects from CAD and analysis to working prototypes and measured results.</p>
-            <div class="hero-ctas">
-              <a class="button" href="#projects">Explore projects</a>
+            <h1 id="home-title">Engineering<br><span>in practice.</span></h1>
+          </div>
+          <div class="masthead-note">
+            <p>From CAD and simulation to working hardware and measured results.</p>
+            <p class="masthead-education">MEngSt (Mechanical), University of Auckland<br>Completing July 2027</p>
+            <div class="actions">
+              <a class="button" href="catalog.html">Browse all projects</a>
               <a class="button secondary" href="assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
             </div>
-            <p class="hero-status">MEngSt (Mechanical), University of Auckland · Completing July 2027</p>
           </div>
-          <a class="hero-project" href="projects/energy-harvesting-backpack.html">
-            <img src="assets/images/kineload-physical-platform-web.webp" alt="The built backpack platform with its generator, guides and elastic suspension" width="1200" height="1600" fetchpriority="high" decoding="async">
-            <span class="hero-project-caption"><small>University of Auckland research prototype</small><strong>Energy-Harvesting Backpack</strong><span>View case study</span></span>
-          </a>
         </div>
       </section>
+
+      <!-- project-showcase:start -->
+      <section class="section showcase" id="projects" aria-labelledby="project-heading">
+        <div class="showcase-intro">
+          <div><p class="eyebrow">The portfolio</p><h2 id="project-heading">Explore the work.</h2></div>
+          <a class="collection-link" href="catalog.html">Browse all 13 projects</a>
+        </div>
+        <nav class="showcase-jumps" aria-label="Project collections">
+          <a href="#work-cad">CAD models</a>
+          <a href="#work-physical">Physical prototypes</a>
+          <a href="#work-simulation">Simulation and analysis</a>
+        </nav>
+
+        <section class="collection featured-collection" aria-labelledby="featured-projects" data-project-rail>
+          <div class="collection-heading">
+            <div><h3 id="featured-projects">Featured projects</h3><p>From a SolidWorks model to a working prototype.</p></div>
+            <div class="rail-controls" hidden>
+              <button type="button" data-rail-step="-1" aria-controls="featured-track" aria-label="Previous featured projects"><span aria-hidden="true">‹</span></button>
+              <button type="button" data-rail-step="1" aria-controls="featured-track" aria-label="Next featured projects"><span aria-hidden="true">›</span></button>
+            </div>
+          </div>
+          <ul class="project-rail" id="featured-track" tabindex="0" aria-label="Featured project cards">
+          <li class="project-tile">
+            <a href="projects/energy-harvesting-backpack.html" class="project-tile-link">
+              <span class="project-art art-photo"><img src="assets/images/kineload-physical-platform-web.webp" alt="Prototype platform with guides, elastic suspension and generator" width="1200" height="1600" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">University of Auckland · Research prototype</p>
+                <h4>Energy-Harvesting Backpack</h4>
+                <p>Built and wired a suspended-load platform. The walking test averaged 55 mW at 4 km/h.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile">
+            <a href="projects/jellyfish-mechanism.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/images/portfolio-jellyfish-iso.webp" alt="Eight-blade jellyfish assembly in SolidWorks" width="576" height="522" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Mechanism design</p>
+                <h4>Biomimetic Jellyfish Mechanism</h4>
+                <p>Eight radial blades, four servo linkages and revised guide brackets.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile">
+            <a href="projects/football-launcher.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/images/portfolio-football-iso.webp" alt="SolidWorks assembly of the Football Launcher V2" width="557" height="546" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Machine design</p>
+                <h4>Football Launcher</h4>
+                <p>A football training machine model with a ball feed, adjustable head and wheeled chassis.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile">
+            <a href="projects/nz-home-ventilation.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/images/cover_nz_ventilation_closeup-web.webp" alt="Three-dimensional heat-recovery ventilation layout" width="860" height="720" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">Revit MEP · Building services</p>
+                <h4>NZ Home Ventilation with Heat Recovery</h4>
+                <p>Heat recovery, duct sizing and automated Revit modelling for a New Zealand home.</p>
+              </div>
+            </a>
+          </li>
+          </ul>
+        </section>
+
+        <section class="collection" id="work-cad" aria-labelledby="collection-cad">
+          <div class="collection-heading">
+            <div><h3 id="collection-cad">CAD models</h3><p>Mechanical assemblies, product design and building systems.</p></div>
+            <a class="collection-link" href="catalog.html?category=cad">View all cad models <span>(5)</span></a>
+          </div>
+          <ul class="project-tiles">
+          <li class="project-tile">
+            <a href="projects/jellyfish-mechanism.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/images/portfolio-jellyfish-iso.webp" alt="Eight-blade jellyfish assembly in SolidWorks" width="576" height="522" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Mechanism design</p>
+                <h4>Biomimetic Jellyfish Mechanism</h4>
+                <p>Eight radial blades, four servo linkages and revised guide brackets.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile">
+            <a href="projects/football-launcher.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/images/portfolio-football-iso.webp" alt="SolidWorks assembly of the Football Launcher V2" width="557" height="546" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Machine design</p>
+                <h4>Football Launcher</h4>
+                <p>A football training machine model with a ball feed, adjustable head and wheeled chassis.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile">
+            <a href="projects/desktop-catapult.html" class="project-tile-link">
+              <span class="project-art art-cad"><img src="assets/catapult/solidworks-v5.webp" alt="Native SolidWorks view of the desktop catapult" width="642" height="567" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Laser-cut prototype</p>
+                <h4>Motorised Desktop Catapult</h4>
+                <p>V5 motorised plywood mechanism, with a workshop video and downloadable model.</p>
+              </div>
+            </a>
+          </li>
+          </ul>
+        </section>
+
+        <section class="collection" id="work-physical" aria-labelledby="collection-physical">
+          <div class="collection-heading">
+            <div><h3 id="collection-physical">Physical prototypes</h3><p>Built hardware, workshop demonstrations and measurements.</p></div>
+            <a class="collection-link" href="catalog.html?category=physical">View all physical prototypes <span>(3)</span></a>
+          </div>
+          <ul class="project-tiles">
+          <li class="project-tile">
+            <a href="projects/energy-harvesting-backpack.html" class="project-tile-link">
+              <span class="project-art art-photo"><img src="assets/images/backpack_worn_prototype.webp" alt="Completed energy-harvesting backpack being worn" width="606" height="806" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">University of Auckland · Research prototype</p>
+                <h4>Energy-Harvesting Backpack</h4>
+                <p>Built and wired a suspended-load platform. The walking test averaged 55 mW at 4 km/h.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile">
+            <a href="projects/desktop-catapult.html" class="project-tile-link">
+              <span class="project-art art-photo"><img src="assets/catapult/prototype.webp" alt="Close-up photograph of the assembled plywood prototype" width="880" height="836" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">SolidWorks · Laser-cut prototype</p>
+                <h4>Motorised Desktop Catapult</h4>
+                <p>V5 motorised plywood mechanism, with a workshop video and downloadable model.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile">
+            <a href="projects/workshop-manufacturing-training.html" class="project-tile-link">
+              <span class="project-art art-photo"><img src="assets/images/workshop_cnc_milling_process-web.webp" alt="CNC mill cutting a workpiece in the workshop" width="1700" height="1275" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">CNC · Fabrication</p>
+                <h4>Workshop Manufacturing</h4>
+                <p>Machining, laser cutting and hands-on manufacturing practice.</p>
+              </div>
+            </a>
+          </li>
+          </ul>
+        </section>
+
+        <section class="collection" id="work-simulation" aria-labelledby="collection-simulation">
+          <div class="collection-heading">
+            <div><h3 id="collection-simulation">Simulation and analysis</h3><p>Thermal, airflow and structural studies.</p></div>
+            <a class="collection-link" href="catalog.html?category=simulation">View all simulation and analysis <span>(2)</span></a>
+          </div>
+          <ul class="project-tiles">
+          <li class="project-tile">
+            <a href="projects/solar-chimney.html" class="project-tile-link">
+              <span class="project-art art-plot"><img src="assets/images/portfolio-solar-results.webp" alt="CFD temperature and velocity contours from the solar chimney study" width="1020" height="217" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">ANSYS Fluent · Thermal and airflow analysis</p>
+                <h4>Solar Chimney CFD</h4>
+                <p>Conjugate heat transfer, a three-mesh independence study and a benchmark check.</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-tile">
+            <a href="projects/front-wing.html" class="project-tile-link">
+              <span class="project-art art-plot"><img src="assets/images/front_wing_03-web.webp" alt="Abaqus displacement plot for the composite front wing" width="1157" height="762" loading="lazy" decoding="async"></span>
+              <div class="project-tile-text">
+                <p class="project-tile-label">Abaqus · Structural analysis</p>
+                <h4>Composite Front Wing FEA</h4>
+                <p>74% peak stress utilisation in the governing load case at a final wing mass of 1.17 kg.</p>
+              </div>
+            </a>
+          </li>
+          </ul>
+        </section>
+
+        <div class="showcase-end"><a class="button secondary" href="catalog.html">Find a project in the full catalogue</a></div>
+      </section>
+      <!-- project-showcase:end -->
 
       <section class="evidence-band" aria-label="Selected project results">
         <div class="evidence-layout">
@@ -73,115 +248,6 @@
           <a href="projects/nz-home-ventilation.html"><strong>60 <span>L/s</span></strong><span>Design supply airflow for an NZ home</span></a>
           <a href="projects/front-wing.html"><strong>74<span>%</span></strong><span>Peak stress utilisation in the FEA load case</span></a>
         </div>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="section-heading">
-          <div><p class="eyebrow">Portfolio</p><h2>Selected engineering work</h2></div>
-        </div>
-        <nav class="work-jumps" aria-label="Project categories">
-          <a href="#work-cad">CAD models</a><a href="#work-physical">Physical prototypes</a><a href="#work-simulation">Simulation and analysis</a>
-        </nav>
-
-        <section class="work-group work-cad" id="work-cad" aria-labelledby="work-cad-title">
-          <div class="work-group-head"><h3 id="work-cad-title">CAD models</h3><p>Mechanical assemblies, product design and building systems.</p></div>
-          <div class="project-grid work-grid">
-            <a class="project-card" href="projects/jellyfish-mechanism.html">
-              <img src="assets/images/portfolio-jellyfish-iso.webp" alt="SolidWorks assembly of an eight-blade jellyfish mechanism" width="576" height="522" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">SolidWorks · Assembly design</p>
-                <h4>Biomimetic Jellyfish Mechanism</h4>
-                <p class="muted">Eight radial blades driven by four servo linkages, with revised guide brackets.</p>
-              </div>
-            </a>
-            <a class="project-card" href="projects/football-launcher.html">
-              <img src="assets/images/portfolio-football-iso.webp" alt="SolidWorks assembly of a football training launcher" width="557" height="546" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">SolidWorks · Assembly design</p>
-                <h4>Football Launcher</h4>
-                <p class="muted">A football training machine model with a feed section, launch head and mobile chassis.</p>
-              </div>
-            </a>
-            <a class="project-card" href="projects/desktop-catapult.html">
-              <img src="assets/catapult/solidworks-v5.webp" alt="V5 desktop catapult shown in SolidWorks" width="642" height="567" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">SolidWorks · Assembly design</p>
-                <h4>Motorised Desktop Catapult</h4>
-                <p class="muted">V5 ball cup, frame and drive assembly for a laser-cut plywood prototype.</p>
-              </div>
-            </a>
-            <a class="project-card" href="projects/nz-home-ventilation.html">
-              <img src="assets/images/cover_nz_ventilation_closeup-web.webp" alt="CAD model of heat recovery ductwork in a New Zealand home" width="860" height="720" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">Revit MEP · SolidWorks</p>
-                <h4>NZ Home Ventilation with Heat Recovery</h4>
-                <p class="muted">Ventilation layout and duct sizing with a Revit model generated through the API.</p>
-              </div>
-            </a>
-            <a class="project-card" href="projects/ruggedized-iot-sensor-module.html">
-              <img src="assets/images/cover_iot_module_closeup-web.webp" alt="SolidWorks housing model for an outdoor IoT sensor" width="1060" height="760" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">SolidWorks · Product design</p>
-                <h4>Outdoor IoT Sensor Enclosure</h4>
-                <p class="muted">A mechanical enclosure study integrating electronics, fasteners and mounting features.</p>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <section class="work-group work-physical" id="work-physical" aria-labelledby="work-physical-title">
-          <div class="work-group-head"><h3 id="work-physical-title">Physical prototypes</h3><p>Built hardware, fabrication and workshop demonstrations.</p></div>
-          <div class="project-grid work-grid">
-            <a class="project-card" href="projects/energy-harvesting-backpack.html">
-              <img src="assets/images/backpack_worn_prototype.webp" alt="The finished energy-harvesting backpack being worn" width="606" height="806" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">Research prototype · Bench and walking tests</p>
-                <h4>Energy-Harvesting Backpack</h4>
-                <p class="muted">Built and wired the suspended-load platform. The walking test averaged 55 mW at 4 km/h.</p>
-              </div>
-            </a>
-            <a class="project-card" href="projects/desktop-catapult.html">
-              <img src="assets/catapult/prototype.webp" alt="Close-up of the assembled plywood catapult" width="880" height="836" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">Laser-cut plywood · Workshop demonstration</p>
-                <h4>Desktop Catapult Prototype</h4>
-                <p class="muted">An assembled prototype with a workshop demonstration video and a downloadable model.</p>
-              </div>
-            </a>
-            <a class="project-card" href="projects/workshop-manufacturing-training.html">
-              <img src="assets/images/workshop_cnc_milling_process-web.webp" alt="A CNC milling operation in the workshop" width="1700" height="1275" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">CNC · Fabrication</p>
-                <h4>Workshop Manufacturing</h4>
-                <p class="muted">Machining, laser cutting and hands-on manufacturing practice.</p>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <section class="work-group work-simulation" id="work-simulation" aria-labelledby="work-simulation-title">
-          <div class="work-group-head"><h3 id="work-simulation-title">Simulation and analysis</h3><p>CFD and finite-element results with model checks.</p></div>
-          <div class="project-grid work-grid">
-            <a class="project-card" href="projects/solar-chimney.html">
-              <img src="assets/images/portfolio-solar-results.webp" alt="Contours from the solar chimney CFD report" width="1020" height="217" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">ANSYS Fluent · Thermal and airflow analysis</p>
-                <h4>Solar Chimney CFD</h4>
-                <p class="muted">Conjugate heat transfer, a three-mesh independence study and a benchmark check.</p>
-              </div>
-            </a>
-            <a class="project-card" href="projects/front-wing.html">
-              <img src="assets/images/front_wing_03-web.webp" alt="Abaqus displacement plot for a composite front wing" width="1157" height="762" decoding="async" loading="lazy">
-              <div class="card-body">
-                <p class="eyebrow">Abaqus · Structural analysis</p>
-                <h4>Composite Front Wing FEA</h4>
-                <p class="muted">The governing load case reached 74% peak stress utilisation at a final wing mass of 1.17 kg.</p>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <p class="work-more">More engineering work <a href="projects/dynamic-weighing.html">Dynamic Pig-Carcass Weighing System</a></p>
       </section>
 
       <section class="section fit-section" id="fit">
@@ -381,7 +447,7 @@
       <div class="footer-inner">
         <div><a class="footer-name" href="index.html">Ricardo Xie</a><p>Mechanical engineering · Auckland, New Zealand</p></div>
         <nav aria-label="Footer navigation">
-          <a href="index.html#projects">Projects</a>
+          <a href="catalog.html">Projects</a>
           <a href="index.html#education">Education</a>
           <a href="index.html#skills">Skills</a>
           <a href="mailto:zxie588@aucklanduni.ac.nz">Email</a>

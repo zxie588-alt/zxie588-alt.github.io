@@ -7,14 +7,17 @@ Live site: https://zxie588-alt.github.io/
 
 CV: https://zxie588-alt.github.io/assets/resumes/Ricardo_Xie_CV.pdf
 
-## Projects
+## Adding projects
 
-- Energy-Harvesting Backpack: suspended-load platform design, build, coil wiring and power testing (University of Auckland research prototype, 2026)
-- NZ Home Ventilation with Heat Recovery (MVHR): airflow schedule, duct sizing, equipment selection, commissioning plan, Revit MEP model generated with the Revit API
-- Solar Chimney CFD: natural convection and conjugate heat transfer (course research project)
-- Composite Front Wing FEA (course project)
-- Outdoor IoT Sensor Enclosure (self-directed design study)
-- Dynamic Pig-Carcass Weighing System (undergraduate embedded project, 2022–2024)
+Add the case study to `projects/` and one matching record to `data/projects.json`. The record
+determines the title, categories, search keywords and cover. A project can be in more than one
+category and use a different cover in each homepage collection. Set `featured` to update the
+homepage rail. Each homepage category shows up to three projects in catalogue order.
+
+Run `python scripts/build_catalog.py` from the repository root to update `catalog.html` and the
+generated part of `index.html`. Use `python scripts/build_catalog.py --check` to detect stale pages.
+Add the public case-study URL to `sitemap.xml` when publishing a new page. GitHub Pages serves the
+checked-in HTML, so it requires no build or JavaScript to display the project catalogue.
 
 ## Contact
 
