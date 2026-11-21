@@ -1094,6 +1094,33 @@ h3 {
   object-fit: contain;
 }
 
+.catapult-gallery .evidence-shot,
+.catapult-demonstration {
+  margin: 0;
+}
+
+.catapult-gallery .evidence-shot img {
+  height: auto;
+  aspect-ratio: 5 / 4;
+}
+
+.catapult-gallery .evidence-shot:first-child img {
+  object-fit: contain;
+  background: #f7f6f0;
+}
+
+.catapult-demonstration {
+  max-width: 980px;
+}
+
+.catapult-demonstration video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #111;
+}
+
 .evidence-shot figcaption {
   border-top: 1px solid var(--line);
   color: var(--muted);
