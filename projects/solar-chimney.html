@@ -13,32 +13,38 @@
     <meta property="og:image" content="https://zxie588-alt.github.io/assets/og/solar-chimney-social.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/theme.js?v=2"></script>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../portfolio.css?v=2">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="../index.html">Ricardo Xie</a>
+        <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">RX</span><span>Ricardo Xie</span></a>
         <div class="nav-links">
-          <a href="../index.html#projects">Projects</a>
+          <a class="nav-current" href="../index.html#projects">Projects</a>
+          <a href="../index.html#fit">Expertise</a>
           <a href="../index.html#experience">Experience</a>
-          <a href="../index.html#education">Education</a>
           <a href="../index.html#contact">Contact</a>
-          <a class="nav-cv" href="../assets/resumes/Ricardo_Xie_CV.pdf">CV</a>
+        </div>
+        <div class="nav-utilities">
+          <a class="nav-cv" href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
         </div>
       </nav>
     </header>
 
     <main class="project-main" id="main">
-      <p class="eyebrow">University of Auckland course research project</p>
-      <h1>Solar Chimney CFD: Natural Convection and Conjugate Heat Transfer</h1>
-      <p class="lead">
+      <div class="case-intro">
+        <a class="case-nav" href="../index.html#projects">All projects</a>
+        <p class="eyebrow">University of Auckland course research project</p>
+        <h1>Solar Chimney CFD: Natural Convection and Conjugate Heat Transfer</h1>
+        <p class="lead">
         How fast does sun-heated air rise through a solar chimney? I modelled a published laboratory-scale chimney
         (12 m collector, 8 m tower) in ANSYS Fluent; the 36,847-cell production mesh is within 0.90% of the
         fine-mesh outlet velocity.
-      </p>
+        </p>
+      </div>
       <p>
         <strong>My role:</strong> I set up the Fluent and CFX models, ran the heat-input cases and the mesh study,
         checked the results against first principles and wrote the technical report.
@@ -99,12 +105,18 @@
       </section>
     </main>
 
-    <footer class="footer">
-      Ricardo Xie · Graduate mechanical engineer, Auckland ·
-      <a href="mailto:zxie588@aucklanduni.ac.nz">zxie588@aucklanduni.ac.nz</a> ·
-      <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a> ·
-      <a href="https://github.com/zxie588-alt" rel="me">GitHub</a> ·
-      <a href="../assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+    <footer class="footer portfolio-footer">
+      <div class="footer-inner">
+        <div><a class="footer-name" href="../index.html">Ricardo Xie</a><p>Mechanical engineering · Auckland, New Zealand</p></div>
+        <nav aria-label="Footer navigation">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#education">Education</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="mailto:zxie588@aucklanduni.ac.nz">Email</a>
+          <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a>
+          <a href="https://github.com/zxie588-alt" rel="me">GitHub</a>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>

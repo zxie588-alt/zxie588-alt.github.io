@@ -14,18 +14,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/theme.js?v=2"></script>
     <link rel="stylesheet" href="styles.css">
-    <script>
-      // Enable scroll-reveal only when the browser can support it cleanly.
-      // Without this class, all content stays fully visible (no JS dependency).
-      try {
-        if ("IntersectionObserver" in window &&
-            !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          document.documentElement.classList.add("has-js");
-        }
-      } catch (e) {}
-    </script>
+    <link rel="stylesheet" href="portfolio.css?v=2">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -40,87 +31,167 @@
       }
     </script>
   </head>
-  <body>
+  <body class="portfolio-home">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="index.html">Ricardo Xie</a>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">RX</span><span>Ricardo Xie</span></a>
         <div class="nav-links">
           <a href="#projects">Projects</a>
+          <a href="#fit">Expertise</a>
           <a href="#experience">Experience</a>
-          <a href="#education">Education</a>
-          <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
-          <a class="nav-cv" href="assets/resumes/Ricardo_Xie_CV.pdf">CV</a>
+        </div>
+        <div class="nav-utilities">
+          <a class="nav-cv" href="assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
         </div>
       </nav>
     </header>
-
     <main id="main">
-      <section class="hero editorial-hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Graduate mechanical engineer · Auckland, New Zealand</p>
-          <h1>I design, build and test mechanical hardware.</h1>
-          <p class="lead">
-            Master of Engineering Studies (Mechanical) at the University of Auckland, completing in July 2027.
-            I am looking for graduate and junior roles in mechanical design, building services and HVAC,
-            testing and automation, anywhere in New Zealand.
-          </p>
-          <ul class="key-facts" aria-label="Key facts">
-            <li><strong>Completing July 2027</strong>MEngSt (Mechanical), University of Auckland. Open to 2028 graduate programmes and roles from mid-2027.</li>
-            <li><strong>Post-study work plans</strong>Planning to apply for a Post Study Work Visa after graduation. Work rights are subject to visa approval.</li>
-            <li><strong>Nov 2026 – Feb 2027</strong>Upcoming mechanical project internship in Shanghai. Happy to interview by video; back in Auckland from late February.</li>
-          </ul>
-          <div class="actions">
-            <a class="button" href="assets/resumes/Ricardo_Xie_CV.pdf">Download CV (PDF)</a>
-            <a class="button secondary" href="mailto:zxie588@aucklanduni.ac.nz?subject=Graduate%20mechanical%20engineering%20opportunity">Email me</a>
-            <a class="button secondary" href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a>
+      <section class="portfolio-hero" aria-labelledby="home-title">
+        <div class="hero-layout">
+          <div class="hero-main">
+            <p class="eyebrow">Mechanical engineer · Auckland, New Zealand</p>
+            <h1 id="home-title">I design, build and test <span>mechanical hardware.</span></h1>
+            <p class="hero-description">I take engineering projects from CAD and analysis to working prototypes and measured results.</p>
+            <div class="hero-ctas">
+              <a class="button" href="#projects">Explore projects</a>
+              <a class="button secondary" href="assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+            </div>
+            <p class="hero-status">MEngSt (Mechanical), University of Auckland · Completing July 2027</p>
           </div>
-        </div>
-        <div class="hero-showcase" aria-label="Featured projects">
-          <a class="showcase-card" href="projects/energy-harvesting-backpack.html">
-            <img src="assets/images/backpack_worn_prototype.webp" alt="Energy-harvesting backpack prototype worn on the back" width="606" height="806" decoding="async" loading="eager" fetchpriority="high">
-            <div>
-              <span>55 mW measured · target 30–50 mW</span>
-              <strong>Energy-harvesting backpack</strong>
-            </div>
-          </a>
-          <a class="showcase-card" href="projects/nz-home-ventilation.html">
-            <img src="assets/images/cover_nz_ventilation_closeup-web.webp" alt="3D model of a New Zealand home ventilation system with heat recovery" width="860" height="720" decoding="async" loading="lazy">
-            <div>
-              <span>Building services · Revit automation</span>
-              <strong>NZ home ventilation design</strong>
-            </div>
+          <a class="hero-project" href="projects/energy-harvesting-backpack.html">
+            <img src="assets/images/kineload-physical-platform-web.webp" alt="The built backpack platform with its generator, guides and elastic suspension" width="1200" height="1600" fetchpriority="high" decoding="async">
+            <span class="hero-project-caption"><small>University of Auckland research prototype</small><strong>Energy-Harvesting Backpack</strong><span>View case study</span></span>
           </a>
         </div>
       </section>
 
-      <section class="proof-strip" aria-label="What I bring">
-        <div>
-          <span>01</span>
-          <strong>From CAD to a working prototype</strong>
-          <p>I take a design through SolidWorks, laser cutting, 3D printing, welding, wiring and assembly, then prove it on the bench.</p>
+      <section class="evidence-band" aria-label="Selected project results">
+        <div class="evidence-layout">
+          <a href="projects/energy-harvesting-backpack.html"><strong>55 <span>mW</span></strong><span>Backpack power measured at 4 km/h</span></a>
+          <a href="projects/nz-home-ventilation.html"><strong>60 <span>L/s</span></strong><span>Design supply airflow for an NZ home</span></a>
+          <a href="projects/front-wing.html"><strong>74<span>%</span></strong><span>Peak stress utilisation in the FEA load case</span></a>
         </div>
-        <div>
-          <span>02</span>
-          <strong>Measured results</strong>
-          <p>I set up my own tests and work from raw data: my backpack power test logged 55 mW walking at 4 km/h against a 30–50 mW target.</p>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <div><p class="eyebrow">Portfolio</p><h2>Selected engineering work</h2></div>
         </div>
-        <div>
-          <span>03</span>
-          <strong>Building services and simulation</strong>
-          <p>MECHENG 715 Building Services, an NZ ventilation design with an automated Revit model, plus CFD (ANSYS Fluent) and FEA (Abaqus).</p>
-        </div>
+        <nav class="work-jumps" aria-label="Project categories">
+          <a href="#work-cad">CAD models</a><a href="#work-physical">Physical prototypes</a><a href="#work-simulation">Simulation and analysis</a>
+        </nav>
+
+        <section class="work-group work-cad" id="work-cad" aria-labelledby="work-cad-title">
+          <div class="work-group-head"><h3 id="work-cad-title">CAD models</h3><p>Mechanical assemblies, product design and building systems.</p></div>
+          <div class="project-grid work-grid">
+            <a class="project-card" href="projects/jellyfish-mechanism.html">
+              <img src="assets/images/portfolio-jellyfish-iso.webp" alt="SolidWorks assembly of an eight-blade jellyfish mechanism" width="576" height="522" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">SolidWorks · Assembly design</p>
+                <h4>Biomimetic Jellyfish Mechanism</h4>
+                <p class="muted">Eight radial blades driven by four servo linkages, with revised guide brackets.</p>
+              </div>
+            </a>
+            <a class="project-card" href="projects/football-launcher.html">
+              <img src="assets/images/portfolio-football-iso.webp" alt="SolidWorks assembly of a football training launcher" width="557" height="546" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">SolidWorks · Assembly design</p>
+                <h4>Football Launcher</h4>
+                <p class="muted">A football training machine model with a feed section, launch head and mobile chassis.</p>
+              </div>
+            </a>
+            <a class="project-card" href="projects/desktop-catapult.html">
+              <img src="assets/catapult/solidworks-v5.webp" alt="V5 desktop catapult shown in SolidWorks" width="642" height="567" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">SolidWorks · Assembly design</p>
+                <h4>Motorised Desktop Catapult</h4>
+                <p class="muted">V5 ball cup, frame and drive assembly for a laser-cut plywood prototype.</p>
+              </div>
+            </a>
+            <a class="project-card" href="projects/nz-home-ventilation.html">
+              <img src="assets/images/cover_nz_ventilation_closeup-web.webp" alt="CAD model of heat recovery ductwork in a New Zealand home" width="860" height="720" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">Revit MEP · SolidWorks</p>
+                <h4>NZ Home Ventilation with Heat Recovery</h4>
+                <p class="muted">Ventilation layout and duct sizing with a Revit model generated through the API.</p>
+              </div>
+            </a>
+            <a class="project-card" href="projects/ruggedized-iot-sensor-module.html">
+              <img src="assets/images/cover_iot_module_closeup-web.webp" alt="SolidWorks housing model for an outdoor IoT sensor" width="1060" height="760" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">SolidWorks · Product design</p>
+                <h4>Outdoor IoT Sensor Enclosure</h4>
+                <p class="muted">A mechanical enclosure study integrating electronics, fasteners and mounting features.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="work-group work-physical" id="work-physical" aria-labelledby="work-physical-title">
+          <div class="work-group-head"><h3 id="work-physical-title">Physical prototypes</h3><p>Built hardware, fabrication and workshop demonstrations.</p></div>
+          <div class="project-grid work-grid">
+            <a class="project-card" href="projects/energy-harvesting-backpack.html">
+              <img src="assets/images/backpack_worn_prototype.webp" alt="The finished energy-harvesting backpack being worn" width="606" height="806" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">Research prototype · Bench and walking tests</p>
+                <h4>Energy-Harvesting Backpack</h4>
+                <p class="muted">Built and wired the suspended-load platform. The walking test averaged 55 mW at 4 km/h.</p>
+              </div>
+            </a>
+            <a class="project-card" href="projects/desktop-catapult.html">
+              <img src="assets/catapult/prototype.webp" alt="Close-up of the assembled plywood catapult" width="880" height="836" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">Laser-cut plywood · Workshop demonstration</p>
+                <h4>Desktop Catapult Prototype</h4>
+                <p class="muted">An assembled prototype with a workshop demonstration video and a downloadable model.</p>
+              </div>
+            </a>
+            <a class="project-card" href="projects/workshop-manufacturing-training.html">
+              <img src="assets/images/workshop_cnc_milling_process-web.webp" alt="A CNC milling operation in the workshop" width="1700" height="1275" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">CNC · Fabrication</p>
+                <h4>Workshop Manufacturing</h4>
+                <p class="muted">Machining, laser cutting and hands-on manufacturing practice.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="work-group work-simulation" id="work-simulation" aria-labelledby="work-simulation-title">
+          <div class="work-group-head"><h3 id="work-simulation-title">Simulation and analysis</h3><p>CFD and finite-element results with model checks.</p></div>
+          <div class="project-grid work-grid">
+            <a class="project-card" href="projects/solar-chimney.html">
+              <img src="assets/images/portfolio-solar-results.webp" alt="Contours from the solar chimney CFD report" width="1020" height="217" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">ANSYS Fluent · Thermal and airflow analysis</p>
+                <h4>Solar Chimney CFD</h4>
+                <p class="muted">Conjugate heat transfer, a three-mesh independence study and a benchmark check.</p>
+              </div>
+            </a>
+            <a class="project-card" href="projects/front-wing.html">
+              <img src="assets/images/front_wing_03-web.webp" alt="Abaqus displacement plot for a composite front wing" width="1157" height="762" decoding="async" loading="lazy">
+              <div class="card-body">
+                <p class="eyebrow">Abaqus · Structural analysis</p>
+                <h4>Composite Front Wing FEA</h4>
+                <p class="muted">The governing load case reached 74% peak stress utilisation at a final wing mass of 1.17 kg.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <p class="work-more">More engineering work <a href="projects/dynamic-weighing.html">Dynamic Pig-Carcass Weighing System</a></p>
       </section>
 
       <section class="section fit-section" id="fit">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Where I fit</p>
-            <h2>Three kinds of role, one CV</h2>
+            <p class="eyebrow">Expertise</p>
+            <h2>Engineering capabilities</h2>
           </div>
           <p class="muted">
-            Each card points to the evidence that matters most for that kind of team.
+            Mechanical design, building services and hands-on implementation.
           </p>
         </div>
 
@@ -166,124 +237,13 @@
         </div>
       </section>
 
-      <section class="section" id="projects">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Projects</p>
-            <h2>Selected work</h2>
-          </div>
-          <p class="muted">Start with the first three. Each page opens with a one-line summary, my role and the key numbers.</p>
-        </div>
-
-        <div class="project-grid featured-grid">
-          <a class="project-card featured" href="projects/energy-harvesting-backpack.html">
-            <img src="assets/images/backpack_exploded_bom_en.webp" alt="Exploded SolidWorks model and parts list for the backpack platform" width="979" height="982" decoding="async" loading="lazy">
-            <div class="card-body">
-              <p class="eyebrow">University of Auckland research prototype · Jul–Oct 2026</p>
-              <h3>Energy-Harvesting Backpack</h3>
-              <p class="plain-intro">A backpack whose load moves up and down as you walk; that motion turns a generator.</p>
-              <p class="muted">
-                I designed and built the suspended-load platform around the research group's generator, wired every
-                generator coil, traced a worn-through coil lead with a multimeter, and ran the 21 October 2026 power test.
-              </p>
-              <p class="metric-line">55 mW walking at 4 km/h (target 30–50 mW) | 81 mW hand-cranked | 3.3 kΩ resistive load</p>
-              <div class="tags">
-                <span class="tag">SolidWorks</span>
-                <span class="tag">Fabrication</span>
-                <span class="tag">Wiring and fault-finding</span>
-                <span class="tag">Power testing</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="project-card" href="projects/nz-home-ventilation.html">
-            <img src="assets/images/cover_nz_ventilation_closeup-web.webp" alt="Ventilation ductwork model for a New Zealand home" width="860" height="720" decoding="async" loading="lazy">
-            <div class="card-body">
-              <p class="eyebrow">Self-directed building services project</p>
-              <h3>NZ Home Ventilation with Heat Recovery</h3>
-              <p class="plain-intro">Whole-house ventilation with heat recovery (MVHR) for a New Zealand home.</p>
-              <p class="muted">
-                Airflow schedule, duct sizing and pressure-loss checks, equipment selection and a commissioning plan,
-                with a Revit MEP model built by a C# Revit API script.
-              </p>
-              <p class="metric-line">60 L/s supply schedule | 45 L/s extract schedule | NZBC G4 and H1 notes</p>
-              <div class="tags">
-                <span class="tag">Revit API (C#)</span>
-                <span class="tag">HVAC sizing</span>
-                <span class="tag">Commissioning plan</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="project-card" href="projects/solar-chimney.html">
-            <img src="assets/images/real_solar_chimney_cfd_results_page-web.webp" alt="ANSYS Fluent results for a solar chimney natural-convection model" width="1224" height="1584" decoding="async" loading="lazy">
-            <div class="card-body">
-              <p class="eyebrow">University of Auckland course research project</p>
-              <h3>Solar Chimney CFD: Natural Convection and Heat Transfer</h3>
-              <p class="plain-intro">How fast does sun-heated air rise through a chimney? A CFD model to find out.</p>
-              <p class="muted">
-                Conjugate heat-transfer model in ANSYS Fluent with a three-mesh independence study, and a
-                physics check that exposed an inconsistency in the published benchmark.
-              </p>
-              <p class="metric-line">36,847-cell mesh | 0.90% outlet-velocity change vs fine mesh</p>
-              <div class="tags">
-                <span class="tag">ANSYS Fluent</span>
-                <span class="tag">CFX</span>
-                <span class="tag">Heat transfer</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="project-grid minor-grid">
-
-          <a class="project-card" href="projects/desktop-catapult.html">
-            <img src="assets/catapult/solidworks-v5.webp" alt="V5 desktop catapult model in SolidWorks" width="642" height="567" decoding="async" loading="lazy">
-            <div class="card-body">
-              <p class="eyebrow">Workshop prototype · November 2026</p>
-              <h3>Motorised Desktop Catapult</h3>
-              <p class="muted">A laser-cut plywood mechanism, documented from CAD and assembly to a workshop demonstration.</p>
-              <div class="tags"><span class="tag">CAD</span><span class="tag">Laser cutting</span><span class="tag">Prototyping</span></div>
-            </div>
-          </a>
-          <a class="project-card" href="projects/front-wing.html">
-            <img src="assets/images/front_wing_03-web.webp" alt="Abaqus displacement result for a composite front wing" width="1157" height="762" decoding="async" loading="lazy">
-            <div class="card-body">
-              <p class="eyebrow">Course project · FEA</p>
-              <h3>Composite Front Wing FEA</h3>
-              <p class="muted">Composite shell model under Formula SAE-style load cases; governing case at about 74% peak stress utilisation.</p>
-              <div class="tags"><span class="tag">Abaqus</span><span class="tag">Composites</span></div>
-            </div>
-          </a>
-
-          <a class="project-card" href="projects/ruggedized-iot-sensor-module.html">
-            <img src="assets/images/cover_iot_module_closeup-web.webp" alt="CAD model of an outdoor IoT sensor enclosure" width="1060" height="760" decoding="async" loading="lazy">
-            <div class="card-body">
-              <p class="eyebrow">Self-directed design study</p>
-              <h3>Outdoor IoT Sensor Enclosure</h3>
-              <p class="muted">SolidWorks enclosure design with Abaqus load checks and a firmware structure in Keil C.</p>
-              <div class="tags"><span class="tag">SolidWorks</span><span class="tag">Abaqus</span><span class="tag">Keil C</span></div>
-            </div>
-          </a>
-
-          <a class="project-card" href="projects/dynamic-weighing.html">
-            <img src="assets/images/dynamic_weighing_software_copyright_certificate-web.webp" alt="Software copyright registration certificate for the dynamic weighing system" width="1080" height="1453" decoding="async" loading="lazy">
-            <div class="card-body">
-              <p class="eyebrow">Undergraduate project · 2022–2024</p>
-              <h3>Dynamic Pig-Carcass Weighing System</h3>
-              <p class="muted">STM32 and HX711 load-cell system that weighs carcasses moving on a processing line. Project software registered (holder: Huazhong Agricultural University).</p>
-              <div class="tags"><span class="tag">STM32</span><span class="tag">Load cells</span><span class="tag">Embedded C</span></div>
-            </div>
-          </a>
-        </div>
-      </section>
-
       <section class="section" id="experience">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Experience</p>
             <h2>Work, research and community</h2>
           </div>
+          <p class="section-links"><a href="#education">Education</a><a href="#skills">Tools and methods</a></p>
         </div>
 
         <div class="exp-list">
@@ -345,7 +305,7 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Education</p>
-            <h2>Study</h2>
+            <h2>Engineering education</h2>
           </div>
           <p class="muted">Transcripts and certificates available on request.</p>
         </div>
@@ -382,7 +342,7 @@
             <h2>Tools and methods</h2>
           </div>
         </div>
-        <div class="table-wrap">
+        <div class="table-wrap" role="region" aria-label="Engineering tools and methods" tabindex="0">
           <table class="skills-table">
             <tbody>
               <tr><th scope="row">Mechanical design</th><td>SolidWorks <span class="level">(proficient: parts, assemblies, drawings)</span>; AutoCAD / DXF <span class="level">(working)</span></td></tr>
@@ -397,82 +357,38 @@
         </div>
       </section>
 
-      <section class="section" id="contact">
-        <h2>Kia ora, let's talk</h2>
-        <div class="split">
-          <div class="panel">
-            <h3>Email</h3>
-            <p class="lead">zxie588@aucklanduni.ac.nz</p>
+      <section class="portfolio-contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-inner">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Let’s talk engineering.</h2>
+            <p>I’m open to graduate and junior engineering roles in New Zealand from mid-2027, including 2028 graduate programmes.</p>
             <div class="actions">
               <a class="button" href="mailto:zxie588@aucklanduni.ac.nz?subject=Graduate%20mechanical%20engineering%20opportunity">Email me</a>
               <a class="button secondary" href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a>
-              <a class="button secondary" href="assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
             </div>
           </div>
-          <aside class="panel">
-            <h3>Good to know</h3>
-            <p>
-              From mid-November 2026 to late February 2027 I will be in Shanghai (five hours behind New Zealand),
-              so email is the fastest way to reach me. Referees are available on request.
-            </p>
-          </aside>
+          <div class="contact-details">
+            <strong>Availability</strong>
+            <p>Planned Shanghai internship from November 2026 to February 2027. Available for video interviews during that time.</p>
+            <strong>Work rights</strong>
+            <p>Planning to apply for a Post Study Work Visa after graduation, subject to visa approval. Referees available on request.</p>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="footer">
-      Ricardo Xie · Graduate mechanical engineer, Auckland ·
-      <a href="mailto:zxie588@aucklanduni.ac.nz">zxie588@aucklanduni.ac.nz</a> ·
-      <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a> ·
-      <a href="https://github.com/zxie588-alt" rel="me">GitHub</a> ·
-      <a href="assets/resumes/Ricardo_Xie_CV.pdf">Download CV</a>
+    <footer class="footer portfolio-footer">
+      <div class="footer-inner">
+        <div><a class="footer-name" href="index.html">Ricardo Xie</a><p>Mechanical engineering · Auckland, New Zealand</p></div>
+        <nav aria-label="Footer navigation">
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#education">Education</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="mailto:zxie588@aucklanduni.ac.nz">Email</a>
+          <a href="https://www.linkedin.com/in/ricardo-xie-6394643b4/" rel="me">LinkedIn</a>
+          <a href="https://github.com/zxie588-alt" rel="me">GitHub</a>
+        </nav>
+      </div>
     </footer>
-
-    <script>
-      // Scroll-reveal: reveal target blocks as they enter the viewport.
-      // Fully fail-safe: any error reveals everything immediately.
-      (function () {
-        var html = document.documentElement;
-        if (!html.classList.contains("has-js")) return;
-
-        var selector = [
-          ".proof-strip > div", ".fit-card", ".project-card", ".exp-item",
-          ".credential-card", ".skills-table", ".section > .section-heading", "#contact > h2"
-        ].join(",");
-
-        var revealAll = function () {
-          try {
-            document.querySelectorAll(selector).forEach(function (el) {
-              el.classList.add("in-view");
-            });
-          } catch (e) { html.classList.remove("has-js"); }
-        };
-
-        try {
-          var targets = Array.prototype.slice.call(document.querySelectorAll(selector));
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                var el = entry.target;
-                el.classList.add("in-view");
-                el.addEventListener("transitionend", function () { el.style.transitionDelay = ""; }, { once: true });
-                io.unobserve(el);
-              }
-            });
-          }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-
-          targets.forEach(function (el, i) {
-            el.style.transitionDelay = (i % 4) * 60 + "ms";
-            io.observe(el);
-          });
-
-          window.addEventListener("load", function () {
-            setTimeout(revealAll, 2500);
-          });
-        } catch (e) {
-          revealAll();
-        }
-      })();
-    </script>
   </body>
 </html>

@@ -22,7 +22,7 @@
   root.setAttribute("data-theme", resolveInitial());
 
   function buildToggle() {
-    var nav = document.querySelector(".nav-links");
+    var nav = document.querySelector(".nav-utilities") || document.querySelector(".nav-links");
     if (!nav || document.querySelector(".theme-toggle")) return;
 
     var btn = document.createElement("button");
