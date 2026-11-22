@@ -297,15 +297,15 @@ html { scroll-padding-top: 100px; }
 
 .project-main { padding-top: clamp(22px, 3.8vw, 48px); }
 .project-main > p, .project-main > .tags { max-width: 86ch; }
-.project-main > .section { max-width: none; width: 100%; padding-inline: 0; margin: 0; border-top: 1px solid var(--line); }
+.project-main > .section { max-width: none; width: 100%; padding: clamp(27px, 4vw, 49px) 0; margin: 0; border-top: 1px solid var(--line); }
 .case-intro {
-  padding: clamp(24px, 5vw, 60px);
-  margin-bottom: 28px;
+  padding: clamp(22px, 4.4vw, 54px);
+  margin-bottom: clamp(19px, 2.5vw, 28px);
   background: radial-gradient(ellipse at 92% 30%, var(--night-bright), transparent 72%), var(--night);
   color: var(--night-text);
   border-radius: 12px;
 }
-.case-nav { display: inline-block; margin-bottom: 19px; color: var(--night-text); font-weight: 650; font-size: .88rem; text-decoration: underline; }
+.case-nav { display: inline-block; margin-bottom: 14px; color: var(--night-text); font-weight: 650; font-size: .88rem; text-decoration: underline; }
 .case-intro h1 { color: var(--night-text); margin: 6px 0 12px; font-size: clamp(2.15rem, 4.8vw, 4.45rem); letter-spacing: -.058em; line-height: 1; }
 .case-intro .lead { color: var(--night-muted); margin: 0; }
 .case-intro .lead strong { color: var(--night-text); }
@@ -321,6 +321,9 @@ html { scroll-padding-top: 100px; }
 .project-main .stat strong { color: var(--accent-dark); }
 .project-main .image-grid img, .project-main .project-image { border-color: var(--line); }
 .project-main figure.evidence-shot { margin: 0; }
+.project-main :is(.evidence-gallery, .image-grid) { gap: clamp(12px, 1.6vw, 20px); }
+.project-main .evidence-shot figcaption { padding: 12px 15px; line-height: 1.5; }
+.photo-tile figcaption { z-index: 1; }
 
 @media (max-width: 980px) {
   .nav { gap: 18px; }
@@ -367,6 +370,29 @@ html { scroll-padding-top: 100px; }
 @media (prefers-reduced-motion: reduce) {
   .hero-project img, .portfolio-home .project-card { transition: none; }
   .hero-project:hover img, .portfolio-home .project-card:hover { transform: none; }
+}
+
+@media (min-width: 601px) and (max-width: 820px) {
+  .project-main .evidence-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .photo-tile img { transition: transform 300ms var(--ease); }
+  .photo-tile:hover img { transform: scale(1.05); }
+
+  /* Clip transformed detail images to their original painted bounds, independently of captions. */
+  .project-main :is(.project-image, .image-grid img, .evidence-shot img) {
+    --image-scale: 1.035;
+    --clip-radius: 8px;
+    clip-path: inset(0 round var(--clip-radius));
+    transition: transform 300ms var(--ease), clip-path 300ms var(--ease);
+  }
+  .project-main .evidence-shot img { --clip-radius: 0px; }
+  .project-main .native-model-gallery img { --image-scale: 1.05; }
+  .project-main :is(.project-image, .image-grid img, .evidence-shot img):hover {
+    transform: scale(var(--image-scale));
+    clip-path: inset(calc((1 - 1 / var(--image-scale)) * 50%) round var(--clip-radius));
+  }
 }
 
 @media print {

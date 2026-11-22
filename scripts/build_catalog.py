@@ -126,8 +126,8 @@ def catalog_page(data, home):
     <script src="assets/js/theme.js?v=2"></script>
     <script src="assets/js/collections.js" defer></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="portfolio.css?v=2">
-    <link rel="stylesheet" href="collections.css">
+    <link rel="stylesheet" href="portfolio.css?v=3">
+    <link rel="stylesheet" href="collections.css?v=2">
   </head>
   <body class="portfolio-catalog">
     <a class="skip-link" href="#main">Skip to content</a>
