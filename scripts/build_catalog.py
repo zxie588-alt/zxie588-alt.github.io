@@ -28,6 +28,14 @@ def image(project, category=None, featured=False):
             'loading="lazy" decoding="async"></span>')
 
 
+def quick_link(project, label):
+    width, height = project['size']
+    return f'''          <li><a href="projects/{escape(project['id'])}.html">
+            <span class="strip-image strip-{escape(project['fit'])}"><img src="{escape(project['image'])}" alt="" width="{width}" height="{height}" decoding="async"></span>
+            <span>{escape(label)}</span>
+          </a></li>'''
+
+
 def project_card(project, *, heading='h3', category=None, featured=False, catalog=False):
     label = escape(project['label'])
     title = escape(project['title'])
@@ -72,20 +80,19 @@ def home_showcase(data):
         </section>''')
 
     jumps = '\n'.join(f'          <a href="#work-{c["id"]}">{escape(c["title"])}</a>' for c in home_categories)
-    cards = '\n'.join(project_card(index[item], heading='h4', featured=True) for item in data['featured'])
+    quick_links = '\n'.join(quick_link(index[item['id']], item['label']) for item in data['quickLinks'])
+    cards = '\n'.join(project_card(index[item], heading='h3', featured=True) for item in data['featured'])
     collections = '\n\n'.join(contents)
     return f'''      <section class="section showcase" id="projects" aria-labelledby="project-heading">
-        <div class="showcase-intro">
-          <div><p class="eyebrow">The portfolio</p><h2 id="project-heading">Explore the work.</h2></div>
-          <a class="collection-link" href="catalog.html">Browse all {len(projects)} projects</a>
-        </div>
-        <nav class="showcase-jumps" aria-label="Project collections">
-{jumps}
+        <nav class="project-strip" aria-label="Quick links to projects">
+          <ul>
+{quick_links}
+          </ul>
         </nav>
 
-        <section class="collection featured-collection" aria-labelledby="featured-projects" data-project-rail>
+        <div class="collection featured-collection" data-project-rail>
           <div class="collection-heading">
-            <div><h3 id="featured-projects">Featured projects</h3><p>From a SolidWorks model to a working prototype.</p></div>
+            <h2 id="project-heading">Featured work</h2>
             <div class="rail-controls" hidden>
               <button type="button" data-rail-step="-1" aria-controls="featured-track" aria-label="Previous featured projects"><span aria-hidden="true">‹</span></button>
               <button type="button" data-rail-step="1" aria-controls="featured-track" aria-label="Next featured projects"><span aria-hidden="true">›</span></button>
@@ -94,7 +101,11 @@ def home_showcase(data):
           <ul class="project-rail" id="featured-track" tabindex="0" aria-label="Featured project cards">
 {cards}
           </ul>
-        </section>
+        </div>
+
+        <nav class="showcase-jumps" aria-label="Project collections">
+{jumps}
+        </nav>
 
 {collections}
 
@@ -127,7 +138,7 @@ def catalog_page(data, home):
     <script src="assets/js/collections.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="portfolio.css?v=3">
-    <link rel="stylesheet" href="collections.css?v=2">
+    <link rel="stylesheet" href="collections.css?v=3">
   </head>
   <body class="portfolio-catalog">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -170,6 +181,9 @@ def validate(data):
         raise ValueError(f'One record per project page is required. Unmatched: {set(by_id) ^ pages}')
     if not set(data['featured']) <= by_id.keys():
         raise ValueError('Featured IDs must reference existing projects.')
+    for link in data['quickLinks']:
+        if link['id'] not in by_id or 'image' not in by_id[link['id']]:
+            raise ValueError(f'Quick link needs an existing project with a cover: {link["id"]}')
     for p in projects:
         if not p['categories'] or set(p['categories']) - categories:
             raise ValueError(f'Invalid categories on {p["id"]}')

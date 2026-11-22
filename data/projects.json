@@ -6,7 +6,17 @@
     {"id": "systems", "title": "Systems and controls"},
     {"id": "community", "title": "Community and training"}
   ],
-  "featured": ["energy-harvesting-backpack", "jellyfish-mechanism", "football-launcher", "nz-home-ventilation"],
+  "quickLinks": [
+    {"id": "jellyfish-mechanism", "label": "Jellyfish"},
+    {"id": "football-launcher", "label": "Football launcher"},
+    {"id": "flanged-three-way-fitting", "label": "Flanged fitting"},
+    {"id": "branched-pipe-elbow", "label": "Branched elbow"},
+    {"id": "desktop-catapult", "label": "Desktop catapult"},
+    {"id": "energy-harvesting-backpack", "label": "Energy backpack"},
+    {"id": "nz-home-ventilation", "label": "Home ventilation"},
+    {"id": "front-wing", "label": "Composite wing"}
+  ],
+  "featured": ["jellyfish-mechanism", "energy-harvesting-backpack", "football-launcher", "flanged-three-way-fitting", "nz-home-ventilation", "front-wing"],
   "projects": [
     {
       "id": "energy-harvesting-backpack", "title": "Energy-Harvesting Backpack", "categories": ["physical"],
